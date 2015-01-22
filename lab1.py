@@ -76,9 +76,6 @@ a = 4
 b = 5
 
 def bitXor(x, y):
-<<<<<<< HEAD
-
-=======
     return x^y
     
 print bitXor(a, b)
@@ -86,8 +83,6 @@ print bitXor(a, b)
 #
 # Mye av det samme som over bare en anen viseflow funksjon
 #
->>>>>>> 508c768688ae73c05ecf66f99dd323e640f0892e
-
 #
 #  Oppgave 4
 #    bitOr - x|y
