@@ -10,14 +10,14 @@
 import sys
 
 # Skriv inn fullt navn på gruppemedlemene (erstatte '-' med navn slikt 'Kari Trå')
-gruppe = {  'student1': Kevin Benjamin Zeppo Adriaansen, \
-			'student2': Stanley Ntiamoah, \
-            'student3': Vegard Nerland, \
-            'student4': Kenneth Rønning, \
-            'student5': Tanja Malbasa, \
-            'student6': Rachel Victoria Legreid, \
-            'student7': Thomas Ørsnes, \
-            'student8': Jostein Nilsen, \
+gruppe = {  'student1': "Kevin Benjamin Zeppo Adriaansen",
+			'student2': "Stanley Ntiamoah",
+            'student3': "Vegard Nerland",
+            'student4': "Kenneth Rønning",
+            'student5': "Tanja Malbasa",
+            'student6': "Rachel Victoria Legreid",
+            'student7': "Thomas Ørsnes",
+            'student8': "Jostein Nilsen",
 }
 
 #
@@ -57,8 +57,12 @@ ascii_bird()
 a = 6
 b = 5
 def bitAnd(x, y):
-	print bin(x&y) #tar to tall i base 10 å gjør de om til en rekke med bool verdier i form av bin tall (base 2)
-				   #så sammen lignes verdiene i en sannhetstabell. 1 og 1 blir 1, 1 og 0 blir 0, 0 og 0 blir 0, 1 = True, 0 = False
+
+	return x&y
+print "oppgave 2 svar = %s " % bitAnd(a,b)
+
+	#tar to tall i base 10 å gjør de om til en rekke med bool verdier i form av bin tall (base 2)
+	#så sammen lignes verdiene i en sannhetstabell. 1 og 1 blir 1, 1 og 0 blir 0, 0 og 0 blir 0, 1 = True, 0 = False
 	
 
 
@@ -76,10 +80,9 @@ a = 4
 b = 5
 
 def bitXor(x, y):
-    return x^y
-    
-print bitXor(a, b)
 
+	return x^y
+print "oppgave 3 svar = %s " % bitXor(a, b)
 #
 # Mye av det samme som over bare en anen viseflow funksjon
 #
@@ -88,13 +91,14 @@ print bitXor(a, b)
 #    bitOr - x|y
 #    Eksempel: bitOr(0, 1) = 1
 #
-a = 0
-b = 1
+a = 5
+b = 4
 
 def bitOr(x, y):
-    return x or y
+	return x|y
 
-print bitOr(a, b)
+
+print "oppgave 4 svar = %s" % bitOr(a, b)
 
 #
 # Samme som over igjen bare en anen viseflow funksjon
@@ -157,7 +161,7 @@ def transferHex(string):
 # 		Implementer en funksjon unicodeBin, som kan behandle norske bokstaver
 # 		Kravspesifikasjon for denne funksjonen er den samme som for ascii8Bin funksjonen
 def unicodeBin(character):
-	pass	
+	pass 	
 
 #
 # Oppgave 9
