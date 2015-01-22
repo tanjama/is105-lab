@@ -2,11 +2,12 @@
 Repository i IS-105
 hahaha
 <<<<<<< HEAD
-vegard var h�r! 
+vegard var hær! 
 blablabalbalbaablbalbal
 =======
-vegard var hær!
-Tanja er også her :)
+vegard var hÃ¦r!
+rachel var her!
+Tanja er ogsÃ¥ her :)
 Stanley var her
 Jostein var her
 Thomas var her!
