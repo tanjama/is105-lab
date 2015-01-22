@@ -1,5 +1,7 @@
 # is105-lab
 Repository i IS-105
 hahaha
-vegard var hær!
-Tanja er også her :)
+vegard var hÃ¦r!
+Tanja er ogsÃ¥ her :)
+Stanley var her
+Jostein var her
