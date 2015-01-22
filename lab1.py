@@ -47,7 +47,9 @@ ascii_bird()
 #					er 4 desimalt. Antagelse: posisjonsbasert tallsystem og 
 #					den mest signifikante bit-en er lengst til venstre
 def bitAnd(x, y):
-	pass
+	print bin(x&y) #tar to tall i base 10 å gjør de om til en rekke med bool verdier i form av bin tall (base 2)
+				   #så sammen lignes verdiene i en sannhetstabell. 1 og 1 blir 1, 1 og 0 blir 0, 0 og 0 blir 0, 1 = True, 0 = False
+	
 
 
 #
