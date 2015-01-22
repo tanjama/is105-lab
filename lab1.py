@@ -10,9 +10,14 @@
 import sys
 
 # Skriv inn fullt navn på gruppemedlemene (erstatte '-' med navn slikt 'Kari Trå')
-gruppe = {  'student1': '-', \
-			'student2': '-', \
-            'student3': '-', \
+gruppe = {  'student1': Kevin Benjamin Zeppo Adriaansen, \
+			'student2': Stanley Ntiamoah, \
+            'student3': Vegard Nerland, \
+            'student4': Kenneth Rønning, \
+            'student5': Tanja Malbasa, \
+            'student6': Rachel Victoria Legreid, \
+            'student7': Thomas Ørsnes, \
+            'student8': Jostein Nilsen, \
 }
 
 #
@@ -22,12 +27,15 @@ gruppe = {  'student1': '-', \
 #    Funksjonen skal hete ascii_fugl() og skal være uten argumenter og uten returverdier
 #    Den skal skrive ut følgende når den brukes ascii_fugl
 #
-#       \/_
-#  \,   /( ,/
-#   \\\' ///
-#    \_ /_/
-#    (./
-#     '` 
+#  print"       \/_ "
+#  print"  \,   /( ,/ "
+#  print"   \\\' /// "
+#  print"    \_ /_/ "
+#  print"    (./ "
+#  print"     '` " 
+#
+# Setter en simpel print for fugelen, kunne også ha brukt (""")
+# 
 def ascii_bird():
 	print"       \/_"
 	print"  \,   /( ,/ "
@@ -46,29 +54,57 @@ ascii_bird()
 #					1 AND 1 gir 1, 1 AND 0 gir 0 og 0 AND 1 gir 0 => 100 binært
 #					er 4 desimalt. Antagelse: posisjonsbasert tallsystem og 
 #					den mest signifikante bit-en er lengst til venstre
+a = 6
+b = 5
 def bitAnd(x, y):
 	print bin(x&y) #tar to tall i base 10 å gjør de om til en rekke med bool verdier i form av bin tall (base 2)
 				   #så sammen lignes verdiene i en sannhetstabell. 1 og 1 blir 1, 1 og 0 blir 0, 0 og 0 blir 0, 1 = True, 0 = False
 	
 
 
+    
+#
+# Lager variabler som settes inn i en viseflow funksjonen, returnerer og printer ut svaret
+#
+ 
 #
 #  Oppgave 3
 #    bitXor - x^y
 #    Eksempel: bitXor(4, 5) = 1
 #
-def bitXor(x, y):
+a = 4
+b = 5
 
+def bitXor(x, y):
+<<<<<<< HEAD
+
+=======
+    return x^y
+    
+print bitXor(a, b)
+
+#
+# Mye av det samme som over bare en anen viseflow funksjon
+#
+>>>>>>> 508c768688ae73c05ecf66f99dd323e640f0892e
 
 #
 #  Oppgave 4
 #    bitOr - x|y
 #    Eksempel: bitOr(0, 1) = 1
 #
+a = 0
+b = 1
+
 def bitOr(x, y):
-	pass
+    return x or y
+
+print bitOr(a, b)
 
 #
+# Samme som over igjen bare en anen viseflow funksjon
+#
+
 #  Oppgave 5
 #
 #  Tips:
@@ -164,5 +200,5 @@ def test():
 
 
 # Bruk denne funksjonen for å vise at alle testene er kjørt feilfritt
-#print test()
+print test()
 		
