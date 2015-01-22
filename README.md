@@ -5,3 +5,4 @@ vegard var hær!
 Tanja er også her :)
 Stanley var her
 Jostein var her
+Thomas var her!
