@@ -29,7 +29,13 @@ gruppe = {  'student1': '-', \
 #    (./
 #     '` 
 def ascii_bird():
-	pass
+	print"       \/_"
+	print"  \,   /( ,/ "
+	print"   \\\' /// "
+	print"    \_ /_/ "
+	print"    (./ "
+	print"     '` "
+ascii_bird()
 
 # 
 #  Oppgave 2
@@ -50,7 +56,7 @@ def bitAnd(x, y):
 #    Eksempel: bitXor(4, 5) = 1
 #
 def bitXor(x, y):
-	pass
+
 
 #
 #  Oppgave 4
