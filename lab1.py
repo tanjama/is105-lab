@@ -101,7 +101,7 @@ def bitOr(x, y):
 print "oppgave 4 svar = %s" % bitOr(a, b)
 
 #
-# Samme som over igjen bare en anen viseflow funksjon
+# Samme som over igjen bare en annen viseflow-funksjon.
 #
 
 #  Oppgave 5
@@ -124,10 +124,18 @@ print "oppgave 4 svar = %s" % bitOr(a, b)
 #	 Forklar resultatet ascii8Bin('å')
 #	 Hvilke faktorer påvirker resultatet? Forklar.
 #
-def ascii8Bin(letter):
-	pass
+def ascii8Bin(tegn):
+    tegn = ord(tegn)
+    return '{0:08b}'.format(tegn)
 
-# 
+    print ascii8Bin('a')
+# Grunnen til at vi ikke kan bruke "å" er på grunn av at ascii-biblioteket ikke er utvidet/definert til å ta i bruk norske tegn. 
+# Resultatet av asciiBin8 8('å') er:
+# Ascii sitt biblitoek påvirker resultatet. Det vil si at vi ikke kan ta i bruk udefinerte tegn for å få et fungerende resultat. 
+
+
+
+
 #  Oppgave 6
 #    transferBin - ta en tilfeldig streng som argument og skriver ut en blokk av 8-bits strenger
 #                  som er den binære representasjon av strengen

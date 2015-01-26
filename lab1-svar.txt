@@ -1,0 +1,37 @@
+Operatørprioritet i python:
+Operatører er symboler som representerer beregner som addisjon og multiplikasjon. Disse verdiene kalles for “operatører”. 
+
+Eksempler på disse operatørene er: +, -, * og **. 
+Når flere av disse operatørere brukes i samme uttrykk er rekkefølgen på evalueringen avhengig av presedensen. 
+Programmeringsspråket python følger den matematiske konvensjonen som er følgende:
+
+
+- Parenteser har høyest prioritet og kan brukes til å tvinge et uttrykk til å bli evaluert i den rekkefølgen du ønsker.
+- Eksponenter har nest høyest prioritet.
+- Multiplikasjon og divisjon har samme prioritet, noe som er høyere enn addisjon og subtraksjon, som også har samme prioritet.
+- Operatører med samme presedens evalueres fra venstre mot høyre. (Python.org)
+
+
+
+One’s complement i python:
+“One’s complement” av binære tall er definert som verdien oppnådd ved å snu alle bits i den binære representasjonen av et nummer. 0 endres til 1, og motsatt. Tallet oppfører seg da motsatt av det dét opprinnelige tallets verdi i noen operasjoner.  (Wikipedia.org)
+
+
+Pass er et reservert ord i python, hva er dets funksjon?:
+“Pass” - uttalelsen gjør ingenting. Pass kan brukes når det kreves å ta med en uttalse (statement), men programmet krever ikke noen direkte aktivitet. 
+Du kan også bruke “pass” for å fylle ut “kroppen”, når en jobber med en annen del av koden. Dermed kan du sette koden på vent, mens du har muligheten til å tenke på et litt mer abstrakt nivå. 
+Eksempel (tatt fra kilde på nettet):
+
+
+>>> def initlog(*args):
+...    pass   # Remember to implement this! ------ Koden settes på vent, men du tenker på et mer
+…                                                               ------ abstrakt nivå, eller jobber med en annen kode. 
+(Segnomedia.no)
+
+
+
+Kilder, lastet ned 22.02.2015:
+Pass som et reservert ord: https://docs.python.org/2/tutorial/controlflow.html
+One’s complement: http://en.wikipedia.org/wiki/Ones%27_complement
+Operatørprioritet i python:
+http://www.segnomedia.no/python-h%C3%A5ndbok/variabler-operat%C3%B8rer-og-uttrykk
