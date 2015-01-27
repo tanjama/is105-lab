@@ -1,16 +1,28 @@
 # is105-lab
 Repository i IS-105
-hahaha
-<<<<<<< HEAD
-vegard var hær! 
-blablabalbalbaablbalbal
-=======
-vegard var hÃ¦r!
-rachel var her!
-Tanja er ogsÃ¥ her :)
-Stanley var her
-Jostein var her
-Thomas var her!
-Kevin var her igjen...
-jeg og -- Jostein
->>>>>>> ad08c8d2c4bc096c97dfe1da8c66591125455933
+Universitetet i Agder, avdeling Kristiansand.
+IT og informasjonssystemet, semester to.
+
+Brukes som delingsverktøy i IS-105. 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
