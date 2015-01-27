@@ -162,7 +162,8 @@ def transferBin(string):
 def transferHex(string):
 	l = list(string)
 	for c in l:
-		print "Den heksadesimale representasjonen for %s" % c
+	
+		print Ascii8Bin(c)
 
 #
 # Oppgave 8
