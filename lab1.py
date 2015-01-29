@@ -169,7 +169,8 @@ def transferHex(string):
 # 		Implementer en funksjon unicodeBin, som kan behandle norske bokstaver
 # 		Kravspesifikasjon for denne funksjonen er den samme som for ascii8Bin funksjonen
 def unicodeBin(character):
-	pass 	
+	return '{0:08b}'.format(ord(character.decode('utf8')))
+
 
 #
 # Oppgave 9
@@ -190,7 +191,19 @@ def unicodeBin(character):
 #	Hvilke andre muligheter har man for å finne informasjon om maskinvare i GNU/Linux?
 #
 def printSysInfo():
-	pass
+	mem = psutil.virtual_memory()
+	hdd = psutil.disk_partitions()
+	cpu = psutil.cpu_percent()
+	cpucores = psutil.cpu_percent(percpu=True)
+	uname = os.uname()
+	cpuinf = cpuinfo.get_cpu_info()
+	print "Memory information: \n", mem, "\n\nHard drive information: \n", hdd, "\n\nCPU Usage percent: ", cpu
+	print "\nCPU Usage pr core: ", cpucores, "\n\nOperating System Info: \n", uname
+	print "\n\nCPU info from cpuinfo.py module: \n", cpuinf, "\n"
+	print('Brand: {0}'.format(cpuinf['brand']))
+	print('Hz Advertised: {0}'.format(cpuinf['hz_advertised']))
+	print('Arch: {0}'.format(cpuinf['arch']))
+	print('Bits: {0}'.format(cpuinf['bits']))
 
 
 def test():
