@@ -148,6 +148,8 @@ def ascii8Bin(tegn):
 def transferBin(string): 
 	l = list(string)
 	for c in l:
+		ascii8Bin(c)
+	transferBin("Hei")
 		# skriv ut den binære representasjon av hvert tegn (bruk ascii8Bin funksjonen din)
 		print "Den binære representasjonen for %s" % c
 
