@@ -146,10 +146,15 @@ def ascii8Bin(tegn):
 #	 Skriv selv inn tester ved å bruke assert i funksjonen test()
 #
 def transferBin(string): 
+	#string = "hei"
 	l = list(string)
-	for c in l:
-		ascii8Bin(c)
-	transferBin("Hei")
+	#sprint 1
+	
+	for variabel in l:
+	return	ascii8Bin(variabel)
+		
+print transferBin("Hei")
+
 		# skriv ut den binære representasjon av hvert tegn (bruk ascii8Bin funksjonen din)
 		print "Den binære representasjonen for %s" % c
 
