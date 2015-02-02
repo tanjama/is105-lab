@@ -178,7 +178,14 @@ def transferHex(string):
 # 		Kravspesifikasjon for denne funksjonen er den samme som for ascii8Bin funksjonen
 def unicodeBin(character):
 	return '{0:08b}'.format(ord(character.decode('utf8')))
+	
+	#-*- coding: latin-1 -*-
+	
+def unicodeBin(character):
+return '{0:08b}'.format(ord(character.decode('utf8')))
 
+print unicodeBin ("å")
+	
 
 #
 # Oppgave 9
