@@ -166,11 +166,24 @@ print transferBin("Hei")
 #					med 2 heksadesimale tegn
 #    Skriv selv inn tester ved å bruke assert i funksjonen test()
 #  
+def ascii2Hex(tegn):
+    tegn = ord(tegn)
+    return '{:02x}'.format(tegn)
+
+
 def transferHex(string):
 	l = list(string)
 	for c in l:
-	
-		print Ascii8Bin(c)
+		return "Den heksadesimale representasjonen for %s:" % c, ascii2Hex(c)
+		
+def transferHexSummary(string):
+	hexString = ''
+	for char in string:
+		hexString += ascii2Hex(char)
+	return "Hele den heksadesimale representasjonen av strengen \'%s\' er: %s" % (string, hexString)
+
+print transferHex("a")
+print transferHexSummary("abc")
 
 #
 # Oppgave 8
