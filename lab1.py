@@ -219,19 +219,19 @@ print unicodeBin ("å")
 #	Hvilke andre muligheter har man for å finne informasjon om maskinvare i GNU/Linux?
 #
 def printSysInfo():
+    
 	mem = psutil.virtual_memory()
-	hdd = psutil.disk_partitions()
+	disk = psutil.disk_partitions()
 	cpu = psutil.cpu_percent()
 	cpucores = psutil.cpu_percent(percpu=True)
-	uname = os.uname()
-	cpuinf = cpuinfo.get_cpu_info()
-	print "Memory information: \n", mem, "\n\nHard drive information: \n", hdd, "\n\nCPU Usage percent: ", cpu
-	print "\nCPU Usage pr core: ", cpucores, "\n\nOperating System Info: \n", uname
-	print "\n\nCPU info from cpuinfo.py module: \n", cpuinf, "\n"
-	print('Brand: {0}'.format(cpuinf['brand']))
-	print('Hz Advertised: {0}'.format(cpuinf['hz_advertised']))
-	print('Arch: {0}'.format(cpuinf['arch']))
-	print('Bits: {0}'.format(cpuinf['bits']))
+	
+	print "Memory Informasjon: " + str(mem) 
+	print "Hard drive information: " + str(disk)
+	print "CPU bruks prosent: " + str(cpu)
+	print "CPU brukes prosent per enhet: " + str(cpucores)
+	
+printSysInfo()
+
 
 
 def test():
