@@ -5,7 +5,7 @@ functionen tar inn et Romer tall mellom I og M og git ut et tall i titallssystem
 #kode blokk til Demo i console
 print 'Begynn med Bokstav med Høyest verdi til venstre så nest høyest til høyre for den også videre'
 print 'hver bokstav kan ha et negativt tall på venstre side'
-print 'eks: 4 = IV, 7 = VIII, 9 = IX, 45 = VL'
+print 'eks: 4 = IV, 7 = VII, 9 = IX, 45 = XLV'
 roman_number = raw_input("skriv inn rommertall med bokstaver mellom I og M: ")
 
 
