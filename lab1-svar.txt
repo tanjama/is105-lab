@@ -1,26 +1,48 @@
 Operatørprioritet i python:
-Operatører er symboler som representerer beregner som addisjon og multiplikasjon. Disse verdiene kalles for “operatører”. 
-
+Operatører er symboler som representerer beregninger som addisjon og multiplikasjon. Disse verdiene kalles for “operatører”. 
 Eksempler på disse operatørene er: +, -, * og **. 
+
 Når flere av disse operatørere brukes i samme uttrykk er rekkefølgen på evalueringen avhengig av presedensen. 
 Programmeringsspråket python følger den matematiske konvensjonen som er følgende:
 
 
-- Parenteser har høyest prioritet og kan brukes til å tvinge et uttrykk til å bli evaluert i den rekkefølgen du ønsker.
-- Eksponenter har nest høyest prioritet.
-- Multiplikasjon og divisjon har samme prioritet, noe som er høyere enn addisjon og subtraksjon, som også har samme prioritet.
-- Operatører med samme presedens evalueres fra venstre mot høyre. (Python.org)
+    - Det finnes ulike operatører: +,-, *,/ og **. 
+    - Parenteser har høyest prioritet og kan brukes til å tvinge et uttrykk til å bli evaluert i den rekkefølgen du ønsker.
+    - Eksponenter har nest høyest prioritet.
+    - Multiplikasjon og divisjon har samme prioritet, noe som er høyere enn addisjon og subtraksjon, som også har samme prioritet.
+    - Operatører med samme presedens evalueres fra venstre mot høyre. (Python.org)
+    - Operatørprioritering læres på grunnskolenivå
+    
+      For eksempel: 5*2+1 
+    Mulitiplikasjon har høyere prioritet enn addisjon, derfor regner vi 5*2 først, og legger deretter til 3. 
+    5*2+1 = 11
+    Hadde vi ikke tatt hensyn til operatørpritering, kunne svaret vært 15 - som er feil. 
 
+    HUSK at det alltid er mulig å klamme utrykk i parentes hvis du er i tvil på hvordan regnestykket skal regnes. 
+    For eksempel: 5*2+1 = 5*(2+1)
 
 
 One’s complement i python:
 “One’s complement” av binære tall er definert som verdien oppnådd ved å snu alle bits i den binære representasjonen av et nummer. 0 endres til 1, og motsatt. Tallet oppfører seg da motsatt av det dét opprinnelige tallets verdi i noen operasjoner.  (Wikipedia.org)
+    
+    For eksempel(svært enkelt eksempel kopiert fra internett)
+    
+        +      −
+ 0   0000   1111   — Note that +0 and −0 return TRUE when tested for zero
+ 1   0001   1110     , FALSE when tested for non-zero. 
+ 2   0010   1101
+ 3   0011   1100
+ 4   0100   1011
+ 5   0101   1010
+ 6   0110   1001
+ 7   0111   1000
+    
 
 
 Pass er et reservert ord i python, hva er dets funksjon?:
 “Pass” - uttalelsen gjør ingenting. Pass kan brukes når det kreves å ta med en uttalse (statement), men programmet krever ikke noen direkte aktivitet. 
 Du kan også bruke “pass” for å fylle ut “kroppen”, når en jobber med en annen del av koden. Dermed kan du sette koden på vent, mens du har muligheten til å tenke på et litt mer abstrakt nivå. 
-Eksempel (tatt fra kilde på nettet):
+For eksempel (tatt fra kilde på nettet):
 
 
 >>> def initlog(*args):
