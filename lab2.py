@@ -48,7 +48,8 @@ def roman_to_int(romIn):
 				else:
 					sum += item
 			except:
-				print "Done"
+                                sum += item
+                                print "Done"
 		return sum
 	else:
 		return "Not valid number"
