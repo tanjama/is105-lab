@@ -121,3 +121,17 @@ Utskriftene på kommandoene er følgende:
     cache_alignment : 64
     address sizes : 36 bits physical, 48 bits virtual
     power management:
+    
+    
+    
+Kilder, lastet ned 09.februar 2015:
+    Det desimale tallsystemet:
+    Binært tallsystem: http://no.wikipedia.org/wiki/Bin%C3%A6rt_tallsystem
+    Titallssystemet: http://no.wikipedia.org/wiki/Titallsystemet
+
+    Det romerske tallsystemet:
+    Roman arthimetic: http://turner.faculty.swau.edu/mathematics/materialslibrary/roman/
+    Romertall: http://no.wikipedia.org/wiki/Romertall
+
+    Grunnleggende systeminformasjon: 
+    Vi har brukt pdf-filen foreleser la ut som oppgaveark. 
