@@ -1,0 +1,9 @@
+cat /etc/system-release
+CentOS release 6.6 (Final)
+cat /proc/version
+Linux version 2.6.32-504.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org)
+(gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) ) #1 SMP Wed Oct 15 04:27:16 UTC 2014
+uname -a
+Linux Linux 2.6.32-504.el6.x86_64 #1 SMP Wed Oct 15 04:27:16 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+uname -mrs
+Linux 2.6.32-504.el6.x86_64 x86_64
