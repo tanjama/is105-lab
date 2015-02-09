@@ -1,32 +1,123 @@
-1. Hva er grunnleggende forskjeller på det desimale og det romerske tallsystemet? (Forklar fra designperspektivet)
+Oppgave 1)
+Hva er grunnleggende forskjeller på det desimale og det romerske tallsystemet? (Forklar fra designperspektivet)
+
+Det desimale tallsystemet:
+Det mest grunnleggende i det desimale tallsystemet er at verdiene blir representert med symboler fra 0 til 9. 
+
+1. Det desimale tallsystemet er et tallsystem med grunntallet ti. 
+
+2. Det moderne titallsystemet kalles for et posisjonssystem, der både sifrenes posisjon og verdi er av betydning. 
+    For eksempel
+    1964 inneholder følgende posisjoner:
+    4 er på enerplassen, 6 er på tierplassen, 9 er på hundreplassen, og 1 er på tusenerplassen. 
+    
+    
+    
+3. Titallssystemmet bygger på tre ideer:
+    - Ideen om at tallets posisjon har en betydning
+    - Ideen om tallsymbolene
+    - Ideen om 0(null) som et tegn for den tomme plassen. 
+ 
+    
+4. Å mulitiplisere, subtrahere, dividere og addere er svært vanlig praksik med det desimale tallsystemet, og det desimale tallsystemet er svært egnet til å regne med. 
 
 
-2. Hva er grunnleggende systeminformasjon for systemet som testene er blitt utført på (operativsystemet, distribusjon, informasjon om CPU-type) ?
+Det romerske tallsystemet:
+Det mest grunnleggende i det romerske tallsystemet er at verdiene bli representert ved hjelp av symboler:
+
+I = 1
+V = 5
+X = 10
+L = 50
+C = 100
+D = 500
+M = 1000
+
+I dette tallsystemet finnes det ingen symbol for 0 (null)
+Videre finnes det noen retningslinjer for hvordan man skriver tall på det romerske tallsystemet. De er følgende:
+
+1. Verdien av symbolene blir delt opp og lagt sammen. 
+    For eksempel:
+    Symbolene MDCLXVI deler vi opp og adderer:
+    
+    M + D + C + L + X + V + I = 1000(M) + 500(D) + 100(C) + 50(L) + 10(X) + 5(V) + 1(I) = 1666
+
+
+2. Hvis et symbol med en lavere verdi står til venstre for et symbol med høyere verdi blir den lavere verdien trukket fra den høyere verdien. 
+    For eksempel:
+    Symbolene IVXLCDM deler vi opp og subtraherer
+    
+    1(I) - 5(V) - 10(X) - 50(L) - 100(C) - 500(D) - 1000(M) = 334
+    I dette tilfellet må vi lese symbolene fra høyre mot venstre(i motsetning til desimal lesing hvor vi starter på venstre side og leser mot høyre.)
+    
+    
+3. Skriv tallene med så få symboler som mulig. Det vil si at en skal prøve å bruke symbol med høyest verdi som mulig.
+    For eksempel:
+    I stedet for å skrive 5 på denne måten: IIIII
+    skriver man i stedet 5 på denne måten: V
+
+4. Det er ikke vanlig praksik i dividere og multiplisere med det romerske tallsystemet. 
+
+5. Symbolene i det romerske tallsystemet skrives alltid med store tegn. 
+
+
+
+Oppgave 2)
+Hva er grunnleggende systeminformasjon for systemet som testene er blitt utført på (operativsystemet, distribusjon, informasjon om CPU-type) ?
 
 (Testene er blitt utført på Daniel Hellang sin datamaskin)
 Grunnleggende systeminformasjon for systemet som testene er blitt utført på er følgende:
 
 For å finne ut av systeminformasjonen for systemet som våre tester er blitt utført på var vi nødt til å skrive inn følgende kommandoer i terminalen:
-- cat/etc/system-release for version you are using.
-- cat/proc/version for version you are using. 
-- uname -a for version name of Linux kernel.
-- uname - mrs for Linux kernel. 
+    - cat/etc/system-release for version you are using.
+    - cat/proc/version for version you are using. 
+    - uname -a for version name of Linux kernel.
+    - uname - mrs for Linux kernel. 
+    - cat/proc/cpuinfo|grep "model name" for processor and CPU details on Linux.
 
 Vi fikk også tips om å bruke cat/etc/lsb-release og cat/proc/cpuinfo|grep "model name", men har av ulike grunner ikke fått respons på disse kommandoene.(SKAL FIKSES FØR INNLEVERING)
-- cat/etc/lisb-release for which distribution you are using. 
-- cat/proc/cpuinfo|grep "model name" for processor and CPU details on Linux.
-
+    - cat/etc/lisb-release for which distribution you are using. 
+    
+   
 Utskriftene på kommandoene er følgende:
 
-cat /etc/system-release
-CentOS release 6.6 (Final)
+    cat /etc/system-release
+    CentOS release 6.6 (Final)
 
-cat /proc/version
-Linux version 2.6.32-504.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org)
-(gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) ) #1 SMP Wed Oct 15 04:27:16 UTC 2014
+    cat /proc/version
+    Linux version 2.6.32-504.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org)
+    (gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) ) #1 SMP Wed Oct 15 04:27:16 UTC 2014
 
-uname -a
-Linux Linux 2.6.32-504.el6.x86_64 #1 SMP Wed Oct 15 04:27:16 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+    uname -a
+    Linux Linux 2.6.32-504.el6.x86_64 #1 SMP Wed Oct 15 04:27:16 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
 
-uname -mrs
-Linux 2.6.32-504.el6.x86_64 x86_64
+    uname -mrs
+    Linux 2.6.32-504.el6.x86_64 x86_64
+    
+    cat/proc/cpuinfo|grep "model name" 
+    processor : 0
+    vendor_id : GenuineIntel
+    cpu family : 6
+    model : 58
+    model name : Intel(R) Core(TM) i7-3610QM CPU @ 2.30GHz
+    stepping : 9
+    microcode : 25
+    cpu MHz : 2202.770
+    cache size : 6144 KB
+    physical id : 0
+    siblings : 1
+    core id : 0
+    cpu cores : 1
+    apicid : 0
+    initial apicid : 0
+    fpu : yes
+    fpu_exception : yes
+    cpuid level : 5
+    wp : yes
+    flags : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc up rep_good        pni         
+    monitor ssse3 lahf_lm
+    bogomips : 4405.54
+    clflush size : 64
+    cache_alignment : 64
+    address sizes : 36 bits physical, 48 bits virtual
+    power management:
