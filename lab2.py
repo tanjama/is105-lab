@@ -58,5 +58,91 @@ print roman_to_int(roman_number)
 
 
 """Titall til Romertall"""
+number_in_raw = raw_input("skriv in et tall: ")
+
+def int_to_roman(number_in_string):
+	number_in = int(number_in_string)
+	result = []
+	while number_in > 0:	
+		if number_in >= 1000:
+			number_in -= 1000
+			result.append("M")
+			
+		elif number_in >= 900:
+			number_in -= 900
+			result.append("CM")
+			
+		elif number_in >= 500:
+			number_in -= 500
+			result.append("D")
+			
+		elif number_in >= 400:
+			number_in -= 400
+			result.append("CD")
+			
+		elif number_in >= 100:
+			number_in -= 100
+			result.append("C")
+			
+		elif number_in >= 90:
+			number_in -= 90
+			result.append("XC")
+			
+		elif number_in >= 50:
+			number_in -= 50
+			result.append("L")
+			
+		elif number_in >= 40:
+			number_in -= 40
+			result.append("XL")		
+			
+		elif number_in >= 10:
+			number_in -= 10
+			result.append("X")
+			
+		elif number_in >= 9:
+			number_in -= 9
+			result.append("IX")
+			
+		elif number_in >= 5:
+			number_in -= 5
+			result.append("V")
+			
+		elif number_in >= 4:
+			number_in -= 4
+			result.append("IV")
+			
+		elif number_in >= 1:
+			number_in -= 1
+			result.append("I")
+			
+	return "".join(result)
+
+print int_to_roman(number_in_raw)
 
 raw_input("")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
