@@ -1,9 +1,32 @@
+1. Hva er grunnleggende forskjeller på det desimale og det romerske tallsystemet? (Forklar fra designperspektivet)
+
+
+2. Hva er grunnleggende systeminformasjon for systemet som testene er blitt utført på (operativsystemet, distribusjon, informasjon om CPU-type) ?
+
+(Testene er blitt utført på Daniel Hellang sin datamaskin)
+Grunnleggende systeminformasjon for systemet som testene er blitt utført på er følgende:
+
+For å finne ut av systeminformasjonen for systemet som våre tester er blitt utført på var vi nødt til å skrive inn følgende kommandoer i terminalen:
+- cat/etc/system-release for version you are using.
+- cat/proc/version for version you are using. 
+- uname -a for version name of Linux kernel.
+- uname - mrs for Linux kernel. 
+
+Vi fikk også tips om å bruke cat/etc/lsb-release og cat/proc/cpuinfo|grep "model name", men har av ulike grunner ikke fått respons på disse kommandoene.(SKAL FIKSES FØR INNLEVERING)
+- cat/etc/lisb-release for which distribution you are using. 
+- cat/proc/cpuinfo|grep "model name" for processor and CPU details on Linux.
+
+Utskriftene på kommandoene er følgende:
+
 cat /etc/system-release
 CentOS release 6.6 (Final)
+
 cat /proc/version
 Linux version 2.6.32-504.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org)
 (gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) ) #1 SMP Wed Oct 15 04:27:16 UTC 2014
+
 uname -a
 Linux Linux 2.6.32-504.el6.x86_64 #1 SMP Wed Oct 15 04:27:16 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+
 uname -mrs
 Linux 2.6.32-504.el6.x86_64 x86_64
