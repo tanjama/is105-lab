@@ -114,7 +114,9 @@ Utskriftene på kommandoene er følgende:
     fpu_exception : yes
     cpuid level : 5
     wp : yes
-    flags : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc up rep_good        pni         
+    flags : fpu vme de pse tsc msr pae mce cx8 apic sep 
+    mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 
+    syscall nx rdtscp lm constant_tsc up rep_good pni         
     monitor ssse3 lahf_lm
     bogomips : 4405.54
     clflush size : 64
