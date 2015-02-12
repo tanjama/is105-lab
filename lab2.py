@@ -19,7 +19,7 @@ def roman_to_int(romIn):
 	print runBool
 	for char in romIn: #Check om input-verdi er gyldig
 		if char == 'I' or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
-			print char
+			pass
 		else:
 			runBool = False
 	print runBool	
@@ -130,12 +130,12 @@ def roman_plus_roman(rom_num1, rom_num2):
 	runBool = True
 	for char in rom_num1: #Check om input-verdi er gyldig
 		if char == 'I' or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
-			print char
+			pass
 		else:
 			runBool = False
 	for char in rom_num2: #Check om input-verdi er gyldig
 		if char == 'I' or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
-			print char
+			pass
 		else:
 			runBool = False
 	
@@ -153,22 +153,33 @@ def roman_plus_roman(rom_num1, rom_num2):
 		return(revert("".join(rom_num_result)))
 	else:
 		return "not valid input"
-def revert(rom_num):
-	rom_num = rom_num.replace("DCCCC", "CM")
-	rom_num = rom_num.replace("CCCC", "CD")
-	rom_num = rom_num.replace("LXXXX", "XC")
-	rom_num = rom_num.replace("XXXX", "XL")
-	rom_num = rom_num.replace("VIIII", "IX")
-	rom_num = rom_num.replace("IIII", "IV")
-	return rom_num
-	
 def convert(rom_num):
+	
 	rom_num = rom_num.replace("CM", "DCCCC")
 	rom_num = rom_num.replace("CD", "CCCC")
 	rom_num = rom_num.replace("XC", "LXXXX")
 	rom_num = rom_num.replace("XL", "XXXX")
 	rom_num = rom_num.replace("IX", "VIIII")
 	rom_num = rom_num.replace("IV", "IIII")
+	return rom_num
+	
+def revert(rom_num):
+    
+	rom_num = rom_num.replace("IIIII", "V")
+	rom_num = rom_num.replace("IIII", "IV")
+	rom_num = rom_num.replace("VIIIII", "X")
+	rom_num = rom_num.replace("VIIII", "IX")
+	rom_num = rom_num.replace("VV", "X")
+	rom_num = rom_num.replace("XXXXX", "L")
+	rom_num = rom_num.replace("XXXX", "XL")
+	rom_num = rom_num.replace("LXXXXX", "C")
+	rom_num = rom_num.replace("LXXXX", "XC")
+	rom_num = rom_num.replace("CCCCC", "D")
+	rom_num = rom_num.replace("CCCC", "CD")
+	rom_num = rom_num.replace("DCCCCC", "M")
+	rom_num = rom_num.replace("DCCCC", "CM")
+	rom_num = rom_num.replace("DD", "M")
+	
 	return rom_num
 
 
@@ -186,7 +197,6 @@ print int_to_roman(number_in_raw) #Resultetet (de romerske symbolene) blir print
 rom1 = raw_input("input a valid roman numeral: ")
 rom2 = raw_input("input a valid roman numeral: ")
 
-print roman_plus_roman(rom1, rom2)
 print roman_plus_roman(rom1, rom2)
 
 raw_input("")
