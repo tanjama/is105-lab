@@ -16,11 +16,7 @@ def roman_to_int(romIn):
 	value_list = [] #Liste til bokstavenes(romertallenes) tall-verdi.
 	char_list = []
 	sum = 0
-	for char in romIn: #Check om input-verdi er gyldig
-		if char == 'I'or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
-			char_list.append(char)
-		else:
-			runBool = False
+	runBool = char_check(romIn)
 	print char_list
 	if runBool == True:
 		for char in romIn: #Legger bokstavenes tall-verdi i value_list.
@@ -126,6 +122,55 @@ def int_to_roman(number_in_string): #Funksjon som skal gjøre titall om til rome
 	return "".join(result) #Setter resultatene sammen. I stedet for at reslutatet blir slik: 'M' 'D' 'C' 'L' 'X' 'V' 'I' blir det slik: MDCLXVI
 print int_to_roman(number_in_raw) #Resultetet (de romerske symbolene) blir printet. 
 
+"""Addisjon av romertall"""
+
+def roman_plus_roman(rom_num1, rom_num2):
+	runBool = True
+	runBool = char_check(rom_num1)
+	runBool = char_check(rom_num2)
+	
+	if runBool == True:
+		rom_num1 = convert(rom_num1)
+		rom_num2 = convert(rom_num2)
+		rom_num_temp = rom_num1 + rom_num2
+		rom_num_result = []
+		rom_num_list = "MDCLXVI"
+		for char in rom_num_list:
+			for item in rom_num_temp:
+				if item == char: 
+					rom_num_result.append(item)
+		
+		return(revert("".join(rom_num_result)))
+
+def revert(rom_num):
+	rom_num = rom_num.replace("DCCCC", "CM")
+	rom_num = rom_num.replace("CCCC", "CD")
+	rom_num = rom_num.replace("LXXXX", "XC")
+	rom_num = rom_num.replace("XXXX", "XL")
+	rom_num = rom_num.replace("VIIII", "IX")
+	rom_num = rom_num.replace("IIII", "IV")
+	return rom_num
+	
+def convert(rom_num):
+	rom_num = rom_num.replace("CM", "DCCCC")
+	rom_num = rom_num.replace("CD", "CCCC")
+	rom_num = rom_num.replace("XC", "LXXXX")
+	rom_num = rom_num.replace("XL", "XXXX")
+	rom_num = rom_num.replace("IX", "VIIII")
+	rom_num = rom_num.replace("IV", "IIII")
+	return rom_num
+
+def char_check(romIn):	
+	for char in romIn: #Check om input-verdi er gyldig
+			if char == 'I'or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
+				char_list.append(char)
+			else:
+				return False
+
+rom1 = raw_input("input a valid roman numeral: ")
+rom2 = raw_input("input a valid roman numeral: ")
+
+print roman_plus_roman(rom1, rom2)
 raw_input("")
 
 
