@@ -11,7 +11,7 @@ roman_number = raw_input("Skriv inn rommertall med bokstaver mellom I og M: ")
 
 
 def roman_to_int(romIn):
-	runBool = True #runBool blir satt til True hvis input-verdien er gyldig (Hvordan vite om input verdien ER gyldig?)
+	runBool = True #runBool blir satt til True hvis input-verdien er gyldig.
 	romIn = romIn.upper() #Setter alle bokstavenen til uppercase.
 	value_list = [] #Liste til bokstavenes(romertallenes) tall-verdi.
 	char_list = []
@@ -57,19 +57,25 @@ def roman_to_int(romIn):
 print roman_to_int(roman_number)
 
 
-"""Titall til Romertall"""
-number_in_raw = raw_input("skriv in et tall: ")
+"""Titall til Romertall
+Funksjonen tall et desimalt tall og konverterer det til et tall med romerske symbol(romertall).
+"""
+number_in_raw = raw_input("Write a number: ")# Her skrives et ønsket titall inn. 
 
-def int_to_roman(number_in_string):
+def int_to_roman(number_in_string): #Funksjon som skal gjøre titall om til romertall. 
 	number_in = int(number_in_string)
 	result = []
+	#Løkke som sjekker flere statements. Går gjennom input-tallet, sjekker verdien og sammenlikner verdien med et romertall. 
+	#Hvis en verdi stemmer konverteres titallet til et romertall, og restverdien sjekkes igjen. 
+	#Løkken fortsetter helt til det ikke er noen restverdi igjen. 
 	while number_in > 0:	
 		
-		if number_in >= 1000:
+		if number_in >= 1000: #Det desimale tallet konverteres til riktig symbol i det romerske tallsystemet. 
+
 			number_in -= 1000
-			result.append("M")
+			result.append("M") #Romersk symbol. 
 			
-		elif number_in >= 900:
+		elif number_in >= 900: #Elif står for else/if. 
 			number_in -= 900
 			result.append("CM")
 			
@@ -117,9 +123,8 @@ def int_to_roman(number_in_string):
 			number_in -= 1
 			result.append("I")
 			
-	return "".join(result)
-
-print int_to_roman(number_in_raw)
+	return "".join(result) #Setter resultatene sammen. I stedet for at reslutatet blir slik: 'M' 'D' 'C' 'L' 'X' 'V' 'I' blir det slik: MDCLXVI
+print int_to_roman(number_in_raw) #Resultetet (de romerske symbolene) blir printet. 
 
 raw_input("")
 
