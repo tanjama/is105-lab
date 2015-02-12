@@ -185,6 +185,8 @@ print int_to_roman(number_in_raw) #Resultetet (de romerske symbolene) blir print
 
 rom1 = raw_input("input a valid roman numeral: ")
 rom2 = raw_input("input a valid roman numeral: ")
+
+print roman_plus_roman(rom1, rom2)
 print roman_plus_roman(rom1, rom2)
 
 raw_input("")
