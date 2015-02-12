@@ -11,16 +11,12 @@ roman_number = raw_input("Skriv inn rommertall med bokstaver mellom I og M: ")
 
 
 def roman_to_int(romIn):
-	runBool = True #runBool blir satt til True hvis input-verdien er gyldig (Hvordan vite om input verdien ER gyldig?)
+	runBool = True #runBool blir satt til True hvis input-verdien er gyldig.
 	romIn = romIn.upper() #Setter alle bokstavenen til uppercase.
 	value_list = [] #Liste til bokstavenes(romertallenes) tall-verdi.
 	char_list = []
 	sum = 0
-	for char in romIn: #Check om input-verdi er gyldig
-		if char == 'I'or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
-			char_list.append(char)
-		else:
-			runBool = False
+	runBool = char_check(romIn)
 	print char_list
 	if runBool == True:
 		for char in romIn: #Legger bokstavenes tall-verdi i value_list.
@@ -57,18 +53,25 @@ def roman_to_int(romIn):
 print roman_to_int(roman_number)
 
 
-"""Titall til Romertall"""
-number_in_raw = raw_input("skriv in et tall: ")
+"""Titall til Romertall
+Funksjonen tall et desimalt tall og konverterer det til et tall med romerske symbol(romertall).
+"""
+number_in_raw = raw_input("Write a number: ")# Her skrives et ønsket titall inn. 
 
-def int_to_roman(number_in_string):
+def int_to_roman(number_in_string): #Funksjon som skal gjøre titall om til romertall. 
 	number_in = int(number_in_string)
 	result = []
+	#Løkke som sjekker flere statements. Går gjennom input-tallet, sjekker verdien og sammenlikner verdien med et romertall. 
+	#Hvis en verdi stemmer konverteres titallet til et romertall, og restverdien sjekkes igjen. 
+	#Løkken fortsetter helt til det ikke er noen restverdi igjen. 
 	while number_in > 0:	
-		if number_in >= 1000:
+		
+		if number_in >= 1000: #Det desimale tallet konverteres til riktig symbol i det romerske tallsystemet. 
+
 			number_in -= 1000
-			result.append("M")
+			result.append("M") #Romersk symbol. 
 			
-		elif number_in >= 900:
+		elif number_in >= 900: #Elif står for else/if. 
 			number_in -= 900
 			result.append("CM")
 			
@@ -116,12 +119,59 @@ def int_to_roman(number_in_string):
 			number_in -= 1
 			result.append("I")
 			
-	return "".join(result)
+	return "".join(result) #Setter resultatene sammen. I stedet for at reslutatet blir slik: 'M' 'D' 'C' 'L' 'X' 'V' 'I' blir det slik: MDCLXVI
+print int_to_roman(number_in_raw) #Resultetet (de romerske symbolene) blir printet. 
 
-print int_to_roman(number_in_raw)
+"""Addisjon av romertall"""
+
+def roman_plus_roman(rom_num1, rom_num2):
+	runBool = True
+	runBool = char_check(rom_num1)
+	runBool = char_check(rom_num2)
+	
+	if runBool == True:
+		rom_num1 = convert(rom_num1)
+		rom_num2 = convert(rom_num2)
+		rom_num_temp = rom_num1 + rom_num2
+		rom_num_result = []
+		rom_num_list = "MDCLXVI"
+		for char in rom_num_list:
+			for item in rom_num_temp:
+				if item == char: 
+					rom_num_result.append(item)
+		
+		return(revert("".join(rom_num_result)))
+
+def revert(rom_num):
+	rom_num = rom_num.replace("DCCCC", "CM")
+	rom_num = rom_num.replace("CCCC", "CD")
+	rom_num = rom_num.replace("LXXXX", "XC")
+	rom_num = rom_num.replace("XXXX", "XL")
+	rom_num = rom_num.replace("VIIII", "IX")
+	rom_num = rom_num.replace("IIII", "IV")
+	return rom_num
+	
+def convert(rom_num):
+	rom_num = rom_num.replace("CM", "DCCCC")
+	rom_num = rom_num.replace("CD", "CCCC")
+	rom_num = rom_num.replace("XC", "LXXXX")
+	rom_num = rom_num.replace("XL", "XXXX")
+	rom_num = rom_num.replace("IX", "VIIII")
+	rom_num = rom_num.replace("IV", "IIII")
+	return rom_num
+
+def char_check(romIn):	
+	for char in romIn: #Check om input-verdi er gyldig
+			if char == 'I'or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
+				char_list.append(char)
+			else:
+				return False
+
+rom1 = raw_input("input a valid roman numeral: ")
+rom2 = raw_input("input a valid roman numeral: ")
 
 
-
+print roman_plus_roman(rom1, rom2)
 
 raw_input("")
 
