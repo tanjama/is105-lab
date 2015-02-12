@@ -1,4 +1,8 @@
-# Denne koden er delvis kopiert og er dermed bare ment til å se på / støtte seg på
+
+#
+# Denne koden er delvis kopiert og er dermed bare ment til å se på / støtte seg på !!!! 
+# Aka vi kan ikke levere dette
+#
 
 import socket
 import sys
