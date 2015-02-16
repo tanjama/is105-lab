@@ -140,18 +140,17 @@ Kilder, lastet ned 09.februar 2015:
     
     
     
-Reflektering over eget arbeid - og vår gjennomføringsprosess. 
-Dette avsnittet vil bidra til å forelesere og andre vedvirkende innblikk i vår arbeidsprosess, og hvordan vi har kommet fram til en lønsing. 
+Reflektering over eget arbeid - og vår gjennomføringsprosess:
+Dette avsnittet vil bidra til å forelesere og andre medvirkende innblikk i vår arbeidsprosess, og hvordan vi har kommet fram til en lønsing. 
 
-Som innledning kan jeg presisere at vår gruppe består av ni medlemmer - hvor alle har vidt forskjellig bakgrunn, og vi fikk også tidlig informasjon om at lab-oppgaven har beregnet for en gruppe bestående av færre medlemmer. Vi kan derfor ikke benekte at det natulig nok har oppstått sosial loffing, men at vi til dels har gitt arbeidsoppgaver(lekser) til alle i et forsøk på å inkludere og gi forståelse av kode. 
+Som innledning kan vi presisere at vår gruppe består av ni medlemmer - hvor alle har vidt forskjellig bakgrunn. Vi fikk tidlig informasjon om at lab2-oppgaven er beregnet for en gruppe bestående av færre medlemmer enn vår gruppe. Vi kan derfor ikke benekte at det natulig nok har oppstått sosial loffing, men at alle på gruppa har fått arbeidsoppgaver(lekser) i et forsøk på å inkludere og forståelse av kode. 
 
-Når vi skulle finne en løsning på lab2-oppgaven lå hovedprioriteten vår i å sette sammen gruppen og reflektere over mulige løsninger på en tavle. Vi hadde en åpen diskusjon, hvor alle deltok og kom med innspill. Etter at gruppen hadde kommet til en konklusjon, started selve kodingen av løsningen. Resultatet finner du i lab2.py-dokumentet. 
+Når vi skulle finne en løsning på lab2-oppgaven la vi hovedfokuset i å sette sammen gruppe og reflektere over mulige løsninger på en tavle. Vi hadde en åpen diskusjon, hvor alle deltok og kom med innspill. Etter at gruppen hadde kommet til en konklusjon, started selve kodingen av løsningen. Mer presist kan vi si at vi først strukturerte og testet koden vår for hånd(papir/tavle) før vi gikk videre og implementerte den i en .py-fil.   
+Resultatet finner du i vårt vedlagte lab2.py-dokument. 
 
+På forelesninger har vi fått tips om å komme til egne løsninger, men har i noen grad lagt vekt på å ta til oss tips og hjelp som har blitt vedlagt i oppgavedokumenter som har blitt lagt ut av foreleser. I tillegg har vi også søkt etter løsninger, tips, og triks på internett. Den største hjelpen har vi likevel fått av vår hjelpelæreren vår som har veiledet oss, og gitt oss tilbakemeldinger. 
 
-
-
-
-
+Vi er i en tidlig prosess, men er likevel nødt til å finne løsninger på et tilfredstillende nivå. Akkurat nå har vi ikke lagt vekt på å komme med revolusjonærende løsninger, men vil ikke se bort ifra at vi i framtiden vil bli flinkere til tenke oss fram til selvstendige løsninger, uten å se på kravspekket som har blitt gitt som en hjelpende hånd av foreleser. 
 
 
 
