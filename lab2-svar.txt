@@ -65,7 +65,7 @@ Videre finnes det noen retningslinjer for hvordan man skriver tall på det romer
 Oppgave 2)
 Hva er grunnleggende systeminformasjon for systemet som testene er blitt utført på (operativsystemet, distribusjon, informasjon om CPU-type) ?
 
-(Testene er blitt utført på Daniel Hellang sin datamaskin)
+(Testene er blitt utført på Daniel Hellang sin datamaskin.)
 Grunnleggende systeminformasjon for systemet som testene er blitt utført på er følgende:
 
 For å finne ut av systeminformasjonen for systemet som våre tester er blitt utført på var vi nødt til å skrive inn følgende kommandoer i terminalen:
@@ -74,10 +74,9 @@ For å finne ut av systeminformasjonen for systemet som våre tester er blitt ut
     - uname -a for version name of Linux kernel.
     - uname - mrs for Linux kernel. 
     - cat/proc/cpuinfo|grep "model name" for processor and CPU details on Linux.
-
-Vi fikk også tips om å bruke cat/etc/lsb-release og cat/proc/cpuinfo|grep "model name", men har av ulike grunner ikke fått respons på disse kommandoene.(SKAL FIKSES FØR INNLEVERING)
     - cat/etc/lisb-release for which distribution you are using. 
     
+Vi har fått tips om å bruke cat/etc/lisb-release, men har av ulike grunner ikke fått respons på denne kommandoen.(SKAL FIKSES FØR INNLEVERING OM MULIG)
    
 Utskriftene på kommandoene er følgende:
 
@@ -137,3 +136,31 @@ Kilder, lastet ned 09.februar 2015:
 
     Grunnleggende systeminformasjon: 
     Vi har brukt pdf-filen foreleser la ut som oppgaveark. 
+    
+    
+    
+    
+Reflektering over eget arbeid - og vår gjennomføringsprosess. 
+Dette avsnittet vil bidra til å forelesere og andre vedvirkende innblikk i vår arbeidsprosess, og hvordan vi har kommet fram til en lønsing. 
+
+Som innledning kan jeg presisere at vår gruppe består av ni medlemmer - hvor alle har vidt forskjellig bakgrunn, og vi fikk også tidlig informasjon om at lab-oppgaven har beregnet for en gruppe bestående av færre medlemmer. Vi kan derfor ikke benekte at det natulig nok har oppstått sosial loffing, men at vi til dels har gitt arbeidsoppgaver(lekser) til alle i et forsøk på å inkludere og gi forståelse av kode. 
+
+Når vi skulle finne en løsning på lab2-oppgaven lå hovedprioriteten vår i å sette sammen gruppen og reflektere over mulige løsninger på en tavle. Vi hadde en åpen diskusjon, hvor alle deltok og kom med innspill. Etter at gruppen hadde kommet til en konklusjon, started selve kodingen av løsningen. Resultatet finner du i lab2.py-dokumentet. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
