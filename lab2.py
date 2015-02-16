@@ -62,71 +62,79 @@ Funksjonen tall et desimalt tall og konverterer det til et tall med romerske sym
 """
 
 def int_to_roman(number_in_string): #Funksjon som skal gjøre titall om til romertall. 
-	number_in = int(number_in_string)
+	run = True
+	try:
+		number_in = int(number_in_string)
+	except:
+		run = False
 	result = []
 	#Løkke som sjekker flere statements. Går gjennom input-tallet, sjekker verdien og sammenlikner verdien med et romertall. 
 	#Hvis en verdi stemmer konverteres titallet til et romertall, og restverdien sjekkes igjen. 
 	#Løkken fortsetter helt til det ikke er noen restverdi igjen. 
-	while number_in > 0:	
-		
-		if number_in >= 1000: #Det desimale tallet konverteres til riktig symbol i det romerske tallsystemet. 
-
-			number_in -= 1000
-			result.append("M") #Romersk symbol. 
+	if run == True:
+		while number_in > 0:	
 			
-		elif number_in >= 900: #Elif står for else/if. 
-			number_in -= 900
-			result.append("CM")
-			
-		elif number_in >= 500:
-			number_in -= 500
-			result.append("D")
-			
-		elif number_in >= 400:
-			number_in -= 400
-			result.append("CD")
-			
-		elif number_in >= 100:
-			number_in -= 100
-			result.append("C")
-			
-		elif number_in >= 90:
-			number_in -= 90
-			result.append("XC")
-			
-		elif number_in >= 50:
-			number_in -= 50
-			result.append("L")
-			
-		elif number_in >= 40:
-			number_in -= 40
-			result.append("XL")		
-			
-		elif number_in >= 10:
-			number_in -= 10
-			result.append("X")
-			
-		elif number_in >= 9:
-			number_in -= 9
-			result.append("IX")
-			
-		elif number_in >= 5:
-			number_in -= 5
-			result.append("V")
-			
-		elif number_in >= 4:
-			number_in -= 4
-			result.append("IV")
-			
-		elif number_in >= 1:
-			number_in -= 1
-			result.append("I")
-			
-	return "".join(result) #Setter resultatene sammen. I stedet for at reslutatet blir slik: 'M' 'D' 'C' 'L' 'X' 'V' 'I' blir det slik: MDCLXVI
+			if number_in >= 1000: #Det desimale tallet konverteres til riktig symbol i det romerske tallsystemet. 
+	
+				number_in -= 1000
+				result.append("M") #Romersk symbol. 
+				
+			elif number_in >= 900: #Elif står for else/if. 
+				number_in -= 900
+				result.append("CM")
+				
+			elif number_in >= 500:
+				number_in -= 500
+				result.append("D")
+				
+			elif number_in >= 400:
+				number_in -= 400
+				result.append("CD")
+				
+			elif number_in >= 100:
+				number_in -= 100
+				result.append("C")
+				
+			elif number_in >= 90:
+				number_in -= 90
+				result.append("XC")
+				
+			elif number_in >= 50:
+				number_in -= 50
+				result.append("L")
+				
+			elif number_in >= 40:
+				number_in -= 40
+				result.append("XL")		
+				
+			elif number_in >= 10:
+				number_in -= 10
+				result.append("X")
+				
+			elif number_in >= 9:
+				number_in -= 9
+				result.append("IX")
+				
+			elif number_in >= 5:
+				number_in -= 5
+				result.append("V")
+				
+			elif number_in >= 4:
+				number_in -= 4
+				result.append("IV")
+				
+			elif number_in >= 1:
+				number_in -= 1
+				result.append("I")
+				
+		return "".join(result) #Setter resultatene sammen. I stedet for at reslutatet blir slik: 'M' 'D' 'C' 'L' 'X' 'V' 'I' blir det slik: MDCLXVI
+	else:
+		print "no valid input"
 
 """Addisjon av romertall"""
 
 def roman_plus_roman(rom_num1, rom_num2):
+	
 	runBool = True
 	for char in rom_num1: #Check om input-verdi er gyldig
 		if char == 'I' or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
@@ -184,19 +192,21 @@ def revert(rom_num):
 
 
 #Kode-blokk til Demo i console
-print 'Bokstav med høyest verdi settes til venstre. Deretter settes tall etter høyest verdi mot høyre.'
-print 'I stedet for desimal rangering (1,2,3,4,5 osv) brukes romersk gradering (1000, 500, 100, 50, 10 osv).'
-print 'Hver bokstav kan ha et negativt tall på venstre side. Dvs at det negative tallet trekkes fra det postive tallet som er stilt til høyre.'
-print 'eks: 4 = IV(5 - 1), 7 = VII(5 + 1 + 1) , 9 = IX (10 - 1), 45 = XLV(50 - 10 + 5)'
-roman_number = raw_input("Skriv inn rommertall med bokstaver mellom I og M: ")
-print roman_to_int(roman_number)
-
-number_in_raw = raw_input("Write a number: ")# Her skrives et ønsket titall inn. 
-print int_to_roman(number_in_raw) #Resultetet (de romerske symbolene) blir printet. 
-
-rom1 = raw_input("input a valid roman numeral: ")
-rom2 = raw_input("input a valid roman numeral: ")
-
-print roman_plus_roman(rom1, rom2)
-
-raw_input("")
+def test():
+	print 'Bokstav med høyest verdi settes til venstre. Deretter settes tall etter høyest verdi mot høyre.'
+	print 'I stedet for desimal rangering (1,2,3,4,5 osv) brukes romersk gradering (1000, 500, 100, 50, 10 osv).'
+	print 'Hver bokstav kan ha et negativt tall på venstre side. Dvs at det negative tallet trekkes fra det postive tallet som er stilt til høyre.'
+	print 'eks: 4 = IV(5 - 1), 7 = VII(5 + 1 + 1) , 9 = IX (10 - 1), 45 = XLV(50 - 10 + 5)'
+	roman_number = raw_input("Skriv inn rommertall med bokstaver mellom I og M: ")
+	print roman_to_int(roman_number)
+	
+	number_in_raw = raw_input("Write a number: ")# Her skrives et ønsket titall inn. 
+	print int_to_roman(number_in_raw) #Resultetet (de romerske symbolene) blir printet. 
+	
+	rom1 = raw_input("input a valid roman numeral: ")
+	rom2 = raw_input("input a valid roman numeral: ")
+	
+	print roman_plus_roman(rom1, rom2)
+	
+	raw_input("")
+test()
