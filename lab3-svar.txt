@@ -1,0 +1,61 @@
+Spørsmål til lab3.
+
+3. Finn ut hvordan bokstavene blir representert (binært) når de
+sendes over fra den ene prosessen (klienten) til den andre prosessen
+(tjeneren). For å gjøre det, må dere installere Wireshark. Velg 
+enkle eksempler (start med kun en bokstav) og studer om det finnes en
+sammenheng mellom den binære presentasjonen av små og store bokstaver?
+Forklar.
+
+- Når man sender meldingen fra klienten over til serveren, blir 
+bokstavene representert i hexa verdier, fra a(61) til z(7a).
+Dette vil si at bokstaven a har binærverdien 1100001, b har 1100010
+og så videre. 
+Så ser man ved hjelp av Wireshark at etter meldingen blir modifisert
+til upper case, så har bokstaven en annen verdi.
+Upper case bokstavene er representert i hexa verdiene A(41) til Z(5a).
+Her kan man se at upper case bokstavene er nøyaktig én hexa verdi
+lavere enn sin lower case motpart.
+Dette vil altså si at representert binært, så "flippes" den sjette 
+bit'en, altså 32bit, når man gjør om en bokstav fra lower case til
+upper case.
+Bokstaven a har binærverdi 1100001.
+Bokstaven A har binærverdi 1000001.
+
+4. Sjekk om applikasjonen fungerer for tegn utover ASCII tegnsettet
+og forklar hva som skjer. Gjør om applikasjonen slik at den kan 
+overføre hvilke som helst tegn fra UNICODE karaktersettet. Finnes det
+en sammenhenge mellom den binære representasjonen for små og store
+bokstaver også i dette tilfelle? Forklar.
+
+- Etter å har modifisert koden til å akseptere karakterer utenfor 
+ASCII tegnsettet, så ser vi at det er en viss sammenheng mellom 
+overgangen fra lower case til upper case på ASCII tegn, og den samme
+overgangen på tegn utenfor ASCII tegnsettet.
+Her har vi tatt æ, ø og å som eksempel:
+Liten æ: 11000011 10100110
+Stor Æ: 		  11000110
+Liten ø: 11000011 10111000
+Stor Ø: 		  11011000
+Liten å: 11000011 10100101
+Stor Å: 		  11000101
+
+Det man ser er at tegn som æ, ø og å blir representert med 2 to
+bytes når de er lower case, og har 8 bits i stede for 7 slik 
+tegnene i ASCII tegnsettet har.
+Mens når man bytter de om til upper case blir de kun representert
+med 1 byte, og man ser at både sjette og sjuende bit "flippes".
+Studerer man hexa verdiene til bokstavene ser man at:
+Liten æ har verdien E6, mens stor Æ har C6.
+Liten ø har verdien F8, mens stor Ø har D8.
+Liten å har verdien E5, mens stor Å har C5.
+Her kan man også se at upper case er nøyaktig én hexa verdi lavere
+enn sin lower case motpart, akkurat det samme som de øvrige tegnene
+i ASCII tegnsettet.
+
+
+
+
+
+
+
