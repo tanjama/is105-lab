@@ -1,9 +1,18 @@
+from socket import *
 
-#
-# Denne koden er delvis kopiert og er dermed bare ment til å se på / støtte seg på !!!! 
-# Aka vi kan ikke levere dette
-#
+serverPort = 12000
+serverSocket = socket(AF_INET, SOCK_DGRAM)
+serverSocket.bind(('', serverPort))
+print "Server ready."
+run = True
+while run == True:
+	message, clientAddress = serverSocket.recvfrom(2048)
+	modifiedMessage = message.upper()
+	serverSocket.sendto(modifiedMessage, clientAddress)
 
+
+	
+"""
 import socket
 import sys
 
@@ -36,3 +45,4 @@ while 1:
 	print 'Message[' + addr[0] + ':' + str(addr[1]) + '] - ' + data.upper()
 
 s.close()
+"""
