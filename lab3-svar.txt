@@ -61,6 +61,26 @@ i ASCII tegnsettet.
 
 
 
+Hvorfor brukte vi UDP, og ikke TCP?
+Først og fremst valgte vi å bruke UDP for å løse denne lab-oppgaven fordi 
+det ble anbefalt i oppgave-spesifikasjonen. 
 
+Det er viktig å spesifisere noen konkrete forskjeller på UDP og TCP.
+TCP protokoller forbindes oftere med sikkerthet og garanti, og "sporer" pakker. 
+Ved bruk av TCP overføres pakker gjennom punkter. 
+Det er vesentlig at det er stor sikkerhet for at pakkene kommer fram. 
+Videre er den økte sikkerheten med på å påvirke hastigheten til 
+pakkene som sendes - de overføres tregere enn UDP. 
 
+UDP protokoller brukes derimot oftere til høy ytelse begrunnet i at data 
+ofte bare sendes, og garantien for at pakken kommer fram, 
+er ikke til stede. Det vil si at pakker kun sendes ut, uten punkter. 
+UDP sender også pakker med økt hastighet. 
+Det er også slik at UDP også brukes til å sende kortere meldinger. 
+
+Fordelen med UDP-pakker er at pakkene som sendes er mye mindre enn
+TCP-pakker. Det vil si at en slipper ekstra trafikk som sendes frem 
+og tilbake for å sjekke at overføringene er riktige. 
+En vesentlig del av denne lab-oppgaven baserte seg på å måle hastigheten 
+når en melding ble overført via protokoller
 
