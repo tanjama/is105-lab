@@ -97,6 +97,7 @@ def deal(numhands, n = 5, deck = [r+s for r in '23456789TJQKA' for s in 'SHDC'])
     deck = iter(deck)
     return [[next(deck) for card in range(n)] for hand in range(numhands)]
 
+# Testing the Program 
 def test():
     "Test cases for the functions in poker program"
     sf = "6C 7C 8C 9C TC".split() # Straight Flush
