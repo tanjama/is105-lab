@@ -39,7 +39,6 @@ def roman_to_int(romIn):
     romIn = romIn.upper() #Setter alle bokstavenen til uppercase.
     value_list = [] #Liste til bokstavenes(romertallenes) tall-verdi.
     sum = 0
-    print romIn
     # print runBool
     for char in romIn: #Check om input-verdi er gyldig
         if char == 'I' or char == 'V' or char == 'X' or char == 'L' or char == 'C' or char == 'D' or char == 'M':
@@ -246,10 +245,12 @@ def revert(rom_num):
     rom_num = rom_num.replace("DCCCC", "CM")
     rom_num = rom_num.replace("CCCCC", "D")
     rom_num = rom_num.replace("CCCC", "CD")
+    rom_num = rom_num.replace("LL", "C")
     rom_num = rom_num.replace("LXXXXX", "C")
     rom_num = rom_num.replace("LXXXX", "XC")
     rom_num = rom_num.replace("XXXXX", "L")
     rom_num = rom_num.replace("XXXX", "XL")
+    rom_num = rom_num.replace("VV", "X")
     rom_num = rom_num.replace("VIIIII", "X")
     rom_num = rom_num.replace("VIIII", "IX")
     rom_num = rom_num.replace("IIIII", "V")
@@ -293,29 +294,35 @@ while 1:
     
     #------------------------------------------------------------------#
     
+    print "------------------------------------------------------------"
+    
     romanIn, clientAddress = serverSocket.recvfrom(2048)
     
-    print romanIn
+    print "Roman number to convert: " + romanIn
     
     intFromRoman = roman_to_int(romanIn)
     
-    print intFromRoman
+    print "Integer value of the roman number: " + str(intFromRoman)
     
     serverSocket.sendto(str(intFromRoman), clientAddress)
     
     #------------------------------------------------------------------#
     
+    print "------------------------------------------------------------"
+    
     intIn, clientAddress = serverSocket.recvfrom(2048)
     
-    print intIn
+    print "Integer value to convert: " + intIn
     
     romanFromInt = int_to_roman(intIn)
     
-    print romanFromInt 
+    print "Roman number of the integer value: " + romanFromInt 
     
     serverSocket.sendto(str(romanFromInt), clientAddress)
     
     #------------------------------------------------------------------#
+    
+    print "------------------------------------------------------------"
     
     rom_num1, clientAddress = serverSocket.recvfrom(2048)
     
@@ -328,3 +335,5 @@ while 1:
     print "Result of roman addition: " + romanAdd
     
     serverSocket.sendto(str(romanAdd), clientAddress)
+    
+    print "------------------------------------------------------------"

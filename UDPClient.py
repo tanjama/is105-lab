@@ -33,36 +33,42 @@ while 1:
     # modifiedMessage, og setter avsenders addresse 
     # i vaiabelen serverAddress.
                                                                  
-    print modifiedMessage.decode("utf-8") 
+    print "Modified message" + modifiedMessage.decode("utf-8") 
     # Til slutt printes meldingen som kommer i retur fra UDPServer, 
     # og dekodes i utf8
     # slik at også tegn utenom ASCII tabellen kommer med i UPPER case.
     
     #--------------------------------------------------------------------#
     
-    romanIn = raw_input("Input roman number:")
+    print "------------------------------------------------------------"
+    
+    romanIn = raw_input("Input roman number to be converted: ")
     
     clientSocket.sendto(romanIn, (serverName, serverPort))
     
     intFromRoman, serverAddress = clientSocket.recvfrom(2048)
     
-    print intFromRoman
+    print "Integer value of the roman number: " + intFromRoman
     
     #--------------------------------------------------------------------#
     
-    intIn = raw_input("Input an integer value:")
+    print "------------------------------------------------------------"
+    
+    intIn = raw_input("Input an integer value to be converted :")
     
     clientSocket.sendto(intIn, (serverName, serverPort))
     
     romanFromInt, serverAddress = clientSocket.recvfrom(2048)
     
-    print romanFromInt
+    print "Roman number of the integer value: " + romanFromInt
     
     #--------------------------------------------------------------------#
     
-    rom_num1 = raw_input("Input roman number:")
+    print "------------------------------------------------------------"
     
-    rom_num2 = raw_input("Input second roman number:")
+    rom_num1 = raw_input("Input roman number to be added :")
+    
+    rom_num2 = raw_input("Input second roman number to be added :")
     
     clientSocket.sendto(str(rom_num1), (serverName, serverPort))
     
@@ -70,6 +76,8 @@ while 1:
     
     romanAdd, serverAddress = clientSocket.recvfrom(2048)
     
-    print romanAdd
+    print "Result of the roman addition: " + romanAdd
+    
+    print "------------------------------------------------------------"
     
 clientSocket.close()
