@@ -33,7 +33,7 @@ while 1:
     # modifiedMessage, og setter avsenders addresse 
     # i vaiabelen serverAddress.
                                                                  
-    print "Modified message" + modifiedMessage.decode("utf-8") 
+    print "Modified message: " + modifiedMessage.decode("utf-8") 
     # Til slutt printes meldingen som kommer i retur fra UDPServer, 
     # og dekodes i utf8
     # slik at også tegn utenom ASCII tabellen kommer med i UPPER case.
