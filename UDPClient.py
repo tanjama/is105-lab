@@ -10,11 +10,11 @@ serverName = "localhost"
 serverPort = 12000 
 # Definerer variabelen serverPort til 12000.
 
-clientSocket = socket(AF_INET, SOCK_DGRAM)  
+clientSocket = socket(AF_INET, SOCK_DGRAM)
 # Oppretter en socket kalt clientSocket. AF_INET indikerer IPv4.
 # SOCK_DGRAM viser at det er en UDP socket, i stede for en TCP socket.
 
-while 1: 
+while 1:
 # Gjør slik at man kan sende flere setninger etter hverandre,
 # uten at programmet slutter.
 
