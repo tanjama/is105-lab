@@ -86,14 +86,16 @@ def int_to_roman(number_in_string): #Funksjon som skal gjøre titall om til rome
     try:
         number_in = int(number_in_string)
     except:
+        print "in except"
         run = False
     result = []
     #Løkke som sjekker flere statements. Går gjennom input-tallet, sjekker verdien og sammenlikner verdien med et romertall. 
     #Hvis en verdi stemmer konverteres titallet til et romertall, og restverdien sjekkes igjen. 
     #Løkken fortsetter helt til det ikke er noen restverdi igjen. 
     if run == True:
+        print "in run"
         while number_in > 0:	
-            
+            print "in while run"
             if number_in >= 1000: #Det desimale tallet konverteres til riktig symbol i det romerske tallsystemet. 
                 
                 number_in -= 1000
@@ -146,8 +148,8 @@ def int_to_roman(number_in_string): #Funksjon som skal gjøre titall om til rome
             elif number_in >= 1:
                 number_in -= 1
                 result.append("I")
-        
-		return "".join(result) #Setter resultatene sammen. I stedet for at reslutatet blir slik: 'M' 'D' 'C' 'L' 'X' 'V' 'I' blir det slik: MDCLXVI
+        print result
+        return "".join(result) #Setter resultatene sammen. I stedet for at reslutatet blir slik: 'M' 'D' 'C' 'L' 'X' 'V' 'I' blir det slik: MDCLXVI
     else:
         print "no valid input"
 
@@ -306,12 +308,12 @@ while 1:
     #------------------------------------------------------------------#
     
     intIn, clientAddress = serverSocket.recvfrom(2048)
-    
+    print "int to roman call"
     print intIn
     
     romanFromInt = int_to_roman(intIn)
     
-    print romanFromInt 
+    print romanFromInt
     
     serverSocket.sendto(str(romanFromInt), clientAddress)
     
