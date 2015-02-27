@@ -43,40 +43,54 @@ while 1:
     print "------------------------------------------------------------"
     
     romanIn = raw_input("Input roman number to be converted: ")
+    # Legger input i variabelen romanIn.
     
     clientSocket.sendto(romanIn, (serverName, serverPort))
+    # Sender input og avsenderadresse til serveren.
     
     intFromRoman, serverAddress = clientSocket.recvfrom(2048)
+    # Mottar svaret og avsenderadressen fra serveren.
     
     print "Integer value of the roman number: " + intFromRoman
+    # Printer resultatet.
     
     #--------------------------------------------------------------------#
     
     print "------------------------------------------------------------"
     
     intIn = raw_input("Input an integer value to be converted :")
+    # Legger input i variabelen intIn.
     
     clientSocket.sendto(intIn, (serverName, serverPort))
+    # Sender input og avsenderadresse til serveren.
     
     romanFromInt, serverAddress = clientSocket.recvfrom(2048)
+    # Mottar svaret og avsenderadressen fra serveren.
     
     print "Roman number of the integer value: " + romanFromInt
+    # Printer resultatet.
     
     #--------------------------------------------------------------------#
     
     print "------------------------------------------------------------"
     
     rom_num1 = raw_input("Input roman number to be added :")
+    # Legger input i variabelen rom_num1.
     
     rom_num2 = raw_input("Input second roman number to be added :")
+    # Legger input i variabelen rom_num2.
     
     clientSocket.sendto(str(rom_num1), (serverName, serverPort))
+    # Sender input og avsenderadresse til serveren.
     
     clientSocket.sendto(str(rom_num2), (serverName, serverPort))
+    # Sender input og avsenderadresse til serveren.
     
     romanAdd, serverAddress = clientSocket.recvfrom(2048)
+    # Mottar svaret og avsenderadressen fra serveren.
     
     print "Result of the roman addition: " + romanAdd
+    # Printer resultatet.
     
     print "------------------------------------------------------------"
     

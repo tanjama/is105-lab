@@ -85,16 +85,13 @@ def int_to_roman(number_in_string): #Funksjon som skal gjøre titall om til rome
     try:
         number_in = int(number_in_string)
     except:
-        print "in except"
         run = False
     result = []
     #Løkke som sjekker flere statements. Går gjennom input-tallet, sjekker verdien og sammenlikner verdien med et romertall. 
     #Hvis en verdi stemmer konverteres titallet til et romertall, og restverdien sjekkes igjen. 
     #Løkken fortsetter helt til det ikke er noen restverdi igjen. 
     if run == True:
-        print "in run"
         while number_in > 0:	
-            print "in while run"
             if number_in >= 1000: #Det desimale tallet konverteres til riktig symbol i det romerske tallsystemet. 
                 
                 number_in -= 1000
@@ -147,7 +144,6 @@ def int_to_roman(number_in_string): #Funksjon som skal gjøre titall om til rome
             elif number_in >= 1:
                 number_in -= 1
                 result.append("I")
-        print result
         return "".join(result) #Setter resultatene sammen. I stedet for at reslutatet blir slik: 'M' 'D' 'C' 'L' 'X' 'V' 'I' blir det slik: MDCLXVI
     else:
         print "no valid input"
@@ -168,7 +164,7 @@ def roman_plus_roman(rom_num1, rom_num2):
         else:
             runBool = False
 	
-    if runBool == True:
+    if runBool == True: # Kjører funksjonen hvis input er gyldig.
         rom_num1 = convert(rom_num1)
         rom_num2 = convert(rom_num2)
         rom_num_temp = rom_num1 + rom_num2
@@ -182,7 +178,7 @@ def roman_plus_roman(rom_num1, rom_num2):
         return(revert("".join(rom_num_result)))
     else:
         return "not valid input"
-def convert(rom_num):
+def convert(rom_num): # Konverterer "vanskelige" romertall til den formen de håndteres i, når det regnes med romertall.
     
     rom_num = rom_num.replace("CM", "DCCCC")
     rom_num = rom_num.replace("CD", "CCCC")
@@ -191,73 +187,25 @@ def convert(rom_num):
     rom_num = rom_num.replace("IX", "VIIII")
     rom_num = rom_num.replace("IV", "IIII")
     return rom_num
-	
-def revert(rom_num):
+
+def revert(rom_num): # Konverterer tilbake til den korrekte måten å skrive romertall.
     
-    rom_num = rom_num.replace("DD", "M")
-    rom_num = rom_num.replace("DCCCCC", "M")
-    rom_num = rom_num.replace("DCCCC", "CM")
-    rom_num = rom_num.replace("CCCCC", "D")
-    rom_num = rom_num.replace("CCCC", "CD")
-    rom_num = rom_num.replace("LXXXXX", "C")
-    rom_num = rom_num.replace("LXXXX", "XC")
-    rom_num = rom_num.replace("XXXXX", "L")
-    rom_num = rom_num.replace("XXXX", "XL")
-    rom_num = rom_num.replace("VV", "X")
-    rom_num = rom_num.replace("VIIIII", "X")
-    rom_num = rom_num.replace("VIIII", "IX")
     rom_num = rom_num.replace("IIIII", "V")
+    rom_num = rom_num.replace("VIIII", "IX")
     rom_num = rom_num.replace("IIII", "IV")
-
-    return rom_num
-
-def roman_addition(rom_num1, rom_num2):
-    rom_num1 = convert(rom_num1)
-    rom_num2 = convert(rom_num2)
-    
-    rom_num_temp = rom_num1 + rom_num2
-    rom_num_result = []
-    rom_num_list = "MDCLXVI"
-    for char in rom_num_list:
-        for item in rom_num_temp:
-            if item == char:
-                rom_num_result.append(item)
-                
-    return(revert("".join(rom_num_result)))
-    
-    print rom_num1
-    print rom_num2
-    
-    
-def convert(rom_num):
-    
-    rom_num = rom_num.replace("CM", "DCCCC")
-    rom_num = rom_num.replace("CD", "CCCC")
-    rom_num = rom_num.replace("XC", "LXXXX")
-    rom_num = rom_num.replace("XL", "XXXX")
-    rom_num = rom_num.replace("IX", "VIIII")
-    rom_num = rom_num.replace("IV", "IIII")
-    
-    return rom_num
-    
-def revert(rom_num):
-    
-    rom_num = rom_num.replace("DD", "M")
-    rom_num = rom_num.replace("DCCCCC", "M")
-    rom_num = rom_num.replace("DCCCC", "CM")
-    rom_num = rom_num.replace("CCCCC", "D")
-    rom_num = rom_num.replace("CCCC", "CD")
+    rom_num = rom_num.replace("VIIIII", "X")
+    rom_num = rom_num.replace("VV", "X")
+    rom_num = rom_num.replace("XXXXX", "L")
+    rom_num = rom_num.replace("LXXXX", "XC")
+    rom_num = rom_num.replace("XXXX", "XL")
+    rom_num = rom_num.replace("LXXXXX", "C")
     rom_num = rom_num.replace("LL", "C")
-    rom_num = rom_num.replace("LXXXXX", "C")
-    rom_num = rom_num.replace("LXXXX", "XC")
-    rom_num = rom_num.replace("XXXXX", "L")
-    rom_num = rom_num.replace("XXXX", "XL")
-    rom_num = rom_num.replace("VV", "X")
-    rom_num = rom_num.replace("VIIIII", "X")
-    rom_num = rom_num.replace("VIIII", "IX")
-    rom_num = rom_num.replace("IIIII", "V")
-    rom_num = rom_num.replace("IIII", "IV")
-    
+    rom_num = rom_num.replace("CCCCC", "D")
+    rom_num = rom_num.replace("DCCCC", "CM")
+    rom_num = rom_num.replace("CCCC", "CD")
+    rom_num = rom_num.replace("DCCCCC", "M")
+    rom_num = rom_num.replace("DD", "M")
+
     return rom_num
 
     #-----------------------------------------------------------------#
@@ -299,43 +247,63 @@ while 1:
     print "------------------------------------------------------------"
     
     romanIn, clientAddress = serverSocket.recvfrom(2048)
+    # Mottar input fra server med et romertall som skal konverteres til integer.
+    # Lagres i variabelen romanIn, og returadressen lagres is clientAddress.
     
     print "Roman number to convert: " + romanIn
+    # Printer input'en.
     
     intFromRoman = roman_to_int(romanIn)
+    # Kjører funksjonen og legger svaret i variabelen intFromRoman.
     
     print "Integer value of the roman number: " + str(intFromRoman)
+    # Printer svaret.
     
     serverSocket.sendto(str(intFromRoman), clientAddress)
+    # Sender svaret tilbake til klienten.
     
     #------------------------------------------------------------------#
     
     print "------------------------------------------------------------"
     
     intIn, clientAddress = serverSocket.recvfrom(2048)
+    # Mottar input fra server med en integer verdi som skal konverteres til romertall.
+    # Lagres i variabelen intIn, og returadressen lagres is clientAddress.
     
     print "Integer value to convert: " + intIn
+    # Printer input'en.
     
     romanFromInt = int_to_roman(intIn)
+    # Kjører funksjonen og legger svaret i variabelen romanFromInt.
     
     print "Roman number of the integer value: " + romanFromInt 
+    # Printer svaret.
     
     serverSocket.sendto(str(romanFromInt), clientAddress)
+    # Sender svaret tilbake til klienten.
     
     #------------------------------------------------------------------#
     
     print "------------------------------------------------------------"
     
     rom_num1, clientAddress = serverSocket.recvfrom(2048)
+    # Mottar input fra server med et romertall som skal adderes med et annet.
+    # Lagres i variabelen rom_num1, og returadressen lagres is clientAddress.
     
     rom_num2, clientAddress = serverSocket.recvfrom(2048)
+    # Mottar input fra server med et romertall som skal adderes med et annet.
+    # Lagres i variabelen rom_num2, og returadressen lagres is clientAddress.
     
     print "Roman numbers to be added: " + rom_num1 + " + " + rom_num2
+    # Printer input'ene.
     
-    romanAdd = roman_addition(rom_num1, rom_num2)
+    romanAdd = roman_plus_roman(rom_num1, rom_num2)
+    # Kjører funksjonen og legger svaret i variabelen romanAdd.
     
     print "Result of roman addition: " + romanAdd
+    # Printer svaret.
     
     serverSocket.sendto(str(romanAdd), clientAddress)
+    # Sender svaret tilbake til klienten.
     
     print "------------------------------------------------------------"
