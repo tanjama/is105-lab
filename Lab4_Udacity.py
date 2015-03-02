@@ -11,7 +11,7 @@ def poker(hands):
     return allmax(hands, key = hand_rank)
 
 def allmax(iterable, key=lambda x:x):
-    "Return a list of all items equal to the max of the iterable."
+    "Return a list of all items equal to the max of the iterable.."
     #iterable is an object that has an __iter__ method which returns an iterator"
     #Iteration is the process of taking one element at a time in a row of elements"
     maxi = max(iterable, key=key)
