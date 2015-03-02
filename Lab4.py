@@ -7,7 +7,9 @@ import itertools
 from collections import defaultdict
 
 def poker(hands):
-    "Return a list of winning hands: poker([hand,...]) => [hand,...]"
+    " Return a list of winning hands: poker([hand,...]) => [hand,...]"
+    " This code will Return the top hand"
+    " "
     return allmax(hands, key = hand_rank)
 
 def allmax(iterable, key=lambda x:x):
