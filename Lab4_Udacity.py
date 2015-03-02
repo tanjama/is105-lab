@@ -24,8 +24,8 @@ def hand_rank(hand):
     # ranks lists corresponding ranks
     # E.g. '7 T 7 9 7' => counts = (3, 1, 1); ranks = (7, 10, 9)
     # The var groups has a list that has all the values in the game
-    groups = group(['--23456789TJQKA'.index(r) for r, s in hand])
     # This one counts the rank of groups 
+    groups = group(['--23456789TJQKA'.index(r) for r, s in hand])
     counts, ranks = unzip(groups)
     if ranks == (14, 5, 4, 3, 2):
         ranks = (5, 4, 3, 2, 1)
@@ -45,11 +45,14 @@ def hand_rank(hand):
 
 def group(items):
     "Return a list of [(count, x)...], highest count first, the highest x first"
-    #
+    # The list is Count
+    # The highest count first
+    # Return the gruop sorted
     groups = [(items.count(x), x) for x in set(items)]
     return sorted(groups, reverse = True)
 
 def unzip(pairs):
+    #
     return zip(*pairs)
 
 def card_ranks(hand):
@@ -73,16 +76,26 @@ def card_ranks(hand):
 
 def straight(ranks):
     "Return True if the ordered ranks form a 5-card straight."
+    # The sum of the ranks 
+    # the smallest ranks * 5
+    # the value is 5 diffrent cards then True
     return sum(ranks) - min(ranks)*5 == 10
 
 def flush(hand):
     "Return True if all the cards have the same suit."
+    # Set is doing like we have only uniqe values
+    # if len is longer than 1 then the value is false
+    # for is doing like we only have the symbol
     suits = [s for r, s in hand]
     return len(set(suits)) == 1
 
 def two_pair(ranks):
     """If there are two pair, return the two ranks as a
     tuple: (highest, lowest); otherwise return None."""
+    # for loop the ranks
+    # set is 2 find 2 types of symbol
+    # if length is longer than 2 
+    # Then the value is not true
     result = [r for r in set(ranks) if ranks.count(r) == 2]
     if len(result) == 2:
         return (max(result), min(result))
@@ -94,17 +107,28 @@ def kind(n, ranks):
         if ranks.count(r) == n:
             return r
     return None
+    
+# Here is the value of all the cards in decks
+# we want to loop in the symbols
+# that means SHDC
+deck = [r+s for r in '23456789TJQKA' for s in 'SHDC']
 
-deck = [r+s for r in '23456789TJQKA' for s in 'SHDC'] 
 
+# This gives five cards to the players
+# It is one of the cards in the deck.
+# Random shuffels the deck 
+# A iter is itering the deck
+# returns a list containing the decks that i simliar to the hands 
 def deal(numhands, n = 5, deck = [r+s for r in '23456789TJQKA' for s in 'SHDC']):
     "Return a list of numhands hands consisting of n cards each"
     random.shuffle(deck)
     deck = iter(deck)
     return [[next(deck) for card in range(n)] for hand in range(numhands)]
 
+
 def test():
     "Test cases for the functions in poker program"
+    # Making diffrent kind of variabels sto that you have something to test
     sf = "6C 7C 8C 9C TC".split() # Straight Flush
     fk = "9D 9H 9S 9C 7D".split() # Four of a Kind
     fh = "TD TC TH 7C 7D".split() # Full House
@@ -158,7 +182,9 @@ def test():
     assert flush(fk) == False
 
     return 'tests pass'
-
+    
+# The Name of the plays you can make 
+# using a List
 hand_names = [
     'High Card',
     'Pair',
@@ -170,6 +196,8 @@ hand_names = [
     '4 Kind',
     'Straight Flush',
     ]
+    
+#    
 def hand_percentages(n = 700*1000):
     "Sample n random hands and print a table of percentages for each type of hand"
     counts = [0]*9
