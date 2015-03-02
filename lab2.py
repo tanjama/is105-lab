@@ -174,19 +174,20 @@ def convert(rom_num):
 def revert(rom_num):
     
 	rom_num = rom_num.replace("IIIII", "V")
-	rom_num = rom_num.replace("IIII", "IV")
-	rom_num = rom_num.replace("VIIIII", "X")
-	rom_num = rom_num.replace("VIIII", "IX")
-	rom_num = rom_num.replace("VV", "X")
-	rom_num = rom_num.replace("XXXXX", "L")
-	rom_num = rom_num.replace("XXXX", "XL")
-	rom_num = rom_num.replace("LXXXXX", "C")
-	rom_num = rom_num.replace("LXXXX", "XC")
-	rom_num = rom_num.replace("CCCCC", "D")
-	rom_num = rom_num.replace("CCCC", "CD")
-	rom_num = rom_num.replace("DCCCCC", "M")
-	rom_num = rom_num.replace("DCCCC", "CM")
-	rom_num = rom_num.replace("DD", "M")
+    rom_num = rom_num.replace("VIIII", "IX")
+    rom_num = rom_num.replace("IIII", "IV")
+    rom_num = rom_num.replace("VIIIII", "X")
+    rom_num = rom_num.replace("VV", "X")
+    rom_num = rom_num.replace("XXXXX", "L")
+    rom_num = rom_num.replace("LXXXX", "XC")
+    rom_num = rom_num.replace("XXXX", "XL")
+    rom_num = rom_num.replace("LXXXXX", "C")
+    rom_num = rom_num.replace("LL", "C")
+    rom_num = rom_num.replace("CCCCC", "D")
+    rom_num = rom_num.replace("DCCCC", "CM")
+    rom_num = rom_num.replace("CCCC", "CD")
+    rom_num = rom_num.replace("DCCCCC", "M")
+    rom_num = rom_num.replace("DD", "M")
 	
 	return rom_num
 
