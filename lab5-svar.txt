@@ -1,0 +1,26 @@
+Svar knyttet til lab 5:
+
+Opgpave 1:
+
+c) Man produserer test1.i ved å kompilere C-fila og kalle den for test1.i i terminalen. 
+   Det vi skrev inn for å få dette gjort var: gcc -o test1.i test1.c
+   -o viser til at vi endrer på outputen til fila. 
+
+
+Oppgave 2:
+
+d) "rb" betyr: r står for reading, b står for binary. "rb" står da for reading binary(å lese binært)
+
+Oppgave 3:
+a)
+
+b)
+
+c)
+
+d)
+
+Oppgave 4:
+h)
+
+j)
