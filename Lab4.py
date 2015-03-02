@@ -1,15 +1,12 @@
-
-""" starten på poker fra udacity """
-
 import random 
 import math
 import itertools
 from collections import defaultdict
 
 def poker(hands):
-    " Return a list of winning hands: poker([hand,...]) => [hand,...]"
-    " This code will Return the top hand"
-    " "
+    "Return a list of winning hands: poker([hand,...]) => [hand,...]"
+    print hands
+    print "Vinner:"
     return allmax(hands, key = hand_rank)
 
 def allmax(iterable, key=lambda x:x):
@@ -98,8 +95,7 @@ def deal(numhands, n = 5, deck = [r+s for r in '23456789TJQKA' for s in 'SHDC'])
     random.shuffle(deck)
     deck = iter(deck)
     return [[next(deck) for card in range(n)] for hand in range(numhands)]
-    
-    
+
 def test():
     "Test cases for the functions in poker program"
     sf = "6C 7C 8C 9C TC".split() # Straight Flush
@@ -256,3 +252,5 @@ def test_shufflers(shufflers=[shuffle, shuffle1], decks=['abc','ab']):
             test_shuffler(f, deck)
 
 def factorial(n): return 1 if (n <= 1) else n*factorial(n-1)
+
+print poker(deal(4))
