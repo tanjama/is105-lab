@@ -5,21 +5,27 @@ from collections import defaultdict
 
 def poker(hands):
     "Return a list of winning hands: poker([hand,...]) => [hand,...]"
+     "This code will Return the top hands"
     print hands
-    print "Vinner:"
+    print "Winner:"
     return allmax(hands, key = hand_rank)
 
 def allmax(iterable, key=lambda x:x):
     "Return a list of all items equal to the max of the iterable."
+    #iterable is an object that has an __iter__ method which returns an iterator"
+    #Iteration is the process of taking one element at a time in a row of elements"
     maxi = max(iterable, key=key)
+    #It is a for loop in the elemnt to get the resultat"
     return [element for element in iterable if key(element) == key(maxi)]
 
 def hand_rank(hand):
     "Return a value indicating how high the hand ranks."
     # counts is the count of each rank
     # ranks lists corresponding ranks
-    # E.g. '7 T 7 9 7' => counts = (3, 1, 1); ranks = (7, 10, 9).
+    # E.g. '7 T 7 9 7' => counts = (3, 1, 1); ranks = (7, 10, 9)
+    # The var groups has a list that has all the values in the game
     groups = group(['--23456789TJQKA'.index(r) for r, s in hand])
+    # This one counts the rank of groups 
     counts, ranks = unzip(groups)
     if ranks == (14, 5, 4, 3, 2):
         ranks = (5, 4, 3, 2, 1)
@@ -39,6 +45,7 @@ def hand_rank(hand):
 
 def group(items):
     "Return a list of [(count, x)...], highest count first, the highest x first"
+    #
     groups = [(items.count(x), x) for x in set(items)]
     return sorted(groups, reverse = True)
 
