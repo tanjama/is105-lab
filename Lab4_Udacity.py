@@ -19,7 +19,7 @@ def allmax(iterable, key=lambda x:x):
     return [element for element in iterable if key(element) == key(maxi)]
 
 def hand_rank(hand):
-    "Return a value indicating how high the hand ranks."
+    "Return a value indicating how high the hand ranks.."
     # counts is the count of each rank
     # ranks lists corresponding ranks
     # E.g. '7 T 7 9 7' => counts = (3, 1, 1); ranks = (7, 10, 9)
