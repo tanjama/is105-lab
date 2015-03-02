@@ -203,7 +203,9 @@ hand_names = [
     'Straight Flush',
     ]
     
-#    
+# This print the chance for win
+# it gives out 70 000 hands
+# prints out the chance 2 win 
 def hand_percentages(n = 700*1000):
     "Sample n random hands and print a table of percentages for each type of hand"
     counts = [0]*9
