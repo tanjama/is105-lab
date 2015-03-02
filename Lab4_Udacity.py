@@ -74,14 +74,20 @@ def card_ranks(hand):
     ranks.sort(reverse = True)
     return ranks if ranks != [14, 5, 4, 3, 2] else [5, 4, 3, 2, 1]
 
-def straight(ranks):
+def straight_udacity(ranks):
     "Return True if the ordered ranks form a 5-card straight."
     # The sum of the ranks 
     # the smallest ranks * 5
     # the value is 5 diffrent cards then True
     return sum(ranks) - min(ranks)*5 == 10
+    
+def straight(ranks):
+	return sorted(ranks, reverse=True)==ranks and len(set(ranks))==len(ranks)
 
 def flush(hand):
+	return [ e[1] for e in hand] == [hand[1][1] for e in range (len(hand))]
+
+def flush_udacity(hand):
     "Return True if all the cards have the same suit."
     # Set is doing like we have only uniqe values
     # if len is longer than 1 then the value is false
@@ -287,5 +293,12 @@ def test_shufflers(shufflers=[shuffle, shuffle1], decks=['abc','ab']):
             test_shuffler(f, deck)
 
 def factorial(n): return 1 if (n <= 1) else n*factorial(n-1)
+
+if __name__ == '__main__':
+	import timeit
+	print(timeit.timeit("straight([9, 8, 7, 6, 5])", setup="from __main__ import straight"))
+	print(timeit.timeit("straight_udacity([9, 8, 7, 6, 5])", setup="from __main__ import straight_udacity"))
+	print(timeit.timeit("flush('6C 7C 8C 9C TC'.split())", setup="from __main__ import flush"))
+	print(timeit.timeit("flush_udactiy('6C 7C 8C 9C TC'.split())", setup="from __main__ import flush_udactiy"))
 
 print poker(deal(4))
