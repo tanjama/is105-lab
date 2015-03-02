@@ -5,7 +5,7 @@ from collections import defaultdict
 
 """
 This is our own code that we have tried making before looking at the solution, we have gotten some help from the WWW ofc.
-This code is missing some key elements like being able to sort the winning hand, for example it will put out [4D, 8H,, 7D, AC, 4S] instead of [4D, 4S, AC, 8H, 7D]."""
+this code is missing some key elements like being able to sort the winning hand, for example it will put out [4D, 8H,, 7D, AC, 4S] instead of [4D, 4S, AC, 8H, 7D]."""
 
 def poker(hands):
     "Return a list of winning hands: poker([hand,...]) => [hand,...]"
