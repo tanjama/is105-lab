@@ -135,6 +135,7 @@ def deal(numhands, n = 5, deck = [r+s for r in '23456789TJQKA' for s in 'SHDC'])
 def test():
     "Test cases for the functions in poker program"
     # Making diffrent kind of variabels sto that you have something to test
+    # Making many diffent kinds of variabels so we can use it 
     sf = "6C 7C 8C 9C TC".split() # Straight Flush
     fk = "9D 9H 9S 9C 7D".split() # Four of a Kind
     fh = "TD TC TH 7C 7D".split() # Full House
@@ -151,7 +152,9 @@ def test():
     assert poker([sf] + 99*[fh]) == [sf]
     assert poker([s1, s2]) == [s2]
     assert poker([s1, tp]) == [s1]
-
+    
+    # Python's assert statement helps you find bugs more quickly
+    # Python's assert statement helps you to slov prblem with less pain
     # assert hand_rank(sf) == (8, 10)
     # assert hand_rank(fk) == (7, 9, 7)
     # assert hand_rank(fh) == (6, 10, 7)
@@ -190,7 +193,7 @@ def test():
     return 'tests pass'
     
 # The names of the plays you can make in poker 
-# using a List to contain the names
+# using a List to contain the hand names
 hand_names = [
     'High Card',
     'Pair',
@@ -205,7 +208,7 @@ hand_names = [
     
 # This print the chance for win
 # it gives out 70 000 hands
-# prints out the chance 2 win 
+# counts is how many that are playing 
 def hand_percentages(n = 700*1000):
     "Sample n random hands and print a table of percentages for each type of hand"
     counts = [0]*9
