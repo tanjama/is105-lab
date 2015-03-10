@@ -2,6 +2,15 @@ Svar knyttet til lab 5:
 
 Opgpave 1:
 
+a) " #include <stdio.h>
+
+int main() {
+    printf("Hello, world!\n");
+    return 0;
+} " Dette blir skrevet som funksjon "main()", og lagret som test1.c
+
+b) Kompilerer så test1.c i gcc, ved å skrive "gcc test1.c", det blir da dannet en kjørbar fil som automatisk blir kalt "a.out".
+
 c) Man produserer test1.i ved å kompilere C-fila og kalle den for test1.i i terminalen. 
    Det vi skrev inn for å få dette gjort var: gcc -o test1.i test1.c
    -o viser til at vi endrer på outputen til fila. 
@@ -16,9 +25,9 @@ a) 'B' Står for den binære representasjonen.
 
 b) f.read(1) fungerer slik at man leser den første byten i filen "f", i dette tilfellet 'E', prøver man å kjøre f.read(1) på nytt, vil den lese den neste byten i filen, i dette tilfellet 'L'.
 
-c) Unpack funksjonen kjøres, og når man skriver "print bin" så får man '127' til svar.
+c) Unpack funksjonen kjøres, så returneres filens første byte, siden det kalles "f.read(1)".
 
-d) 
+d) Siden dette er en ELF fil, har bin verdien 127. 
 
 Oppgave 4:
 d) Hvis du gjør "bin >> 8", returneres verdien '0', fordi da går man over til den neste byten, som er 00000000.
