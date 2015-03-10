@@ -12,15 +12,18 @@ Oppgave 2:
 d) "rb" betyr: r står for reading, b står for binary. "rb" står da for reading binary(å lese binært)
 
 Oppgave 3:
-a)
+a) 'B' Står for den binære representasjonen.
 
-b)
+b) f.read(1) fungerer slik at man leser den første byten i filen "f", i dette tilfellet 'E', prøver man å kjøre f.read(1) på nytt, vil den lese den neste byten i filen, i dette tilfellet 'L'.
 
-c)
+c) Unpack funksjonen kjøres, og når man skriver "print bin" så får man '127' til svar.
 
-d)
+d) 
 
 Oppgave 4:
-h)
+d) Hvis du gjør "bin >> 8", returneres verdien '0', fordi da går man over til den neste byten, som er 00000000.
 
-j)
+h) Når man kjører "hex(bin)", returneres '0x7f', som er hexaverdien til 127, dette relateres til ELF, med at alle ELF filer starter med de samme 4 bytesene: 0x7f, og så ELF i ASCII. Dette kalles for ELF formatet sitt "Magic number". Jeg prøvde å sammenligne dette med å kjøre en .jpeg fil gjennom samme struct.unpack, og fant også .jpeg formatet har sitt eget "Magic number", der starten av en .jpeg fil har "\xff, \xd8, \xff", og etterfulgt av en x10JFIF, som står for JPEG File Interchange Format.
+
+j) Etter å kalle den samme funksjonen "bin = struct.unpack('B',f.read(1))[0]" nok en gang, returneres bare verdien til den neste byten i filen, i dette tilfellet 69, altså verdien til bokstaven 'E'.
+Dette på grunn av at neste tegn etter "\x7f" er 'E'.
