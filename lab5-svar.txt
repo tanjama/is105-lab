@@ -1,0 +1,50 @@
+Svar knyttet til lab 5:
+
+Opgpave 1:
+
+a) " #include <stdio.h>
+
+int main() {
+    printf("Hello, world!\n");
+    return 0;
+} " Dette blir skrevet som funksjon "main()", og lagret som test1.c
+
+b) Kompilerer så test1.c i gcc, ved å skrive "gcc test1.c", det blir da dannet en kjørbar fil som automatisk blir kalt "a.out".
+
+c) Man produserer test1.i ved å kompilere C-fila og kalle den for test1.i i terminalen. 
+   Det vi skrev inn for å få dette gjort var: gcc -o test1.i test1.c
+   -o viser til at vi endrer på outputen til fila. 
+
+
+Oppgave 2:
+
+d) "rb" betyr: r står for reading, b står for binary. "rb" står da for reading binary(å lese binært)
+
+Oppgave 3:
+
+a) 'B' Står for den binære representasjonen.
+
+b) f.read(1) fungerer slik at man leser den første byten i filen "f", i dette tilfellet 'E', prøver man å kjøre f.read(1) på nytt, vil den lese den neste byten i filen, i dette tilfellet 'L'.
+
+c) Unpack funksjonen kjøres, så returneres filens første byte, siden det kalles "f.read(1)".
+
+d) Siden dette er en ELF fil, har bin verdien 127. 
+
+Oppgave 4:
+
+d) Hvis du gjør "bin >> 8", returneres verdien '0', fordi da går man over til den neste byten, som er 00000000.
+
+h) Når man kjører "hex(bin)", returneres '0x7f', som er hexaverdien til 127, dette relateres til ELF, med at alle ELF filer starter med de samme 4 bytesene: 0x7f, og så ELF i ASCII. Dette kalles for ELF formatet sitt "Magic number". Jeg prøvde å sammenligne dette med å kjøre en .jpeg fil gjennom samme struct.unpack, og fant også .jpeg formatet har sitt eget "Magic number", der starten av en .jpeg fil har "\xff, \xd8, \xff", og etterfulgt av en x10JFIF, som står for JPEG File Interchange Format.
+
+j) Etter å kalle den samme funksjonen "bin = struct.unpack('B',f.read(1))[0]" nok en gang, returneres bare verdien til den neste byten i filen, i dette tilfellet 69, altså verdien til bokstaven 'E'.
+Dette på grunn av at neste tegn etter "\x7f" er 'E'.
+
+Oppgave 5:
+
+Oppgave 6:
+
+Etter å ha gjort punkt 3) to ganger til får bin verdien 76 etter første kall, og 70 etter andre kall. 76 er verdien til 'L' og 70 er verdien til 'F', dette fordi at alle elf filer har x7f, E, L, F som de fire første bytes i filen.
+
+a) Viser til svaret i 4 h), der vi fant ut på egenhånd at elf har et magic number, og undersøkte videre at .jpeg filer også har dette. 
+
+b) Etter å ha brukt f.read(1) 4 ganger får vi "x7f, E, L, F", dette kalles for "The Magic Number" til en ELF fil.
