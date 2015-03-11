@@ -12,19 +12,19 @@ def poker(hands):
 
 def allmax(iterable, key=lambda x:x):
     "Return a list of all items equal to the max of the iterable."
-    #iterable is an object that has an __iter__ method which returns an iterator"
-    #Iteration is the process of taking one element at a time in a row of elements"
+    #"Iterable" is an object that has an __iter__ method which returns an iterator."
+    #Iteration is the process of taking one element at a time in a row of elements."
     maxi = max(iterable, key=key)
-    #It is a for loop in the elemnt to get the resultat"
+    #It is a for-loop in the element to get the result."
     return [element for element in iterable if key(element) == key(maxi)]
 
 def hand_rank(hand):
     "Return a value indicating how high the hand ranks."
-    # counts is the count of each rank
-    # ranks lists corresponding ranks
+    # "Counts" is the count of each rank.
+    # Ranks lists corresponding ranks.
     # E.g. '7 T 7 9 7' => counts = (3, 1, 1); ranks = (7, 10, 9)
-    # The var groups has a list that has all the values in the game
-    # This one counts the rank of groups 
+    # The var group has a list that has all the values in the game.
+    # This one counts the rank of groups. 
     groups = group(['--23456789TJQKA'.index(r) for r, s in hand])
     counts, ranks = unzip(groups)
     if ranks == (14, 5, 4, 3, 2):
@@ -45,9 +45,9 @@ def hand_rank(hand):
 
 def group(items):
     "Return a list of [(count, x)...], highest count first, the highest x first"
-    # The list is Count
-    # The highest count first
-    # Return the gruop sorted
+    # The list is Count.
+    # The highest count first.
+    # Return the gruop sorted.
     groups = [(items.count(x), x) for x in set(items)]
     return sorted(groups, reverse = True)
 
@@ -76,9 +76,9 @@ def card_ranks(hand):
 
 def straight_udacity(ranks):
     "Return True if the ordered ranks form a 5-card straight."
-    # The sum of the ranks 
-    # the smallest ranks * 5
-    # the value is 5 diffrent cards then True
+    # The sum of the ranks. 
+    # the smallest ranks * 5.
+    # the value is 5 diffrent cards then True.
     return sum(ranks) - min(ranks)*5 == 10
     
 def straight(ranks):
@@ -89,18 +89,18 @@ def flush(hand):
 
 def flush_udacity(hand):
     "Return True if all the cards have the same suit."
-    # Set is doing like we have only uniqe values
-    # if len is longer than 1 then the value is false
-    # for is doing like we only have the symbol
+    # Set is doing like we have only uniqe values.
+    # If len is longer than 1, then the value is set to false.
+    # For is doing like we only have the symbol.
     suits = [s for r, s in hand]
     return len(set(suits)) == 1
 
 def two_pair(ranks):
     """If there are two pair, return the two ranks as a
     tuple: (highest, lowest); otherwise return None."""
-    # for loop the ranks
-    # set is 2 find 2 types of symbol
-    # if length is longer than 2 
+    # For-loop the ranks
+    # Set is 2 find 2 types of symbol
+    # If length is longer than 2:
     # Then the value is not true
     result = [r for r in set(ranks) if ranks.count(r) == 2]
     if len(result) == 2:
@@ -120,11 +120,11 @@ def kind(n, ranks):
 deck = [r+s for r in '23456789TJQKA' for s in 'SHDC']
 
 
-# This gives five cards to the players
+# This gives five cards to the players.
 # It is one of the cards in the deck.
-# Random shuffels the deck 
-# A iter is itering the deck
-# returns a list containing the decks that i simliar to the hands 
+# Random shuffels the deck.
+# A iter is itering the deck.
+# returns a list containing the decks that i simliar to the hands. 
 def deal(numhands, n = 5, deck = [r+s for r in '23456789TJQKA' for s in 'SHDC']):
     "Return a list of numhands hands consisting of n cards each"
     random.shuffle(deck)
@@ -133,9 +133,9 @@ def deal(numhands, n = 5, deck = [r+s for r in '23456789TJQKA' for s in 'SHDC'])
 
 
 def test():
-    "Test cases for the functions in poker program"
-    # Making diffrent kind of variabels sto that you have something to test
-    # Making many diffent kinds of variabels so we can use it 
+    "Test cases for the functions in the poker-program."
+    # Making different kinds of variabels so that you have something to test.
+    # Making many diffent kinds of variabels so we can use them.
     sf = "6C 7C 8C 9C TC".split() # Straight Flush
     fk = "9D 9H 9S 9C 7D".split() # Four of a Kind
     fh = "TD TC TH 7C 7D".split() # Full House
@@ -153,8 +153,8 @@ def test():
     assert poker([s1, s2]) == [s2]
     assert poker([s1, tp]) == [s1]
     
-    # Python's assert statement helps you find bugs more quickly
-    # Python's assert statement helps you to slov prblem with less pain
+    # Python's assert statement helps you find bugs more quickly.
+    # Python's assert statement helps you to solve problems with less pain.
     # assert hand_rank(sf) == (8, 10)
     # assert hand_rank(fk) == (7, 9, 7)
     # assert hand_rank(fh) == (6, 10, 7)
@@ -166,10 +166,10 @@ def test():
     assert card_ranks(fh) == [10, 10, 10, 7, 7]
     assert card_ranks(['AC', '3D', '4S', 'KH']) == [14, 13, 4, 3]
 
-    # Ace-high beats 7-high
+    # Ace-high beats 7-high:
     assert (card_ranks(['AS', '2C', '3D', '4H', '6S']) >
             card_ranks(['2D', '3S', '4C', '6H', '7D']))
-    # 5-straight loses to 6-straight
+    # 5-straight loses to 6-straight:
     assert (card_ranks(['AS', '2C', '3D', '4H', '5S']) <
             card_ranks(['2D', '3S', '4C', '5H', '6D']))
 
@@ -206,9 +206,9 @@ hand_names = [
     'Straight Flush',
     ]
     
-# This print the chance for win
-# it gives out 70 000 hands
-# counts is how many that are playing 
+# This prints the chance to win.
+# It gives out 70 000 hands.
+# Counts how many that are playing. 
 def hand_percentages(n = 700*1000):
     "Sample n random hands and print a table of percentages for each type of hand"
     counts = [0]*9
@@ -233,7 +233,7 @@ def all_hand_percentages():
 
 def shuffle1(deck):
     # O(N**2)
-    # incorrect distribution
+    # Incorrect distribution
     N = len(deck)
     swapped = [False] * N
     while not all(swapped):
@@ -243,7 +243,7 @@ def shuffle1(deck):
 
 def shuffle2(deck):
     # O(N**2)
-    # incorrect distribution?    
+    # Incorrect distribution?    
     N = len(deck)
     swapped = [False] * N
     while not all(swapped):
@@ -263,7 +263,7 @@ def shuffle2a(deck):
 
 def shuffle3(deck):
     # O(N)
-    # incorrect distribution    
+    # Incorrect distribution    
     N = len(deck)
     for i in range(N):
         j = random.randrange(N)
