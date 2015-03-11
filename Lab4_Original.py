@@ -4,17 +4,17 @@ import itertools
 from collections import defaultdict
 
 """
-This is our own code that we have tried making before looking at the solution, we have gotten some help from the WWW ofc.
-This code is missing some key elements like being able to sort the winning hand, for example it will put out [4D, 8H,, 7D, AC, 4S] instead of [4D, 4S, AC, 8H, 7D]."""
+This is our own code that we have tried to make before looking at the solution, we have of course gotten some help from the www.
+This code is missing some key elements, like beeing able to sort the winning hand, for example it will put out [4D, 8H,, 7D, AC, 4S] instead of [4D, 4S, AC, 8H, 7D]."""
 
 def poker(hands):
-    "Return a list of winning hands: poker([hand,...]) => [hand,...]"
+    "Returns a list of winning hands: poker([hand,...]) => [hand,...]."
     print hands
-    print "Vinner:"
+    print "Winner:"
     return allmax(hands, key = hand_rank)
 
 def allmax(iterable, key=lambda x:x):
-    "Return a list of all items equal to the max of the iterable."
+    "Returns a list of all items equal to the max of the iterable."
     maxi = max(iterable, key=key)
     return [element for element in iterable if key(element) == key(maxi)]
 
@@ -70,7 +70,7 @@ def hand_rank(hand):
 		return (0, ) + tuple(ranks)
 
 def group(items):
-    "Return a list of [(count, x)...], highest count first, the highest x first"
+    "Returns a list of [(count, x)...], highest count first, the highest x first."
     groups = [(items.count(x), x) for x in set(items)]
     return sorted(groups, reverse = True)
 
@@ -124,13 +124,13 @@ def kind(n, ranks):
 deck = [r+s for r in '23456789TJQKA' for s in 'SHDC'] 
 
 def deal(numhands, n = 5, deck = [r+s for r in '23456789TJQKA' for s in 'SHDC']):
-    "Return a list of numhands hands consisting of n cards each"
+    "Returns a list of numhands hands consisting of n cards each."
     random.shuffle(deck)
     deck = iter(deck)
     return [[next(deck) for card in range(n)] for hand in range(numhands)]
 
 """ 
-From here in downwards, we have copied the code from Udacity because the task says to copy the shuffle functions from Udacity.
+From here to downwards, we have copied the code from Udacity. That is because the task tells us to copy the shuffle functions from Udacity.
 """
 
 def hand_percentages(n = 700*1000):
@@ -144,7 +144,7 @@ def hand_percentages(n = 700*1000):
         print('%14s: %6.3f'%(hand_names[i], 100.*counts[i]/n))
 
 def all_hand_percentages():
-    "Print an exhaustive table of frequencies for each type of hand"
+    "Prints an exhaustive table of frequencies for each type of hand."
     counts = [0]*9
     n = 0
     deck = [r+s for r in '23456789TJQKA' for s in 'SHDC']
@@ -187,14 +187,14 @@ def shuffle2a(deck):
 
 def shuffle3(deck):
     # O(N)
-    # incorrect distribution    
+    # Incorrect distribution.    
     N = len(deck)
     for i in range(N):
         j = random.randrange(N)
         deck[i], deck[j] = deck[j], deck[i]
 
 def shuffle(deck):
-    # Knuth method
+    # Knuth method.
     n = len(deck)
     for i in range(n-1):
         j = random.randrange(i, n)
