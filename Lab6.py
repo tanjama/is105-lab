@@ -89,6 +89,7 @@ i header feltet. 3. Hvis flere koder er akseptable, blir den koden som har høye
 verdi fra qvalue 1+ valgt. 4. «Identity» innholds koden er alltid akseptabel, 
 hvis den ikke spesifikt inneholder «identity;q=0», eller fordi feltet inkluderer «*q=0». 
 Hvis Accept Encoding feltets verdi er tom er bare selve «identity» akseptabel. 
+
 Accept Language = Accept Language forespørsel-header feltet er lik som Accept,
  men begrenser språkene som er foretrukket som en respons av forespørselen. 
 =======
