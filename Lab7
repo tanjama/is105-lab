@@ -1,3 +1,5 @@
+TCP Headers:
+
 Source port (16 bits) = identifiserer den sendende porten
 
 Destination port (16 bits) = identifiserer den mottakende porten
