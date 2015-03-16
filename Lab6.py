@@ -61,6 +61,7 @@ https://www.youtube.com/watch?v=NHLTa29iovU Youtube.com
 b)
 Get = Den ber om en represtasjon av en spesefik resurs. 
 Forspørselen som bruker GET skal bare motta data, og ikke ha noen andre effekter.
+
 Connection = Den konverterer forsespørselen om tilkobling til en 
 åpenbar/gjennomsiktig TCP/IP tunnel. 
 Målet med dette er for å legge til rette for SSL kryptert 
