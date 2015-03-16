@@ -55,7 +55,8 @@ b) TCP flaget er satt SYN. Bit nummer 2 fra høyre er satt til 1.
 
 Oppgave 4
 a)Sequence number i SYN ACK-segmentet er 0000 0001 0010
-b)
+b) TCP flaget er satt SYN. Bit nummer 5 og 2 fra høyre er satt til 1.
+Det gjør som at vi at det er  andre segmentet i en  thre-way-handshake. 
 
 
 
