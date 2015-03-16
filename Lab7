@@ -33,3 +33,24 @@ Flags(9 bits) : Inneholder 9 1-bits flags som følgende :
 •	SYN(1 bit) – Synkroniserer sekvens numrene. Bare den første pakken som er sendt fra hver ende skal ha dette flagget satt. Andre flagg og felt skifter mening basert på SYN flagget, og noen er bare valid når SYN flagget er satt og andre er satt når SYN flagget er invalid. 
 •	FIN(1 bit) – Ikke mer data fra sender. 
 
+
+Lab 7
+
+Siden serveren er nede kommer jeg til å bruke Viktor Setervang sin wireshark save
+
+Oppgave 1
+IP nummeret til pcen min er i dette tilfelle 10.224.210.117
+Og det som er TCP portnummeret er 35176
+
+
+Oppgave 2
+gaia.cs.umass.edu IP nummer er 128.119.245.12
+Og det som er TCP port nummeret er 80
+
+ 
+Oppgave 3
+a) Sequence number i TCP er 0.
+b) TCP flaget er satt SYN. Bit nummer 2 fra høyre er satt til 1.
+
+
+Oppgave 4
