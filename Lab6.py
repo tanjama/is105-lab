@@ -29,5 +29,17 @@ for en tilbakemelding.  Når en server tester om koden er akseptabel i forhold t
 feltet inkluderer «*q=0». Hvis Accept Encoding feltets verdi er tom er bare selve «identity» akseptabel. 
 
 Accept Language = Accept Language forespørsel-header feltet er lik som Accept, men begrenser språkene som er foretrukket som
-en respons av forespørselen. 
+en respons av forespørselen.
+
+
+
+Oppgave 2
+
+a) Det er siden jeg ikke har vært på siden før. nettleseren vil skjekke om siden er mellomragret/cachet for å se om vi har vært der før og siden jeg ikke har vært der så blir ikke IF-MODIFIED-SINCE sendt med forsesøpsel.
+
+b) Jeg fikk den filen jeg var ute etter. Serveren svarte med et HTTP koden var 200 som vil si at den var OK.
+
+c) Grunnen til at jeg får IF-MODIFIED-SINCE er på grunn av at jeg at jeg har vært på siden, og at det er i minnet. Det gjør som at den vet at jeg har vært på siden, og vi er da ute etter siste forandring bare. Det er ikke noe vits å laste ned hele siden på nytt pga DATA megnde osv.
+
+d) Det innformasjon vi får av HTTP server koden er 304. Det betyr at siden jeg prøver eller vil besøke ikke er oppdatert siden sist jeg var der. Det er altså lagret i mellomlagret/cache i nettleser.
  
