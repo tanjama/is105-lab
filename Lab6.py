@@ -9,6 +9,8 @@ b)
 Get = Den ber om en represtasjon av en spesefik resurs. forspørselen som bruker GET skal bare motta data, og ikke ha noen andre
 effekter.
 
+Post = Det er en forsspørsels metode som brukes når du vil sende data til en web server, f eks når du sender inn en ett utfyllt HTML skjema 
+
 Connection = Den konverterer forsespørselen om tilkobling til en åpenbar/gjennomsiktig TCP/IP tunnel.
 Målet med dette er for å legge til rette for SSL kryptert kommunkasjon(HTTPS) gjennom en ukrypter HTTP server.
 
