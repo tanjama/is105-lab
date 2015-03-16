@@ -1,3 +1,4 @@
+# We import functions so that we can use them even though they are defined elsewhere (standard module)
 import random 
 import math
 import itertools
@@ -5,26 +6,28 @@ from collections import defaultdict
 
 def poker(hands):
     "Return a list of winning hands: poker([hand,...]) => [hand,...]"
-     "This code will Return the top hands"
+    #This code will Return the top hands (winning hands). It also uses the allmax function which is defined under
     print hands
     print "Winner:"
     return allmax(hands, key = hand_rank)
 
 def allmax(iterable, key=lambda x:x):
     "Return a list of all items equal to the max of the iterable."
-    #"Iterable" is an object that has an __iter__ method which returns an iterator."
-    #Iteration is the process of taking one element at a time in a row of elements."
+    #Iterable is an object that has an __iter__ method which returns an iterator.
+    #Iteration is the process of taking one element at a time in a row of elements.
     maxi = max(iterable, key=key)
-    #It is a for-loop in the element to get the result."
+    #It is a for-loop in the element to get the result.
     return [element for element in iterable if key(element) == key(maxi)]
 
 def hand_rank(hand):
     "Return a value indicating how high the hand ranks."
-    # "Counts" is the count of each rank.
+    # Count is the count of each rank.
     # Ranks lists corresponding ranks.
     # E.g. '7 T 7 9 7' => counts = (3, 1, 1); ranks = (7, 10, 9)
     # The var group has a list that has all the values in the game.
-    # This one counts the rank of groups. 
+    # Then it counts the ranks of the groups.
+    # The if ranks sentences also makes sure that the problem with the ace in a straight is solved as it
+    # can both be a 1 and a 14.
     groups = group(['--23456789TJQKA'.index(r) for r, s in hand])
     counts, ranks = unzip(groups)
     if ranks == (14, 5, 4, 3, 2):
@@ -44,26 +47,17 @@ def hand_rank(hand):
         0), ranks
 
 def group(items):
-    "Return a list of [(count, x)...], highest count first, the highest x first"
-    # The list is Count.
-    # The highest count first.
-    # Return the gruop sorted.
+    # The list is Count, it will return the highest count first (x)
     groups = [(items.count(x), x) for x in set(items)]
     return sorted(groups, reverse = True)
 
 def unzip(pairs):
-    #
+    # It packs up a list
     return zip(*pairs)
 
 def card_ranks(hand):
-    "Return a list of the ranks, sorted with higher first."
-    # ranks = ['--23456789TJQKA'.index(r) for r, s in hand]
-    # ranks = [{'A':14,
-    #           'K':13,
-    #           'Q':12,
-    #           'J':11,
-    #           'T':10,
-    #           }.get(r,r) for r, s in hand]
+    # Returns a list of the ranks, sorted with higher first
+    # It also have a sort function incase if the ace problem i mentioned earlier
     ranks = [14 if r == 'A' else
              13 if r == 'K' else
              12 if r == 'Q' else
@@ -75,20 +69,28 @@ def card_ranks(hand):
     return ranks if ranks != [14, 5, 4, 3, 2] else [5, 4, 3, 2, 1]
 
 def straight_udacity(ranks):
-    "Return True if the ordered ranks form a 5-card straight."
+    # Return True if the ordered ranks form a 5-card straight.
     # The sum of the ranks. 
     # the smallest ranks * 5.
     # the value is 5 diffrent cards then True.
+    # Example: we have the hand [5, 4, 3, 2, 1] which gives the value 15 - 1*5 = 10,
+    # so 10 = 10 and it will retur  true
     return sum(ranks) - min(ranks)*5 == 10
     
 def straight(ranks):
+	# This is our own code this is to check the time difference between our code and udacitys
+	# Checks if we have a straight, a straight can only be if all the cards in the hand
+	# Have eather +1 or -1 in rank (value) to the other card in front of it.
 	return sorted(ranks, reverse=True)==ranks and len(set(ranks))==len(ranks)
 
 def flush(hand):
+	# This is our own code this is to check the time difference between our code and udacitys
+	# Checks if we have a flush, flush means that all the card in the hand have the same
+	# Colour, which is what this code does. Also have a look on udacitys code.
 	return [ e[1] for e in hand] == [hand[1][1] for e in range (len(hand))]
 
 def flush_udacity(hand):
-    "Return True if all the cards have the same suit."
+    # It will return True if all the cards have the same suit.
     # Set is doing like we have only uniqe values.
     # If len is longer than 1, then the value is set to false.
     # For is doing like we only have the symbol.
@@ -96,27 +98,26 @@ def flush_udacity(hand):
     return len(set(suits)) == 1
 
 def two_pair(ranks):
-    """If there are two pair, return the two ranks as a
-    tuple: (highest, lowest); otherwise return None."""
+    # If we have two pair, return the two ranks as a
+    # tuple: (highest, lowest); otherwise it should return none
     # For-loop the ranks
-    # Set is 2 find 2 types of symbol
-    # If length is longer than 2:
-    # Then the value is not true
+    # Set is to find 2 types of symbol
+    # If length is longer than 2, then the value is not true
     result = [r for r in set(ranks) if ranks.count(r) == 2]
     if len(result) == 2:
         return (max(result), min(result))
 
 def kind(n, ranks):
-    """Return the first rank that this hand has exactly n of.
-    Return None if there is no n-of-a-kind in the hand."""
+    # Return the first rank that this hand has exactly n of
+    # Return None if there is no n-of-a-kind in the hand
+    # Here is the value of all the cards in decks
+    # We want to loop in the symbols
+    # That means SHDC
     for r in set(ranks):
         if ranks.count(r) == n:
             return r
     return None
-    
-# Here is the value of all the cards in decks
-# we want to loop in the symbols
-# that means SHDC
+  
 deck = [r+s for r in '23456789TJQKA' for s in 'SHDC']
 
 
@@ -207,7 +208,7 @@ hand_names = [
     ]
     
 # This prints the chance to win.
-# It gives out 70 000 hands.
+# It gives out 700 000 hands.
 # Counts how many that are playing. 
 def hand_percentages(n = 700*1000):
     "Sample n random hands and print a table of percentages for each type of hand"
@@ -300,10 +301,13 @@ def test_shufflers(shufflers=[shuffle, shuffle1], decks=['abc','ab']):
 def factorial(n): return 1 if (n <= 1) else n*factorial(n-1)
 
 if __name__ == '__main__':
+	# Find out if our code is faster then udacitys code. Our was faster in one point while
+	# udacitys code was faster then the other.
 	import timeit
 	print(timeit.timeit("straight([9, 8, 7, 6, 5])", setup="from __main__ import straight"))
 	print(timeit.timeit("straight_udacity([9, 8, 7, 6, 5])", setup="from __main__ import straight_udacity"))
 	print(timeit.timeit("flush('6C 7C 8C 9C TC'.split())", setup="from __main__ import flush"))
 	print(timeit.timeit("flush_udactiy('6C 7C 8C 9C TC'.split())", setup="from __main__ import flush_udactiy"))
 
+# The ammount of hands we want to deal out, aka the ammount of players
 print poker(deal(4))
