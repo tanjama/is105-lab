@@ -49,6 +49,7 @@ j) Etter å ha kalt den samme funksjonen "bin = struct.unpack('B',f.read(1))[0]"
 Dette på grunn av at neste tegn etter "\x7f" er 'E'.
 
 Oppgave 5:
+a) Den har noen spefikasjoner. Det finnnes noen tredje parts python moduler, og en python modull som heter struckt som følger med python.(Standar bibilotek)
 
 Oppgave 6:
 
