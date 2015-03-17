@@ -7,14 +7,14 @@ a) " #include <stdio.h>
 int main() {
     printf("Hello, world!\n");
     return 0;
-} " Dette blir skrevet som funksjon "main()", og lagret som test1.c
+} " 
+Dette blir skrevet som funksjon "main()", og lagret som test1.c
 
 b) Kompilerer så test1.c i gcc, ved å skrive "gcc test1.c", det blir da dannet en kjørbar fil som automatisk blir kalt "a.out".
 
 c) Man produserer test1.i ved å kompilere C-filen og kalle den for test1.i i terminalen. 
    Det vi skrev inn for å få dette gjort var: gcc -o test1.i test1.c
    -o viser til at vi endrer på outputen til filen. 
-
 
 
 Oppgave 2:
@@ -26,19 +26,17 @@ d) "rb" betyr følgende:
 "rb" står da for reading binary(å lese binært). 
 
 
-
 Oppgave 3:
 
 a) 'B' står for den binære representasjonen.
 
-b) f.read(1) fungerer slik at man leser den første byten i filen "f", i dette tilfellet leser vi 'E', prøver man å kjøre f.read(1) på nytt, vil den lese den neste byten i filen, i dette tilfellet leser vi 'L'.
+b) f.read(1) fungerer slik at man leser den første byten i filen "f", i dette tilfellet leser vi 'x7f', prøver man å kjøre f.read(1) på nytt, vil den lese den neste byten i filen, i dette tilfellet leser vi 'E'.
 
 c) Unpack-funksjonen kjøres, så returneres filens første byte, siden det kalles "f.read(1)".
 
 d) Siden dette er en ELF fil, har den binære verdien 127. 
-
-
-
+ 
+ 
 Oppgave 4:
 
 d) Hvis du gjør "bin >> 8", returneres verdien '0'. Dette er fordi man da går over til den neste byten, som er: 00000000.
@@ -49,7 +47,7 @@ j) Etter å ha kalt den samme funksjonen "bin = struct.unpack('B',f.read(1))[0]"
 Dette på grunn av at neste tegn etter "\x7f" er 'E'.
 
 Oppgave 5:
-a) Den har noen spefikasjoner. Det finnnes noen tredje parts python moduler, og en python modull som heter struckt som følger med python.(Standar bibilotek)
+a) Den har noen spesifikasjoner. Det finnnes noen tredje parts python moduler, og en python modul som heter struct som følger med python.(Standard bibilotek)
 
 Oppgave 6:
 
