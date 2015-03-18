@@ -148,19 +148,20 @@ Accept, men begrenser språkene som er foretrukket som en respons av forespørse
 
 Oppgave 2
 
-a) Det er siden jeg ikke har vært på siden før. nettleseren vil skjekke om 
-siden er mellomragret/cachet for å se om vi har vært der før og siden jeg 
-ikke har vært der så blir ikke IF-MODIFIED-SINCE sendt med forsesøpsel.
+a) Det er siden jeg ikke har vært på siden før. Nettleseren vil skjekke om 
+siden er mellomragret/cachet for å se om vi har vært der før, og siden jeg 
+som tidligere nevnt ikke har vært der så blir ikke 
+IF-MODIFIED-SINCE sendt med forsesøpselen.
 
-b) Jeg fikk den filen jeg var ute etter. Serveren svarte med et HTTP 
-koden var 200 som vil si at den var OK.
+b) Jeg fikk den filen jeg var ute etter. Serveren svarte med at HTTP 
+koden var 200. Det som vil si at den var OK.
 
-c) Grunnen til at jeg får IF-MODIFIED-SINCE er på grunn av at jeg at 
+c) Grunnen til at jeg får IF-MODIFIED-SINCE er på grunn av at 
 jeg har vært på siden, og at det er i minnet. Det gjør som at den vet 
-at jeg har vært på siden, og vi er da ute etter siste forandring bare. 
-Det er ikke noe vits å laste ned hele siden på nytt pga DATA megnde osv.
+at jeg har vært på siden, og vi er da ute etter kun siste forandring. 
+Det er ikke noe vits å laste ned hele siden på nytt på grunn av DATA megnde.
 
-d) Det innformasjon vi får av HTTP server koden er 304. Det betyr at siden 
+d) Den innformasjon vi får av HTTP-server-koden er 304. Det betyr at siden 
 jeg prøver eller vil besøke ikke er oppdatert siden sist jeg var der. 
 Det er altså lagret i mellomlagret/cache i nettleser.
 >>>>>>> 34b5bac39f7ff251be150036e5eaf945409ff001
