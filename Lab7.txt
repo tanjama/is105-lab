@@ -1,0 +1,100 @@
+TCP Headers:
+
+Source port (16 bits) = identifiserer den sendende porten.
+
+Destination port (16 bits) = identifiserer den mottakende porten.
+
+Sequence number (32 bits) = sekvensnummeret har to roller: 
+1. Hvis SYN flagget er satt (1), så er sekvensnummeret det innledende sekvensnummeret. 
+
+2. Hvis SYN flagget er satt til (0) så er sekvensnummeret det samlede sekvensnummeret 
+   fra den første databyten fra dette segmentet i denne sesjonen(????).
+
+Acknowledgment number (32 bits) = hvis ACK flagget er satt så er verdien av dette feltet 
+det samme som det neste sekvensnummeret mottakeren forventer. 
+Dette erkjenner alle bytes som har blitt sendt. 
+Det første ACK flagget sendt fra hver side erkjenner hverandres sekvensnummer.
+
+Data offsets (4 bits) = Data offsets spesifiserer størrelsen på TCP headeren i 32-bit ord. 
+Den minste mulige header-størrelsen er fem ord og den største er 15 ord. 
+Minimum størrelsen er på 20 bytes og maks størrelse er 60 bytes. 
+Dette lar 40 bytes være åpent for endringer og andre alternativer i headeren.
+
+Reserved (3 bits) = Dette er 3 bits som er reservert for framtidig bruk, 
+men det er som oftest satt til 0.
+
+TCP Options(Variable 0-320 bits, går opp i 32): 
+Lengden av dette feltet er satt av dataen I offset feltet. 
+Options har opp til tre felt som er følgende: Option-Kind(1 byte), Option-Length(1 byte), 
+Option-Data(variable). Option-Kind feltet indikerer typen av Option,
+og er det eneste feltet som ikke er valgfritt. 
+
+Urgent pointer(16 bits): Hvis URG flagget er satt er dette 16-bit feltet en offsett fra 
+det sekvensnummeret som indikerer den siste urgent data byten. 
+
+Checksum(16 bits): Den 16-bits checksum feltet er brukt for å se etter errors i headeren og dataen. 
+
+Window size(16 bits): Størrelsen av «recieve window», 
+som spesifikiserer nummeret av «window size units» som senderen er villig til å motta. 
+
+
+Flags(9 bits): Inneholder 9 1-bits flags som følgende : 
+•	NS(1 bit) – «ECN-nonce concealment protection”.
+
+•	CWR(1bit) – Congestion Window Reduced (CWR) flagget er satt av hosten for å indikere
+ at den har motatt en TCP med et ECE flag og svarer i en «congestion control mechanism».
+ 
+•	ECE(1 bit) – ECN-Echo har to roller som avhenger av verdien av SYN flagget:
+-	Hvis SYN flagget er satt til (1) tilsier dette at TCP peer er ECN capable.
+-	Hvis SYN flagget er satt til (0) tilsier dette at en pakke med Congestion Experienced flag
+    i IP headeren er mottatt under en normal overføring. 
+    
+•	URG(1 bit) – Indikerer at den Urgent pointer feltet er signifikant. 
+
+•	ACK(1 bit) – Indikerer at Acknowledge feltet er signifikant. 
+    Alle pakker etter SYN pakken sendt av klienten burde ha dette flagget satt. 
+    
+•	PSH(1 bit) – En «push» funksjon. Spør om å «pushe» den buffrede dataen til den 
+    mottakende applikasjonen.
+
+•	RST(1 bit) – Resetter internett koblingen.
+
+•	SYN(1 bit) – Synkroniserer sekvens numrene. 
+    Bare den første pakken som er sendt fra hver ende skal ha dette flagget satt. 
+    Andre flagg og felt skifter mening basert på SYN flagget, og noen er bare valid når 
+    SYN flagget er satt og andre er satt når SYN flagget er invalid. 
+    
+•	FIN(1 bit) – Ikke mer data fra sender. 
+
+
+Oppgaver i tilnytning til Lab7. 
+
+Siden serveren er nede kommer jeg til å bruke Viktor Setervang sin Wireshark-save
+
+Oppgave 1:
+IP nummeret til pcen min er i dette tilfelle 10.224.210.117.
+Og det som er TCP portnummeret er 35176.
+
+
+Oppgave 2:
+gaia.cs.umass.edu IP nummer er 128.119.245.12.
+Og det som er TCP port nummeret er 80.
+
+ 
+Oppgave 3:
+a) Sequence number i TCP er 0.
+b) TCP flaget er satt SYN. Bit nummer 2 fra høyre er satt til 1.
+
+
+Oppgave 4
+a)Sequence number i SYN ACK-segmentet er 0000 0001 0010.
+b) TCP flaget er satt SYN. Bit nummer 5 og 2 fra høyre er satt til 1.
+Det gjør som at vi at det er  andre segmentet i en  thre-way-handshake. 
+
+
+
+
+
+
+
+
