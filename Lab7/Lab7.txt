@@ -83,23 +83,31 @@ Og det som er TCP port nummeret er 80.
  
 Oppgave 3:
 a) Sequence number i TCP er 0.
+
 b) TCP flaget er satt SYN. Bit nummer 2 fra høyre er satt til 1.
 
 
-Oppgave 4
+Oppgave 4:
 a)Sequence number i SYN ACK-segmentet er 0000 0001 0010.
+
 b) TCP flaget er satt SYN. Bit nummer 5 og 2 fra høyre er satt til 1.
 Det gjør som at vi at det er  andre segmentet i en  thre-way-handshake.
 
 
-Oppgave 5
-Det som er mulig å gjøre er å legge sammen sequence-number og TCP-sequende-lenght, og deretter finner next sequence number. 
---->""Det du kan gjøre er å legge sammen sequence number og TCP sequence length finner man next sequence number.""
+Oppgave 5:
+Det som er mulig å gjøre er å legge sammen sequence-number og TCP-sequende-lenght, 
+og deretter finner next sequence number. 
+--->""Det du kan gjøre er å legge sammen sequence number og TCP sequence length 
+finner man next sequence number.""
 
 
-Oppgave 6
-a) Det som er meningen er å finne HTTP POSTens  segmentet nummer, og derreter finne de fem andre pakkene.
-b) Vi gjør det samme som i oppge 6aav, men etter at vi har motatt paken bekrefter vi det med segmentet, nummer og tid på når vi fikk pakken.
+Oppgave 6:
+a) Det som er meningen er å finne HTTP POSTens  segmentet nummer, og derreter 
+finne de fem andre pakkene.
+
+b) Vi gjør det samme som i oppge 6aav, men etter at vi har motatt paken bekrefter 
+vi det med segmentet, nummer og tid på når vi fikk pakken.
+
 c)
 
 Sequence	Time		Acknowledgment		Time		RTT
