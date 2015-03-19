@@ -93,12 +93,13 @@ Det gjør som at vi at det er  andre segmentet i en  thre-way-handshake.
 
 
 Oppgave 5
-Det du kan gjøre er å legge sammen sequence number og TCP sequence length finner man next sequence number.
+Det som er mulig å gjøre er å legge sammen sequence-number og TCP-sequende-lenght, og deretter finner next sequence number. 
+--->""Det du kan gjøre er å legge sammen sequence number og TCP sequence length finner man next sequence number.""
 
 
 Oppgave 6
-a) Det som er meningen er å finne HTTP POSTens  segmentet nummer, og derreter finne de 5 andre pakkene.
-b) Vi gjør det samme som på oppg A, men etter at vi har motatt paken bekrefter vi det med segmentet nummer og tid på når vi fikk pakken.
+a) Det som er meningen er å finne HTTP POSTens  segmentet nummer, og derreter finne de fem andre pakkene.
+b) Vi gjør det samme som i oppge 6aav, men etter at vi har motatt paken bekrefter vi det med segmentet, nummer og tid på når vi fikk pakken.
 c)
 
 Sequence	Time		Acknowledgment		Time		RTT
