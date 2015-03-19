@@ -89,8 +89,25 @@ b) TCP flaget er satt SYN. Bit nummer 2 fra høyre er satt til 1.
 Oppgave 4
 a)Sequence number i SYN ACK-segmentet er 0000 0001 0010.
 b) TCP flaget er satt SYN. Bit nummer 5 og 2 fra høyre er satt til 1.
-Det gjør som at vi at det er  andre segmentet i en  thre-way-handshake. 
+Det gjør som at vi at det er  andre segmentet i en  thre-way-handshake.
 
+
+Oppgave 5
+Det du kan gjøre er å legge sammen sequence number og TCP sequence length finner man next sequence number.
+
+
+Oppgave 6
+a) Det som er meningen er å finne HTTP POSTens  segmentet nummer, og derreter finne de 5 andre pakkene.
+b) Vi gjør det samme som på oppg A, men etter at vi har motatt paken bekrefter vi det med segmentet nummer og tid på når vi fikk pakken.
+c)
+
+Sequence	Time		Acknowledgment		Time		RTT
+1		5,445243000	636			5,445390000	0,000445000
+636		5,445390000	2084			5,445407000	0,000147000
+2084		5,445407000	3532			5,445410000	0,000017000
+3532		5,445410000	4980			5,445412000	0,000003000
+4980		5,445412000	6428			5,445419000	0,000002000
+6428		5,445419000	7876			5,445423000	0,000007000
 
 
 
