@@ -42,7 +42,10 @@ mens http OK falt på 1.1229400000 sekunder. Differansen er da 0,125551 sekunder
 “http GET”- meldingen ble sendt tok det 0,125551 sekunder til “http OK” -meldingen ble mottatt.) 
 
 Hva kan denne verdien brukes til ? 
-Hypertext Transfer Protocol er en tekst-basert førespørsel-svar-klient-server protkoll. En http-klient (Mozilla Firefox) foretar en http-forespøsel til en http-server(Apache server), som vil utstede en http-respons. Så verdien brukes til å regne ut hvor lang tid get tar fra http-klienten utsteder en forespørsel til en http-server og får en http-respons. 
+Hypertext Transfer Protocol er en tekst-basert førespørsel-svar-klient-server protkoll. 
+En http-klient (Mozilla Firefox) foretar en http-forespøsel til en http-server(Apache server), 
+som vil utstede en http-respons. Så verdien brukes til å regne ut hvor lang tid get tar fra 
+http-klienten utsteder en forespørsel til en http-server og får en http-respons. 
 
 
 Kilder, lastet ned 16.03.2015: 
