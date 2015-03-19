@@ -34,9 +34,12 @@ Den andre metoden innebærer at du søker etter “http” I søkemotoren, og de
 Trykk så på “protocol” for å sortere innholdet alfabetisk etter protocol-type. 
 
 Hvor lang tid tok det da fra “http GET” - meldingen ble sendt til “http OK”-meldingen ble mottatt? 
-HTTP Get meldingen ble sendt ut etter 3.171428000 sekunder, og vi mottok HTTP OK etter 3.189186000 sekunder. Det vil si at det tok 0.017758 sekunder fra da HTTP Get meldingen ble sendt ut til vi mottok HTTP GET Ok meldingen. 
+HTTP Get meldingen ble sendt ut etter 3.171428000 sekunder, og vi mottok HTTP OK etter 3.189186000 sekunder.
+Det vil si at det tok 0.017758 sekunder fra da HTTP Get meldingen ble sendt ut til vi mottok HTTP GET Ok meldingen. 
 
-(Følgende resultater ble hentet fra en medstudents resulater: Http GET falt på 0.9973890000 sekunder, mens http OK falt på 1.1229400000 sekunder. Differansen er da 0,125551 sekunder. Det vil si at fra “http GET”- meldingen ble sendt tok det 0,125551 sekunder til “http OK” -meldingen ble mottatt.) 
+(Følgende resultater ble hentet fra en medstudents resulater: Http GET falt på 0.9973890000 sekunder, 
+mens http OK falt på 1.1229400000 sekunder. Differansen er da 0,125551 sekunder. Det vil si at fra 
+“http GET”- meldingen ble sendt tok det 0,125551 sekunder til “http OK” -meldingen ble mottatt.) 
 
 Hva kan denne verdien brukes til ? 
 Hypertext Transfer Protocol er en tekst-basert førespørsel-svar-klient-server protkoll. En http-klient (Mozilla Firefox) foretar en http-forespøsel til en http-server(Apache server), som vil utstede en http-respons. Så verdien brukes til å regne ut hvor lang tid get tar fra http-klienten utsteder en forespørsel til en http-server og får en http-respons. 
