@@ -55,6 +55,7 @@ Forspørselen som bruker GET skal bare motta data, og ikke ha noen andre effekte
 Connection = Connection-feltet konverterer forsespørselen om tilkobling 
 til en åpenbar/gjennomsiktig TCP/IP tunnel. Målet med dette er å legge til 
 rette for SSL kryptert kommunkasjon(HTTPS), gjennom en ukrypter HTTP server. 
+
 Host = Host-feltet er siden vi henter informasjon fra, eller den siden vi er på.
 I dette tilfelle er det http://www-net.cs.umass.edu/. 
 
@@ -88,8 +89,8 @@ men begrenser språkene som er foretrukket som en respons av forespørselen.
 Oppgave 2 
 
 a) På gunn av at dette er en nettside vi ikke har vært på før, 
-vil nettleseren skjekke om siden er mellomragret/cachet for å se om vi 
-har vært der før. Siden vi som ikke har vært der så blir ikke IF-MODIFIED-SINCE sendt med forsesøpselen. 
+vil nettleseren skjekke om siden er mellomragret/cache for å se om vi 
+har vært der før. Siden vi ikke har vært der så blir ikke IF-MODIFIED-SINCE sendt med forsesøpselen. 
 
 b) Vi fikk den filen vi var ute etter. Serveren svarte med at HTTP koden var 200. 
 Det som vil si at den var OK. 
