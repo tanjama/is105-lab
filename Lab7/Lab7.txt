@@ -105,8 +105,9 @@ Oppgave 6:
 a) Det som er meningen er å finne HTTP POSTens  segmentet nummer, og derreter 
 finne de fem andre pakkene.
 
-b) Vi gjør det samme som i oppge 6aav, men etter at vi har motatt paken bekrefter 
-vi det med segmentet, nummer og tid på når vi fikk pakken.
+b) Vi gjør det samme som i oppge 6a, men etter at vi har motatt paken bekreftes 
+det med et Acknowledgment nummer. Siden ACK flagget er satt så er Acknowledgment nummer
+det samme som next Sequence number.
 
 c)
 
