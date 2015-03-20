@@ -98,7 +98,11 @@ Den fjerde prossesen indikerer at det er et program eller python prosses som kj�
 
 Oppgave 9
 
-ls -l /proc/<pid>/fd hovedfuksjon er å åpne en fil liste der man kan se hvor mange python prossesorer som kjører eller er åpen. Den viktigste funskjoen fd. file descriptor(fd) er en abstartk indikator som brukes til å aksesere en fil eller andre inputs og outputs ressurser. Pid er nummret fra modulen/ oppgaven som gjør som at vi kan bruke fd.   
+ls -l /proc/<pid>/fd hovedfuksjon er å åpne en fil liste der man kan se hvor mange python prossesorer som
+kjører eller er åpen. Den viktigste funskjoen fd. file descriptor(fd) er en abstartk indikator som brukes
+til å aksesere en fil eller andre inputs og outputs ressurser. Pid er nummret fra modulen/ oppgaven som gjør
+som at vi kan bruke fd.   
+
 
 Oppgave 10
 
