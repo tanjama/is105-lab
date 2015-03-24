@@ -88,7 +88,7 @@ men begrenser språkene som er foretrukket som en respons av forespørselen.
 
 Oppgave 2 
 
-a)Det første som skjer er at nettleseren vil sjekke om nettsiden er mellomlagret/cashet. 
+a)Det første som skjer er at nettleseren vil sjekke om nettsiden er mellomlagret/cachet. 
 Hvis den er det vil det si at vi har vært inne på denne nettsiden tidligere, hvis 
 den ikke er det vil det si at vi ikke har vært inne på nettsiden før. 
 Siden det viser seg at vi ikke har vært der så blir ikke IF-MODIFIED-SINCE sendt med forespørselen. 
@@ -98,13 +98,42 @@ Det som vil si at den var OK.
 
 c) Grunnen til at vi får IF-MODIFIED-SINCE er på grunn av at vi har vært på siden (ref. oppgave a), 
 og at den er i minnet. På grunn av at nettsiden er I minnet, er vi da ute etter kun siste forandring. 
-Det er ikke noe vits å laste ned hele siden på nytt på grunn av DATA megnde. 
+Det er ikke noe vits å laste ned hele siden på nytt på grunn av data megnde. 
+
+Hvordan lagring av minne foregår(Cache memory, CPU og RAM):
+"Cache memory", også kalt CPU-minne, er random access memory (RAM), som er datamaskins mikrprosessor kan få
+tilgang til raskene enn det kan få tilgang til vanlig RAM. 
+Dette minnet blir integrert direkte med en CPU-chip, eller plassert på en separat chip som har 
+en separat samtrafikk med CPU. 
+
+Betegnelsen RAM brukes ofte om hovedminnet/hovedhukommelsen. 
+RAM blir ofte kalt "fysisk minne", som er annerledes enn virtuelt minne er lagret på datamaskinens harddisk.
+Dette er den delen av minnet i en datamaskin der prosesser
+ligger klare for kjøring av et program eller en prosess i maskinen.
+
+Et program må alltid legges i minnet før det kan eksekveres. 
+Alle data må legges i minnet før datamaskinen kan regne med dem eller manipulere dem, 
+dessuten må alle inn- og utdata innom minnet.
+Innholdet i RAM kan leses og skrives tilfeldig og uten noen bestemt rekkefølge, og går tapt når maskinen skrus av.
+Datamaskiner har også en raskere type minne, kalt hurtigminne (cache). Under kjøring vil det hele tiden 
+kopieres instruksjoner og data over fra hovedhukommelsen til hurtigminnet, 
+da må ting innom der før de går videre til prosessoren.
+
+
 
 d) Den informasjon vi får av HTTP-server-koden er 304. Det betyr at siden vi 
 prøver eller vil besøke ikke er oppdatert siden sist vi var der. 
-Det er altså mellomlagret/cachet i nettleser. 
-
+Den er altså mellomlagret/cachet i nettleser. 
 >>>>>>> 34b5bac39f7ff251be150036e5eaf945409ff001t
+
+
+Systemet som henter siden har en bufret kopi og ber om:
+1) Den siden har blitt endret siden en viss tid (den tiden da den bufrede kopien ble hentet) 
+og 
+2) Om en kopi av siden hvis den har blitt endret siden da. 
+
+Vi fikk oversendt filen, men var ikke behov for å laste ned den på nytt på grunn av at det ikke har vært endringer på den. 
+
 
 
 
@@ -114,4 +143,6 @@ https://ask.wireshark.org/questions/13384/display-http-header wireshark.org
 https://wiki.wireshark.org/Hyper_Text_Transfer_Protocol wireshark.org 
 https://www.youtube.com/watch?v=NHLTa29iovU Youtube.com 
 
-
+Kilder lastet ned 24.03.2015:
+http://searchstorage.techtarget.com/definition/cache-memory Techtarget.com
+http://no.wikipedia.org/wiki/RAM Wikipedia.org
