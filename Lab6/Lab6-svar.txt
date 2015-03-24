@@ -88,10 +88,11 @@ men begrenser språkene som er foretrukket som en respons av forespørselen.
 
 Oppgave 2 
 
-a) På gunn av at dette er en nettside vi ikke har vært på før, 
-vil nettleseren skjekke om siden er mellomragret/cache for å se om vi 
-har vært der før. Siden vi ikke har vært der så blir ikke IF-MODIFIED-SINCE sendt med forsesøpselen. 
-
+a)Det første som skjer er at nettleseren vil sjekke om nettsiden er mellomlagret/cashet. 
+Hvis den er det vil det si at vi har vært inne på denne nettsiden tidligere, hvis 
+den ikke er det vil det si at vi ikke har vært inne på nettsiden før. 
+Siden det viser seg at vi ikke har vært der så blir ikke IF-MODIFIED-SINCE sendt med forespørselen. 
+ 
 b) Vi fikk den filen vi var ute etter. Serveren svarte med at HTTP koden var 200. 
 Det som vil si at den var OK. 
 
@@ -102,6 +103,7 @@ Det er ikke noe vits å laste ned hele siden på nytt på grunn av DATA megnde.
 d) Den informasjon vi får av HTTP-server-koden er 304. Det betyr at siden vi 
 prøver eller vil besøke ikke er oppdatert siden sist vi var der. 
 Det er altså mellomlagret/cachet i nettleser. 
+
 >>>>>>> 34b5bac39f7ff251be150036e5eaf945409ff001t
 
 
