@@ -88,19 +88,19 @@ Oppgave 7
 
 Oppgave 8
 
-I følge min python shell så er det forsatt en python prosses som er åpen eller kjører
-De tre første prossene er standard det vil si at de alltid er med da du kjører en eller flere python prosseser.
+I følge min python shell så er det forsatt en python prosess som er åpen eller kjører.
+De tre første prosessene er standard, det vil si at de alltid er med når du kjører en eller flere python prosesser.
 0 = Standard input
 1 = Standard output
 2 = Standard error
-Den fjerde prossesen indikerer at det er et program eller python prosses som kjører i mitt tillfeller er det
+Den fjerde prosessen indikerer at det er et program eller python prosess som kjører, i mitt tilfelle er det
 = lr-x------ 1 stanley stanley 64 mars  17 14:10 3 -> /home/stanley/IS-105_old/testi.i
 
 Oppgave 9
 
-ls -l /proc/<pid>/fd hovedfuksjon er å åpne en fil liste der man kan se hvor mange python prossesorer som
-kjører eller er åpen. Den viktigste funskjoen fd. file descriptor(fd) er en abstartk indikator som brukes
-til å aksesere en fil eller andre inputs og outputs ressurser. Pid er nummret fra modulen/ oppgaven som gjør
+ls -l /proc/<pid>/fd sin hovedfunksjon er å åpne en fil liste der man kan se hvor mange python prossesorer som
+kjører eller er åpne. Den viktigste funskjonen er "fd". File descriptor(fd) er en abstrakt indikator som brukes
+til å aksessere en fil eller andre inputs og outputs ressurser. Pid er nummeret fra modulen/oppgaven som gjør
 som at vi kan bruke fd.   
 
 
