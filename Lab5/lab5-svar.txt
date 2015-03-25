@@ -4,10 +4,10 @@ Oppgave 1:
 
 a) " #include <stdio.h>
 
-	int main() {
-		printf("Hello, world!\n");
-		return 0;
-	} " 
+   int main() {
+	   printf("Hello, world!\n");
+	   return 0;
+   } " 
    Dette blir skrevet som funksjon "main()", og lagret som test1.c
 
 b) Kompilerer så test1.c i gcc, ved å skrive "gcc test1.c", det blir da 
