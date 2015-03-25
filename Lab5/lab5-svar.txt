@@ -1,13 +1,13 @@
 Svar i tilknytting til lab 5:
 
-Opgpave 1:
+Oppgave 1:
 
 a) " #include <stdio.h>
 
-int main() {
-    printf("Hello, world!\n");
-    return 0;
-} " 
+	int main() {
+		printf("Hello, world!\n");
+		return 0;
+	} " 
    Dette blir skrevet som funksjon "main()", og lagret som test1.c
 
 b) Kompilerer så test1.c i gcc, ved å skrive "gcc test1.c", det blir da 
@@ -71,10 +71,10 @@ a) Den har noen spesifikasjoner. Det finnnes noen tredje parts python
 
 Oppgave 6:
 
-Etter å ha gjort punkt 3) to ganger til får bin verdien 76 etter første 
-kall, og 70 etter andre kall. 76 er verdien til 'L' og 70 er verdien til 
-'F', dette fordi at alle ELF-filer har x7f, E, L, F som de fire første 
-bytes i filen.
+   Etter å ha gjort punkt 3) to ganger til får bin verdien 76 etter første 
+   kall, og 70 etter andre kall. 76 er verdien til 'L' og 70 er verdien til 
+   'F', dette fordi at alle ELF-filer har x7f, E, L, F som de fire første 
+   bytes i filen.
 
 a) Viser til svaret i 4 h), der vi på egenhånd fant ut av at ELF har et 
    magic number, og undersøkte videre at .jpeg filer også har dette. 
@@ -96,26 +96,26 @@ b) For å komme frem til den samme verdien i bin som jeg har etter sjette
 
 Oppgave 8
 
-I følge min python shell så er det forsatt en python prosess som er åpen 
-eller kjører.
-De tre første prosessene er standard, det vil si at de alltid er med når 
-du kjører en eller flere python prosesser.
-0 = Standard input
-1 = Standard output
-2 = Standard error
-Den fjerde prosessen indikerer at det er et program eller python prosess 
-som kjører, i mitt tilfelle er det
-= lr-x------ 1 stanley stanley 64 mars  17 14:10 3 -> 
-/home/stanley/IS-105_old/testi.i
+   I følge min python shell så er det forsatt en python prosess som er åpen 
+   eller kjører.
+   De tre første prosessene er standard, det vil si at de alltid er med når 
+   du kjører en eller flere python prosesser.
+   0 = Standard input
+   1 = Standard output
+   2 = Standard error
+   Den fjerde prosessen indikerer at det er et program eller python prosess 
+   som kjører, i mitt tilfelle er det
+   = lr-x------ 1 stanley stanley 64 mars  17 14:10 3 -> 
+   /home/stanley/IS-105_old/testi.i
 
 Oppgave 9
 
-ls -l /proc/<pid>/fd sin hovedfunksjon er å åpne en fil liste der man 
-kan se hvor mange python prossesorer som
-kjører eller er åpne. Den viktigste funskjonen er "fd". 
-File descriptor(fd) er en abstrakt indikator som brukes
-til å aksessere en fil eller andre inputs og outputs ressurser. 
-Pid er nummeret fra modulen/oppgaven som gjør at vi kan bruke fd.   
+   ls -l /proc/<pid>/fd sin hovedfunksjon er å åpne en fil liste der man 
+   kan se hvor mange python prossesorer som
+   kjører eller er åpne. Den viktigste funskjonen er "fd". 
+   File descriptor(fd) er en abstrakt indikator som brukes
+   til å aksessere en fil eller andre inputs og outputs ressurser. 
+   Pid er nummeret fra modulen/oppgaven som gjør at vi kan bruke fd.   
 
 
 Oppgave 10
