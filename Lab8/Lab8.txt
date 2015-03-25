@@ -2,28 +2,48 @@ Lab 8
 
 
 Oppgave1
-IP adresse på den pcen vi bruker til denne laben er: 158.37.246.138
+   IP adressen på den pc'en vi bruker til denne lab'en er: 158.37.246.138
 
 Oppgave 2
-Protokoll nummeret er (1), og den forteller oss at der er en Internet Control Message. Det vil si at det er Destinasjon for porten ikke er mulig å nå(Destination Unreachelbel)
+   Protokoll nummeret er (1), og den forteller oss at der er en 
+   Internet Control Message. Det vil si at destinasjonen 
+   for porten ikke er mulig å nå(Destination Unreachable)
  
 Opppgave 3
-I følge wireshark så er det 20 bytes i en ip header
+   I følge Wireshark så er det 20 bytes i en IP header
 
 Oppgave 4
-I følge Wireshark så er det 0 fragments. Det vil si at pakken ikke har blitt fragmentert. Det vil si at det ikke er nødvendig å sende pakken i mindre biter. Du kan også se på flags er satt på dont fragment, og det vil si at det ikke er noen framenter.
+   I følge Wireshark så er det 0 fragmenter. Det vil si at pakken ikke har 
+   blitt fragmentert. Det vil si at det ikke er nødvendig å sende pakken i 
+   mindre biter. Du kan også se på flags er satt på dont fragment, og det 
+   vil si at det ikke er noen fragmenter.
 
 Oppgave 5
-Siden pakke størelssen jeg sender er for stor, så må filen fragmenters for å få sendt alt sammen. Det vi sender er på 3528 bytes.
+   Siden pakke størrelsen jeg sender er for stor, så må filen fragmenteres 
+   for å få sendt alt sammen. Det vi sender er på 3528 bytes.
 
 Oppgave 6
-a) med å se på fragment offset kan vi se at den er på 0 bytes. med å se på flags satt i pakken kan vi se at biten for more fragments har blitt satt til 1. Det er den sjette biten( 0010 0000). Det vil si at dette er en av flere fragmenterte pakker
-b) Det wireshark sier er at fragment offset er satt på 0. Det indikerer at dette er det første fragmentet og at det neste fragmentet er 1480. deter er standar.
-c) ifølge wireshark som vi bruer i dette projekte så er det fragmentet som ble sendt på 1480 bytes.
+a) Med å se på fragment offset kan vi se at den er på 0 bytes. Med å se 
+   på flags satt i pakken kan vi se at biten for more fragments har blitt 
+   satt til 1. Det er den femte biten(0010 0000). Det vil si at dette 
+   er en av flere fragmenterte pakker.
+b) Det wireshark sier er at fragment offset er satt på 0. Det indikerer 
+   at dette er det første fragmentet og at det neste fragmentet er 1480. 
+   Dette er standard.
+c) I følge wireshark som vi bruker i dette projektet så er det fragmentet 
+   som ble sendt på 1480 bytes.
 
 Oppgave 7
-a) med å samenlingne det første fragmentet og den andre fragmentet kan vi se at fragment offset på det første framenet er 0 og at fragment offset på den andre pakken er 1480 bytes.
-b) med å se på flags satt i pakken kan vi se at biten for more fragments har blitt satt til 1. Det er den sjette biten( 0010 0000). Det vil si at det er flere fragmenterte pakker.
+a) Med å sammenligne det første fragmentet og den andre fragmentet kan vi 
+   se at fragment offset på det første fragmentet er 0 og at fragment offset 
+   på den andre pakken er 1480 bytes.
+b) Med å se på flags satt i pakken kan vi se at biten for more fragments 
+   har blitt satt til 1. Det er den femte biten( 0010 0000). Det vil si 
+   at det er flere fragmenterte pakker.
 
 Oppgave 8
-Med å ha sett på wireshark tok det 3 pakker for å sendte 3528 bytes. Det er flere møter å finne ut av det på vi kan regne length i pakken med fragment offset for å se om vi har nådd målet vårt. eks i den andre pakken vår hadde vi fragment offset: 2960 + length: 568 =. da kan du se om vi har nådd målet.
+   Med å ha sett på wireshark tok det 3 pakker for å sendte 3528 bytes. 
+   Det er flere møter å finne ut av det på vi kan regne length i pakken 
+   med fragment offset for å se om vi har nådd målet vårt. eks i den andre 
+   pakken vår hadde vi fragment offset: 2960 + length: 568 =. da kan du se 
+   om vi har nådd målet.
