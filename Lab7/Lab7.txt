@@ -13,7 +13,7 @@ Sequence number (32 bits) = sekvensnummeret har to roller:
 Acknowledgment number (32 bits) = hvis ACK flagget er satt så er verdien av dette feltet 
 det samme som det neste sekvensnummeret mottakeren forventer. 
 Dette erkjenner alle bytes som har blitt sendt. 
- Det første ACK flagget sendt fra hver side erkjenner hverandres sekvensnummer.
+Det første ACK flagget sendt fra hver side erkjenner hverandres sekvensnummer.
 
 Data offsets (4 bits) = Data offsets spesifiserer størrelsen på TCP headeren i 32-bit ord. 
 Den minste mulige header-størrelsen er fem ord og den største er 15 ord. 
@@ -28,7 +28,7 @@ Lengden av dette feltet er satt av dataen I offset feltet.
 Options har opp til tre felt som er følgende: Option-Kind(1 byte), Option-Length(1 byte) og
 Option-Data(variable). 
 Option-Kind feltet indikerer typen av Option,
- og er det eneste feltet som ikke er valgfritt. 
+og er det eneste feltet som ikke er valgfritt. 
 
 Urgent pointer (16 bits): Hvis URG flagget er satt er dette 16-bit feltet en offsett fra 
 det sekvensnummeret som indikerer den siste urgent data-byten. 
@@ -36,13 +36,13 @@ det sekvensnummeret som indikerer den siste urgent data-byten.
 Checksum (16 bits): Det 16-bits checksum-feltet er brukt for å se etter errors i headeren og dataen. 
 
 Window size (16 bits): Størrelsen av «recieve window», 
-som spesifikiserer nummeret av «window size units» som senderen er villig til å motta. 
+som spesifiserer nummeret av «window size units» som senderen er villig til å motta. 
 
 
 Flags (9 bits): Inneholder 9 1-bits flags som følgende : 
 - NS (1 bit) – “ECN-nonce concealment protection”.
 - CWR (1bit) – Congestion Window Reduced (CWR) flagget er satt av hosten for å indikere
- at den har motatt en TCP med et ECE flag og svarer i en «congestion control mechanism».
+at den har motatt en TCP med et ECE flag og svarer i en «congestion control mechanism».
  
 ECE (1 bit): ECN-Echo har to roller som avhenger av verdien av SYN flagget:
 - Hvis SYN flagget er satt til (1) tilsier dette at TCP peer er ECN capable.
@@ -52,7 +52,7 @@ ECE (1 bit): ECN-Echo har to roller som avhenger av verdien av SYN flagget:
 URG(1 bit): Indikerer at den Urgent pointer feltet er signifikant. 
 
 ACK(1 bit): Indikerer at Acknowledge feltet er signifikant. 
- Alle pakker etter SYN pakken sendt av klienten burde ha dette flagget satt. 
+Alle pakker etter SYN pakken sendt av klienten burde ha dette flagget satt. 
     
 PSH(1 bit): En «push» funksjon. Spør om å «pushe» den buffrede dataen til den 
 mottakende applikasjonen.
@@ -69,46 +69,42 @@ FIN(1 bit): Ikke mer data fra sender.
 
 Oppgaver i tilnytning til Lab7. 
 
-Siden serveren er nede kommer vi til å bruke Viktor Setervang sin Wireshark-save
-.
+Siden serveren er nede kommer vi til å bruke Viktor Setervang sin Wireshark-save.
 
 Oppgave 1:
 IP nummeret til pcen vi gjør oppgaven på er i dette tilfellet 10.224.210.117.
- TCP -port nummeret er 35176.
+TCP -port nummeret er 35176.
  
 
 Oppgave 2:
 gaia.cs.umass.edu IP nummer er 128.119.245.12.
- TCP-portnummeret er 80.
+TCP-portnummeret er 80.
 
  
 Oppgave 3:
 a) Sequence number i TCP er 0.
 
-b) TCP flaget er satt SYN. Bit nummer 2 fra høyre er satt til 1.
+b) TCP flaget er satt SYN. Bit nummer 1 er satt til 1.
 
 
 Oppgave 4:
 a) Sequence number i SYN ACK-segmentet er 0000 0001 0010.
 
-b) TCP flaget er satt SYN. Bit nummer 5 og 2 fra høyre er satt til 1.
- Dette gjør at det er andre segmenter I en three-way-shake. 
+b) TCP flaget er satt SYN. Bit nummer 4 og 1 er satt til 1.
+Dette gjør at det er andre segmenter I en three-way-shake. 
 
 
 Oppgave 5:
-Det som er mulig å gjøre er å legge sammen sequence-number og TCP-sequende-lenght, 
+Det som er mulig å gjøre er å legge sammen sequence-number og TCP-sequence-length, 
 og deretter finne next sequence number. 
---->""Det du kan gjøre er å legge sammen sequence number og TCP sequence length, 
-deretter finner man next sequence number.""
-
 
 Oppgave 6:
-a) Det som er meningen er å finne HTTP POSTens  segmentet-nummer, og deretter 
+a) Det som er meningen er å finne HTTP POSTens  sequence-number, og deretter 
 finne de fem andre pakkene.
 
-b) Vi gjør det samme som er I oppgave 6a, men etter at vi har motatt paken bekreftes 
+b) Vi gjør det samme som er I oppgave 6a, men etter at vi har motatt pakken bekreftes 
 det med et Acknowledgment nummer. Siden ACK flagget er satt så er Acknowledgment nummer
- det samme som next Sequence number.
+det samme som next Sequence number.
 
 c)
 
