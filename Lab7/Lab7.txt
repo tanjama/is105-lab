@@ -42,12 +42,12 @@ som spesifiserer nummeret av «window size units» som senderen er villig til å
 Flags (9 bits): Inneholder 9 1-bits flags som følgende : 
 - NS (1 bit) – “ECN-nonce concealment protection”.
 - CWR (1bit) – Congestion Window Reduced (CWR) flagget er satt av hosten for å indikere
-at den har motatt en TCP med et ECE flag og svarer i en «congestion control mechanism».
+  at den har motatt en TCP med et ECE flag og svarer i en «congestion control mechanism».
  
 ECE (1 bit): ECN-Echo har to roller som avhenger av verdien av SYN flagget:
 - Hvis SYN flagget er satt til (1) tilsier dette at TCP peer er ECN capable.
 - Hvis SYN flagget er satt til (0) tilsier dette at en pakke med Congestion Experienced flag
- i IP-headeren er mottatt under en normal overføring. 
+  i IP-headeren er mottatt under en normal overføring. 
     
 URG(1 bit): Indikerer at den Urgent pointer feltet er signifikant. 
 
