@@ -85,12 +85,21 @@ Oppgave 3:
 a) Sequence number i TCP er 0.
 
 b) TCP flaget er satt SYN. Bit nummer 1 er satt til 1.
+Med bit nummer 1 mener jeg den andre bit'en fra høyre, siden bits er definert slik:
+7 6 5 4 3 2 1 0 - Bit nummerering
+' ' ' ' ' ' ' '
+0 0 1 0 0 0 1 0 
 
 
 Oppgave 4:
 a) Sequence number i SYN ACK-segmentet er 0000 0001 0010.
 
 b) TCP flaget er satt SYN. Bit nummer 4 og 1 er satt til 1.
+Med bit nummer 4 og 1 mener jeg den femte bit'en fra høyre, og den andre bit'en fra høyre,
+siden bits er definert slik:
+7 6 5 4 3 2 1 0 - Bit nummerering
+' ' ' ' ' ' ' '
+0 0 1 0 0 0 1 0 
 Dette gjør at det er andre segmenter I en three-way-shake. 
 
 
