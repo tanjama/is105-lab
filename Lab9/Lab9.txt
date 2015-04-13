@@ -1,0 +1,44 @@
+Teori
+
+Oppgave 1
+
+
+
+Lab 
+Oppgave 1
+a) 48-bits enhets adresse på denne pcen er 14:2d:27:55:57:59. Det er altså det samme som MAC adressen min.
+b) 48-bits enhets adressen til destination er 00:08:e3:ff:fd:b8
+c) Mottakeren var Cisco_ff:fd:b8, som er acces punktet som er i rommen. Det er fordi den er første leddet når den
+kommuniserer med nettverket.
+d) Den hexadesimale verdien er 0x0800. Den forteller oss at eternettrammen typen ip datagram (0x0800).
+e) The ASCI "G" er 52 bytes fra starten av ethernetrammen. Det er 14 B i ethernettrammen og så 20 av IP etterfulgt
+av 20 bytes av TCP før HTTP data blir truffet.
+f) Source adress til ethernett er Cisco_ff:fd:b8
+g) Enheten Cisco har andressen 00:08:e3:ff:fd:b8
+h) Destinasjons adressen til ethernettet er 14:2d:27:55:57:59
+i) Ja det er mac adressen til min maskin.
+
+
+Oppgave 2
+a) Den kommandoen du bruker for å få fram cache i arp-tabellen er arp -a. Det gjør som at du kan se hva du har gjort tidligere
+Vis du f.eks vis du har brukt ping kommandoen tidligere så kommer det opp. Refererer til bilde nr 1.
+b) Den kommandoen bruker man for å fjerne/slette innholdet i arp-tabellen er arp -d. Med denne kommandoen kan du fjerne
+innholdet i cachen din. Det som skjer da vi fjerner MAC adressen er at den blir incomplete, men med en gang pcen oppdager
+dette så opprettes det en ny mac addrese. Jeg referer til bilde nr 2 og 3.
+
+Oppgave 3
+a) Den hexadesimale verdien til frametype er 0x0806.
+b) Det er 20 bytes i rammen før starten av arp upcode.
+c) Vi ba om 1 pake og fikk 2, dete er fordi arp er bygd opp med lag og derfor ble det sendt en pakke for ipv4 og en for ipv6
+d) Verdien på upcode feltet er 1.
+e) Ja, vi kan finne ip adressen til både avsender og mottaker under "Adress resolution protocol"
+f) 
+g) 
+h) 
+
+Kilde
+http://it.iut.ac.ir/sites/fsites/it/files/u4/uploads/Networking%20Class-Wireshar%20Labs-Solutions/10-Wireshark_Ethernet_ARP_Solution_July_22_2007.pdf
+https://technet.microsoft.com/en-us/library/cc786759%28v=ws.10%29.aspx
+http://www.orionscache.com/2014/01/clearing-arp-and-dns-cache-in-linux/
+http://networkengineering.stackexchange.com/questions/3585/what-to-use-as-arp-request-target-hardware-address
+https://supportforums.cisco.com/discussion/11157626/arp-destination-0000000000-000000000000
