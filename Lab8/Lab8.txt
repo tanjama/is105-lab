@@ -1,6 +1,52 @@
 Oppgaver i tilknytning til lab 8:
 
+Teorioppgaver
 
+Oppgave 1:
+Version: Version spesifiserer formatet på IP pakkens header.
+
+Internet header length: IHL spesifiserer lengden på IP pakkens header 
+og minsteverdi for en gyldig header er 5.
+
+Type of service: TOS brukes til å spesifisere kvaliteten av bruken som ønskes for datagrammet.
+
+Total length: TL inneholder lengden på datagrammet.
+
+Identification: Identification  brukes for å identifisere fragmentene til datagrammet. 
+Det gjør den ved å bruke fragmenter fra et annet datagram. 
+Den opprinnelige  protokoll-modulen av et internet-datagram setter et identifikasjons-felt 
+som må ha unik verdi for source/destination-paret, samtidig som protokollen må ha samme verdi 
+så lenge datagrammet er aktivt i internett-systemet.
+
+Flags: Flags er et 3-bit field. Det brukes til å kontrollere eller identifisere fragmenter. 
+
+Det har denne rekkefølgen:
+Bit 0: Reserved; must bezero.
+Bit 1: Don’t fragment (DF).
+Bit 2: More Fragments (MF).
+
+Fragment offset: Fragment offset brukes for å dirigere sammensetningen av et fragmentert datagram.
+
+Time To Live: TTL er et Timer Field som brukes til å spore levetiden til datagrammet. 
+Datagrammet blir forkastet når TTL er dekrementert til 0.
+
+Protocol: Protocol er et felt som spesifiserer den neste innkapslede protokollen.
+
+Header Checksum: Header Checksum feilsjekker headeren. 
+Ruteren kalkulerer headerens checksum når en pakke ankommer ruteren. 
+Deretter sammenligner den det med checksum field. Hvis verdien ikke matcher, 
+blir pakken forkastet av ruteren.
+
+Source Address: Source Address er IP adressen til avsender.
+
+Destination Address: Destination Address er IP adressen til mottaker.
+
+Oppgave 2:
+Når vi sammenligner IPV4 og IPV6 ser vi at den har mye større adresse plass, 
+dette er grunnet at IPV4 adressene er 32 bits lange mens IPV6 adressene er 128 bits lange.
+
+
+Praktiske oppgaver:
 Oppgave1)
    IP adressen på  pc'en vi bruker til denne lab-en er: 158.37.246.138
 
@@ -51,3 +97,7 @@ Oppgave 8)
    For eksempel:
    i den andre pakken vår hadde vi fragment offset: 2960 + length: 568 =. da kan du se 
    om vi har nådd målet.
+   
+
+Kilder, lastet ned 05.04.2015:
+
