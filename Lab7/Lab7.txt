@@ -125,3 +125,7 @@ Sequence	    Time		   Acknowledgment	    Time            RTT
 4980		5,445412000	          6428			5,445419000	    0,000002000
 6428		5,445419000	          7876			5,445423000	    0,000007000
 
+
+Kilder
+1. http://en.wikipedia.org/wiki/Transmission_Control_Protocol
+2. http://www.freesoft.org/CIE/Course/Section4/8.htm
