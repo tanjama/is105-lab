@@ -120,3 +120,15 @@ Oppgave 9
 
 Oppgave 10
 
+for å lukke en fil i python shell må du gå tilbake til det terminalvinduet du har åpnet filen(e) med commanden "f = open("x"'y') og så skrive inn commanden "f.close()". 
+"f" er fordi vi brukte "f" for å åpne filen, da må du også bruke den for å lukke den igjen.
+etter at du har lukket en fil med close() så kan du kjøre koden for å vise fil deskriptoren igjen og da ser du at filen ikke lenger kjører.
+
+
+Opggave 11
+
+Når vi bruker en JPEG fil i punkt 2 og 6 så ser vi at når vi bruker f.read(1) så får vi "ff", "d8", "ff", "e0". Dette er JPEG filens magic number. videre får vi "00" og "10"
+vi finner også "J", "F", "I", "F", JFIF. JFIF er standard formatet i en JPEG som hjelper å utveksle kodeinformasjonen.
+
+
+
