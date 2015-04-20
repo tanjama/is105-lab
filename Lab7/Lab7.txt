@@ -129,3 +129,5 @@ Sequence	    Time		   Acknowledgment	    Time            RTT
 Kilder
 1. http://en.wikipedia.org/wiki/Transmission_Control_Protocol
 2. http://www.freesoft.org/CIE/Course/Section4/8.htm
+3. http://packetlife.net/blog/2010/jun/7/understanding-tcp-sequence-acknowledgment-numbers/
+4. https://ask.wireshark.org/questions/2145/how-do-tcp-sequence-and-acknowledgement-numbers-work
