@@ -3,75 +3,7 @@ Teorioppgaver i tilknytning til Lab9:
 Oppgave a)
 http://en.wikipedia.org/wiki/Carrier_sense_multiple_access
 http://www.mcmcse.com/cisco/guides/csma.shtml
-
-Oppgave b)
-Ethernet er den vanligste teknologien som blir brukt i lokalnett(LAN)
-Nettverk som bruker ethnernetteknologi kan bestå av kaksialkabler, tvunnet par-kabler,
-eller være trådløse, såkalte WLAN. 
-Denne teknologien tillater typisk dataoverføring i hastigheter på 10 Mbps. (wikipedia.org)
-
-Med "upålitelig" menes det at det ikke er noen garantier for at en IP-pakke kommer frem. En av årsakene
-til dette kan være at en ruter går tom for det som kalles for bufferlager, og derfor må kaste pakker. 
-Andre årsaker til pakketap kan være konfigurasjonsfeil på rutere. (wikipedia.org)
-
-Med "forbindelsesløs" menes det at hver enkelt IP-pakke behandles uavhengig/selvstendig. IP lager ingen tilstand
-til strømmene av pakker. 
-Forbindelsesløse pakker kan komme ut av rekkefølgen til mottakeren. 
-Ønsker du pålitelighet og at pakker skal bli levert til mottakerapplikasonen i rekkefølge, 
-kan du benytte en pålitelig transportlagsprotokoll som TCP. (wikipedia.org)
-
-Oppgave c)
-Ethernet-frame starter etter en seven-ocett-preamble og et one-ocett start frame delimiter(SFD).
-Begge er en del av ethernet-pakken som omslutter frame. I denne oppgaven skal vi kort 
-gå nærmere inn på hva preamble brukes til. 
-
-Innledning til en Ethernet-pakke består av et 56-bit mønster av vekslende 1 og 0 biter, slik at noder
-på nettverket enkelt kan synkroniseres med mottakerens klokker, dette er da etterfulgt SFD for å 
-markere en ny frame. 
-
-Oppgave d)
-Det finnes flere ulike Ethernet-frame-types, for eksempel:
-- Ethernet II (type eller lengde: ≥ 1536)
-- Novell raw IEEE 802.3 (type eller lengde: ≤ 1500)
-- IEEE 802.2 LLC (type eller lengde: ≤ 1500)
-- EEE 802.2 SNAP (type eller lengde: ≤ 1500)
-
-De ulike frame-types har ulike formater og 
-MTU-verdier(Maximum Transmission Unit: http://en.wikipedia.org/wiki/Maximum_transmission_unit), 
-men kan eksistere på samme fysiske node. 
-
-Oppgave e)
-http://en.wikipedia.org/wiki/Ethernet_frame
-Destination address:
-Source address:
-Data:
-CRC:
-
-
-
-
-
-Praktiske oppgaver i tilknytning til Lab9:
-Oppgave 1
-a) 48-bits enhets adresse på denne pcen er 14:2d:27:55:57:59. Det er altså det samme som MAC adressen min.
-b) 48-bits enhets adressen til destination er 00:08:e3:ff:fd:b8
-c) Mottakeren var Cisco_ff:fd:b8, som er acces punktet som er i rommen. Det er fordi den er første leddet når den
-kommuniserer med nettverket.
-d) Den hexadesimale verdien er 0x0800. Den forteller oss at eternettrammen typen ip datagram (0x0800).
-e) The ASCI "G" er 52 bytes fra starten av ethernetrammen. Det er 14 B i ethernettrammen og så 20 av IP etterfulgt
-av 20 bytes av TCP før HTTP data blir truffet.
-f) Source adress til ethernett er Cisco_ff:fd:b8
-g) Enheten Cisco har andressen 00:08:e3:ff:fd:b8
-h) Destinasjons adressen til ethernettet er 14:2d:27:55:57:59
-i) Ja det er mac adressen til min maskin.
-
-
-Oppgave 2
-a) Den kommandoen du bruker for å få fram cache i arp-tabellen er arp -a. Det gjør som at du kan se hva du har gjort tidligere
-Vis du f.eks vis du har brukt ping kommandoen tidligere så kommer det opp. Refererer til bilde nr 1.
-b) Den kommandoen bruker man for å fjerne/slette innholdet i arp-tabellen er arp -d. Med denne kommandoen kan du fjerne
-innholdet i cachen din. Det som skjer da vi fjerner MAC adressen er at den blir incomplete, men med en gang pcen oppdager
-dette så opprettes det en ny mac addrese. Jeg referer til bilde nr 2 og 3.
+gg 3.
 
 Oppgave 3
 a) Den hexadesimale verdien til frametype er 0x0806.
