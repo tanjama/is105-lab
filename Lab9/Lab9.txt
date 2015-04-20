@@ -2,6 +2,7 @@ Teorioppgaver i tilknytning til Lab9:
 
 Oppgave a)
 http://en.wikipedia.org/wiki/Carrier_sense_multiple_access
+http://www.mcmcse.com/cisco/guides/csma.shtml
 
 Oppgave b)
 Ethernet er den vanligste teknologien som blir brukt i lokalnett(LAN)
