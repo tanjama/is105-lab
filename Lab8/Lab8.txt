@@ -106,4 +106,5 @@ http://no.wikipedia.org/wiki/IPv wikipedia.org
 http://en.wikipedia.org/wiki/IPv4_header_checksum wikipedia.org
 http://en.wikipedia.org/wiki/Type_of_service wikipedia.org
 http://en.wikipedia.org/wiki/Time_to_live wikipedia.org
+https://www.uio.no/studier/emner/matnat/ifi/INF3190/v11/fellesgruppe/ukesoppgaver/uke10_losningsforslag.html
 
