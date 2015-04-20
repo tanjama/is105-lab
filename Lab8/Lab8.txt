@@ -101,3 +101,9 @@ Oppgave 8)
 
 Kilder, lastet ned 05.04.2015:
 
+http://no.wikipedia.org/wiki/IPv4 wikipedia.org
+http://no.wikipedia.org/wiki/IPv wikipedia.org
+http://en.wikipedia.org/wiki/IPv4_header_checksum wikipedia.org
+http://en.wikipedia.org/wiki/Type_of_service wikipedia.org
+http://en.wikipedia.org/wiki/Time_to_live wikipedia.org
+
