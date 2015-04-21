@@ -103,7 +103,8 @@ Destination address: Destination Address er IP adressen til mottaker.(Lab8)
 
 Source address: Source Address er IP adressen til avsender.(Lab8)
 
-Data: Data (i sammenheng med computing) kan defineres som: "Enhver sekvens av symboler som gir betydning ved spesifikke handlinger av tolkning. 
+Data: Data (i sammenheng med computing) kan defineres som: 
+"Enhver sekvens av symboler som gir betydning ved spesifikke handlinger av tolkning. 
 Digital data er mengde, tegn eller symboler på hvilke operasjoner som utføres av en datamaskin, lagret og
 tatt opp av magnetiske, optiske eller mekaniske opptaksmedier, og overføres i form av elektriske signaler."
 (wikipedia.org)
