@@ -1,7 +1,6 @@
 Teorioppgaver i tilknytning til Lab9:
+
 Oppgave a)
-http://en.wikipedia.org/wiki/Carrier_sense_multiple_access
-http://www.mcmcse.com/cisco/guides/csma.shtml
 
 Før vi presiserer hvordan CSMA/CD fungerer er det først nødvendig å 
 definere hva det er, og hva det brukes til.
@@ -41,21 +40,25 @@ Det var bruk for å opprette en standard som ville få vertene til å følge reg
 sende data, og når de ikke kunne det. 
 Denne standarden er det vi kjenner som Carrier Sense Multiple Access med Collision Detection(CSMA/CD).
 
-Hvis to av tre datamaskiner på dette segmentet sender data samtidig, skjer det en kolligsjon, 
+Hvis to av tre datamaskiner på dette segmentet sender data samtidig, skjer det en kollisjon, 
+(Kollisjon: To sendinger forstyrre hverandre. Veldig vanlig på tungt trafikkerte nettverk. 
+Kan ødelegge data, eller avkorte rammer. )
+
 for å unngå dette tvinger CSMA/CD datamaskinen til å lytte til Ethernet før en sending for å være 
 sikker på at ingen andre verter på ledningen sender. 
 Når segmentet ikke er opptatt, kan enheten som ønsker å sende data gjøre det! Avsenderen vil fortsette å lytte, 
 og sørge for at dataene du sender ikke forårsaker en kollisjon. 
 
-Hvis en kollisjon blir hørt/oppdaget, vil begge senderne sende et signal over Ethernet. Dette signalet
-varsler andre enheter i segmentet om at det har vært en kollisjon, og de før ikke sende lata. 
+Hvis en kollisjon blir hørt/oppdaget, vil begge senderne sende et jam signal over Ethernet. 
+(Jamming: NIC indikerer til nettverksnoder at forrige sending var misslykket)
+Dette jam signalet varsler andre enheter i segmentet om at det har vært en kollisjon, og de før ikke sende data. 
 
-Etter at signalet er sendt, vil hver av avsenderne vente en tilfeldig til før hele prosessen
+Etter at jam signalet er sendt, vil hver av avsenderne vente en tilfeldig tid før hele prosessen
 starter på nytt. Den tilfeldige tiden bidrar til å sikre at de to enhetene ikke sender samtidig igjen.  
 
 
 Oppgave b)
-Ethernet er den vanligste teknologien som blir brukt i lokalnett(LAN)
+Ethernet er den vanligste teknologien som blir brukt i lokalnett(LAN).
 Nettverk som bruker ethnernetteknologi kan bestå av kaksialkabler, tvunnet par-kabler,
 eller være trådløse, såkalte WLAN.
 Denne teknologien tillater typisk dataoverføring i hastigheter på 10 Mbps. (wikipedia.org)
@@ -80,6 +83,7 @@ på nettverket enkelt kan synkroniseres med mottakerens klokker, dette er da ett
 markere en ny frame.
 
 Oppgave d)
+I feltet "type" legges det til informasjon om 
 Det finnes flere ulike Ethernet-frame-types, for eksempel:
 - Ethernet II (type eller lengde: ≥ 1536)
 - Novell raw IEEE 802.3 (type eller lengde: ≤ 1500)
@@ -90,12 +94,23 @@ De ulike frame-types har ulike formater og
 MTU-verdier(Maximum Transmission Unit: http://en.wikipedia.org/wiki/Maximum_transmission_unit),
 men kan eksistere på samme fysiske node.
 
+Verdier på 1500 og ned betyr at den brukes til å indikiere lasten i oketter. 
+Verdier på 1536 og mer betyr at det brukes som et Ethertype.
+
 Oppgave e)
-http://en.wikipedia.org/wiki/Ethernet_frame
-Destination address:
-Source address:
-Data:
-CRC:
+
+Destination address: Destination Address er IP adressen til mottaker.(Lab8)
+
+Source address: Source Address er IP adressen til avsender.(Lab8)
+
+Data: Data (i sammenheng med computing) kan defineres som: "Enhver sekvens av symboler som gir betydning ved spesifikke handlinger av tolkning. 
+Digital data er mengde, tegn eller symboler på hvilke operasjoner som utføres av en datamaskin, lagret og
+tatt opp av magnetiske, optiske eller mekaniske opptaksmedier, og overføres i form av elektriske signaler."
+(wikipedia.org)
+
+CRC: En cyclic redundancy check (CRC) er en feildekterende kode som vanligvis brukes i digitale nettverk 
+og largringsenheter for å oppdage tilfeldige endreinger av rådata. (wikipedia.org)
+
 
 
 Praktiske oppgaver i tilknytning til Lab9:
@@ -157,13 +172,9 @@ Teoretiske oppgaver:
 http://no.wikipedia.org/wiki/Ethernet wikipedia.org
 https://learningnetwork.cisco.com/thread/46562 learningnetwork.cisco.com
 http://en.wikipedia.org/wiki/Ethernet_frame wikipedia.org
-Praktiske oppgaver:
-http://it.iut.ac.ir/sites/fsites/it/files/u4/uploads/Networking%20Class-Wireshar%20Labs-Solutions/10-Wireshark_Ethernet_ARP_Solution_July_22_2007.pdf
-https://technet.microsoft.com/en-us/library/cc786759%28v=ws.10%29.aspx
-http://www.orionscache.com/2014/01/clearing-arp-and-dns-cache-in-linux/
-http://networkengineering.stackexchange.com/questions/3585/what-to-use-as-arp-request-target-hardware-address
-https://supportforums.cisco.com/discussion/11157626/arp-destination-0000000000-000000000000
-http://www.mcmcse.com/cisco/guides/csma.shtml
+http://www.mcmcse.com/cisco/guides/csma.shtml mcmcse.com
+http://en.wikipedia.org/wiki/Cyclic_redundancy_check wikipedia.org
+http://en.wikipedia.org/wiki/Data_%28computing%29 wikipedia.org
 
 Praktiske oppgaver:
 http://it.iut.ac.ir/sites/fsites/it/files/u4/uploads/Networking%20Class-Wireshar%20Labs-Solutions/10-Wireshark_Ethernet_ARP_Solution_July_22_2007.pdf
