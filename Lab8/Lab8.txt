@@ -5,21 +5,20 @@ Teorioppgaver
 Oppgave 1:
 Version: Version spesifiserer formatet på IP pakkens header.
 
-Internet header length: IHL spesifiserer lengden på IP pakkens header 
+Internet header length: IHL spesifiserer lengden på IP pakkens header
 og minsteverdi for en gyldig header er 5.
 
 Type of service: TOS brukes til å spesifisere kvaliteten av bruken som ønskes for datagrammet.
 
 Total length: TL inneholder lengden på datagrammet.
 
-Identification: Identification  brukes for å identifisere fragmentene til datagrammet. 
-Det gjør den ved å bruke fragmenter fra et annet datagram. 
-Den opprinnelige  protokoll-modulen av et internet-datagram setter et identifikasjons-felt 
-som må ha unik verdi for source/destination-paret, samtidig som protokollen må ha samme verdi 
+Identification: Identification brukes for å identifisere fragmentene til datagrammet.
+Det gjør den ved å bruke fragmenter fra et annet datagram.
+Den opprinnelige protokoll-modulen av et internet-datagram setter et identifikasjons-felt
+som må ha unik verdi for source/destination-paret, samtidig som protokollen må ha samme verdi
 så lenge datagrammet er aktivt i internett-systemet.
 
-Flags: Flags er et 3-bit field. Det brukes til å kontrollere eller identifisere fragmenter. 
-
+Flags: Flags er et 3-bit field. Det brukes til å kontrollere eller identifisere fragmenter.
 Det har denne rekkefølgen:
 Bit 0: Reserved; must bezero.
 Bit 1: Don’t fragment (DF).
@@ -27,85 +26,85 @@ Bit 2: More Fragments (MF).
 
 Fragment offset: Fragment offset brukes for å dirigere sammensetningen av et fragmentert datagram.
 
-Time To Live: TTL er et Timer Field som brukes til å spore levetiden til datagrammet. 
+Time To Live: TTL er et Timer Field som brukes til å spore levetiden til datagrammet.
 Datagrammet blir forkastet når TTL er dekrementert til 0.
 
 Protocol: Protocol er et felt som spesifiserer den neste innkapslede protokollen.
 
-Header Checksum: Header Checksum feilsjekker headeren. 
-Ruteren kalkulerer headerens checksum når en pakke ankommer ruteren. 
-Deretter sammenligner den det med checksum field. Hvis verdien ikke matcher, 
+Header Checksum: Header Checksum feilsjekker headeren.
+Ruteren kalkulerer headerens checksum når en pakke ankommer ruteren.
+Deretter sammenligner den det med checksum field. Hvis verdien ikke matcher,
 blir pakken forkastet av ruteren.
 
 Source Address: Source Address er IP adressen til avsender.
 
 Destination Address: Destination Address er IP adressen til mottaker.
 
+
 Oppgave 2:
-Når vi sammenligner IPV4 og IPV6 ser vi at den har mye større adresse plass, 
+Når vi sammenligner IPV4 og IPV6 ser vi at den har mye større adresse plass,
 dette er grunnet at IPV4 adressene er 32 bits lange mens IPV6 adressene er 128 bits lange.
+
 
 
 Praktiske oppgaver:
 Oppgave1)
-   IP adressen på  pc'en vi bruker til denne lab-en er: 158.37.246.138
+IP adressen på pc'en vi bruker til denne lab-en er: 158.37.246.138
 
 Oppgave 2)
-   Protokoll-nummeret er (1), og den forteller oss at der er en 
-   Internet Control Message. Det vil si at destinasjonen 
-   for porten ikke er mulig å nå (Destination Unreachable).
- 
+Protokoll-nummeret er (1), og den forteller oss at der er en
+Internet Control Message. Det vil si at destinasjonen
+for porten ikke er mulig å nå (Destination Unreachable).
+
 Opppgave 3)
-   I følge Wireshark så er det 20 bytes i en IP header.
+I følge Wireshark så er det 20 bytes i en IP header.
 
 Oppgave 4)
-   I følge Wireshark så er det 0 fragmenter. Det vil si at pakken ikke har 
-   blitt fragmentert. Det vil si at det ikke er nødvendig å sende pakken i 
-   mindre biter. Du kan også se at flags er satt på don't fragment, og det 
-   vil si at det ikke er noen fragmenter.
+I følge Wireshark så er det 0 fragmenter. Det vil si at pakken ikke har
+blitt fragmentert. Det vil si at det ikke er nødvendig å sende pakken i
+mindre biter. Du kan også se at flags er satt på don't fragment, og det
+vil si at det ikke er noen fragmenter.
 
 Oppgave 5)
-   Siden pakke-størrelsen vi sender er for stor, så må filen fragmenteres 
-   for å få sendt alt sammen. Det vi sender er på 3528 bytes.
+Siden pakke-størrelsen vi sender er for stor, så må filen fragmenteres
+for å få sendt alt sammen. Det vi sender er på 3528 bytes.
 
 Oppgave 6)
-a) Ved å se på fragment offset kan vi se at den er på 0 bytes. Ved å se 
-   på flags satt i pakken kan vi se at biten for more fragments har blitt 
-   satt til 1. Det er den femte biten(0010 0000). Det vil si at dette 
-   er en av flere fragmenterte pakker.
-   
-b) Det Wireshark sier er at fragment offset er satt på 0. Det indikerer 
-   at dette er det første fragmentet og at det neste fragmentet er 1480. 
-   Dette er standard.
-   
-c) I følge Wireshark som vi bruker i dette projektet så er det fragmentet 
-   som ble sendt på 1480 bytes.
+a) Ved å se på fragment offset kan vi se at den er på 0 bytes. Ved å se
+på flags satt i pakken kan vi se at biten for more fragments har blitt
+satt til 1. Det er den femte biten(0010 0000). Det vil si at dette
+er en av flere fragmenterte pakker.
+
+b) Det Wireshark sier er at fragment offset er satt på 0. Det indikerer
+at dette er det første fragmentet og at det neste fragmentet er 1480.
+Dette er standard.
+
+c) I følge Wireshark som vi bruker i dette projektet så er det fragmentet
+som ble sendt på 1480 bytes.
 
 Oppgave 7)
-a) Ved å sammenligne det første fragmentet og den andre fragmentet kan vi 
-   se at fragment offset på det første fragmentet er 0 og at fragment offset 
-   på den andre pakken er 1480 bytes.
-   
-b) Med å se på flags satt i pakken kan vi se at biten for more fragments 
-   har blitt satt til 1. Det er den femte biten( 0010 0000). Det vil si 
-   at det er flere fragmenterte pakker.
+a) Ved å sammenligne det første fragmentet og den andre fragmentet kan vi
+se at fragment offset på det første fragmentet er 0 og at fragment offset
+på den andre pakken er 1480 bytes.
+
+b) Med å se på flags satt i pakken kan vi se at biten for more fragments
+har blitt satt til 1. Det er den femte biten( 0010 0000). Det vil si
+at det er flere fragmenterte pakker.
 
 Oppgave 8)
-   Med å ha sett på wireshark tok det tre pakker for å sende 3528 bytes. 
-   Det er flere måter å finne ut av det på. Vi kan regne length i pakken 
-   med fragment offset for å se om vi har nådd målet vårt. 
-   For eksempel:
-   i den andre pakken vår hadde vi fragment offset: 2960 + length: 568 =. da kan du se 
-   om vi har nådd målet.
-   
+Med å ha sett på wireshark tok det tre pakker for å sende 3528 bytes.
+Det er flere måter å finne ut av det på. Vi kan regne length i pakken
+med fragment offset for å se om vi har nådd målet vårt.
+For eksempel:
+i den andre pakken vår hadde vi fragment offset: 2960 + length: 568 =. da kan du se
+om vi har nådd målet.
+
+
 
 Kilder, lastet ned 05.04.2015:
-
 http://no.wikipedia.org/wiki/IPv4 wikipedia.org
 http://no.wikipedia.org/wiki/IPv wikipedia.org
 http://en.wikipedia.org/wiki/IPv4_header_checksum wikipedia.org
 http://en.wikipedia.org/wiki/Type_of_service wikipedia.org
 http://en.wikipedia.org/wiki/Time_to_live wikipedia.org
-http://searchnetworking.techtarget.com/definition/time-to-live?hc_location=ufi techtarget.com
-http://en.wikipedia.org/wiki/Network_address_translation wikipedia.org
-
+https://www.uio.no/studier/emner/matnat/ifi/INF3190/v11/fellesgruppe/ukesoppgaver/uke10_losningsforslag.html
