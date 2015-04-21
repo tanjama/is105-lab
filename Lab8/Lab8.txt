@@ -106,4 +106,6 @@ http://no.wikipedia.org/wiki/IPv wikipedia.org
 http://en.wikipedia.org/wiki/IPv4_header_checksum wikipedia.org
 http://en.wikipedia.org/wiki/Type_of_service wikipedia.org
 http://en.wikipedia.org/wiki/Time_to_live wikipedia.org
+http://searchnetworking.techtarget.com/definition/time-to-live?hc_location=ufi techtarget.com
+http://en.wikipedia.org/wiki/Network_address_translation wikipedia.org
 
