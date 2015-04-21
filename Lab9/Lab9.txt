@@ -5,7 +5,7 @@ Oppgave a)
 Før vi presiserer hvordan CSMA/CD fungerer er det først nødvendig å 
 definere hva det er, og hva det brukes til.
 
-CSMA er en forkortelse for: "Carrier Sense Multiple Access", og er et en medieakesskontroll (MAC) protokoll. 
+CSMA er en forkortelse for: "Carrier Sense Multiple Access", og er en medieakesskontroll(MAC) protokoll. 
 I denne protokollen bekrefter en node framvær av en annen trafikk før overføring på et feles transmisjonsmedium, 
 slik som en elektrisk buss, eller et bånd av det elektromagnetiske spektrum. 
 
