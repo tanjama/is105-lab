@@ -3,6 +3,57 @@ Oppgave a)
 http://en.wikipedia.org/wiki/Carrier_sense_multiple_access
 http://www.mcmcse.com/cisco/guides/csma.shtml
 
+Før vi presiserer hvordan CSMA/CD fungerer er det først nødvendig å 
+definere hva det er, og hva det brukes til.
+
+CSMA er en forkortelse for: "Carrier Sense Multiple Access", og er et en medieakesskontroll (MAC) protokoll. 
+I denne protokollen bekrefter en node framvær av en annen trafikk før overføring på et feles transmisjonsmedium, 
+slik som en elektrisk buss, eller et bånd av det elektromagnetiske spektrum. 
+
+Carrier Sense betyr at en sender anvender tilbakemelding fra en mottaker til å avgjøre hvorvidt en overføring 
+utføres før en initering av en overføring. 
+Det vil si at den forsøker å detektere tilstedeværelsen av en bærebølge fra en annen stasjon før man forsøker å overføre. 
+Dersom en transportør er sanset, venter stasjonen med utsendelsen som pågår til å fullføres,
+før den initialiserer sin egen overføring.
+Lettere sagt er CSMA basert på prinsippet "sans-før-overføring" eller "lytt-før-sending".
+(Wikipedia.org)
+ 
+Multiple Access betyr at flere stasjoner sender og mottar på mediet. 
+Overføringene ved en node mottas av alle andre stasjoner som er koblet til mediet. 
+
+CSMA/CD brukes til på forbedre (CSMA)-ytelsen ved å avslutte en overføring så fort en kollisjon blir oppdaget. 
+Dermed kan man forkorte tiden før et nytt forsøk kan prøves ut.  (Wikipedia.org)
+
+
+Litt om hvorfor vi bruker CSMA/CD og hvordan den brukes
+(Tatt og oversatt fra: http://www.mcmcse.com/cisco/guides/csma.shtml):
+
+De første Ethernet-standarder var 10Base5 og 10Base2
+(les mer her: http://en.wikipedia.org/wiki/10BASE5, http://en.wikipedia.org/wiki/10BASE2)
+
+Nettveksenteter som huber, repeatere og brytere var ikke i bildet enda, og de eneste fysiske komponenter
+var Ethernet-kort i datamaskiner og koaksialkabel. 
+Denne kabelen består av en buss som alle tilkoblede enheter ville bruke(felles buss)
+Hvis bare én av vertene på nettverket ønsket å sende data, ville det være problemfritt. 
+Problemet oppstår imidlertid når to verter ville sende på samme tid selv om en kollisjon inntreffer. 
+Når signalene som sendes killderte, ville de bli ubrukelige. 
+Det var bruk for å opprette en standard som ville få vertene til å følge regler om når de kunne
+sende data, og når de ikke kunne det. 
+Denne standarden er det vi kjenner som Carrier Sense Multiple Access med Collision Detection(CSMA/CD).
+
+Hvis to av tre datamaskiner på dette segmentet sender data samtidig, skjer det en kolligsjon, 
+for å unngå dette tvinger CSMA/CD datamaskinen til å lytte til Ethernet før en sending for å være 
+sikker på at ingen andre verter på ledningen sender. 
+Når segmentet ikke er opptatt, kan enheten som ønsker å sende data gjøre det! Avsenderen vil fortsette å lytte, 
+og sørge for at dataene du sender ikke forårsaker en kollisjon. 
+
+Hvis en kollisjon blir hørt/oppdaget, vil begge senderne sende et signal over Ethernet. Dette signalet
+varsler andre enheter i segmentet om at det har vært en kollisjon, og de før ikke sende lata. 
+
+Etter at signalet er sendt, vil hver av avsenderne vente en tilfeldig til før hele prosessen
+starter på nytt. Den tilfeldige tiden bidrar til å sikre at de to enhetene ikke sender samtidig igjen.  
+
+
 Oppgave b)
 Ethernet er den vanligste teknologien som blir brukt i lokalnett(LAN)
 Nettverk som bruker ethnernetteknologi kan bestå av kaksialkabler, tvunnet par-kabler,
