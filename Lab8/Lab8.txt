@@ -53,8 +53,7 @@ IP adressen på pc'en vi bruker til denne lab-en er: 158.37.246.138
 
 Oppgave 2)
 Protokoll-nummeret er (1), og den forteller oss at der er en
-Internet Control Message. Det vil si at destinasjonen
-for porten ikke er mulig å nå (Destination Unreachable).
+Internet Control Message. 
 
 Opppgave 3)
 I følge Wireshark så er det 20 bytes i en IP header.
