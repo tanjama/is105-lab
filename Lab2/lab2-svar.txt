@@ -1,4 +1,5 @@
 Oppgave 1)
+
 Hva er grunnleggende forskjeller på det desimale og det romerske tallsystemet? 
 (Forklar fra designperspektivet)
 
@@ -10,20 +11,19 @@ representert med symboler fra 0 til 9.
 
 2. Det moderne titallsystemet kalles for et posisjonssystem, 
    der både sifrenes posisjon og verdi er av betydning. 
+   
    For eksempel:
    1964 inneholder følgende posisjoner:
    4 er på enerplassen, 6 er på tierplassen, 9 er på hundreplassen, og 1 er på tusenerplassen. 
-    
-    
-    
+     
 3. Titallssystemmet bygger på tre ideer:
-    - Ideen om at tallets posisjon har en betydning
-    - Ideen om tallsymbolene
+    - Ideen om at tallets posisjon har en betydning.
+    - Ideen om tallsymbolene.
     - Ideen om 0(null) som et tegn for den tomme plassen. 
  
     
 4. Å mulitiplisere, subtrahere, dividere og addere er svært vanlig praksik med det 
-   desimale tallsystemet, og det desimale tallsystemet er svært egnet til å regne med. 
+   desimale tallsystemet, og det desimale tallsystemet er derfor svært egnet til å regne med. 
 
 
 Det romerske tallsystemet:
@@ -37,7 +37,7 @@ C = 100
 D = 500
 M = 1000
 
-I dette tallsystemet finnes det ingen symbol for 0 (null)
+I dette tallsystemet finnes det ingen symbol for 0 (null).
 Videre finnes det noen retningslinjer for hvordan man skriver tall på det romerske tallsystemet. De er følgende:
 
 1. Verdien av symbolene blir delt opp og lagt sammen. 
@@ -160,7 +160,7 @@ hvor alle har vidt forskjellig bakgrunn. Vi fikk tidlig informasjon om
 at lab2-oppgaven er beregnet for en gruppe bestående av færre medlemmer 
 enn vår gruppe. Vi kan derfor ikke benekte at det natulig nok har oppstått 
 sosial loffing, men at alle på gruppa har fått arbeidsoppgaver(lekser) 
-i et forsøk på å inkludere og forståelse av kode. 
+i et forsøk på å inkludere og få forståelse av kode. 
 
 Når vi skulle finne en løsning på lab2-oppgaven la vi hovedfokuset i å 
 sette sammen gruppen og reflektere over mulige løsninger på en tavle. 
@@ -182,15 +182,3 @@ et tilfredstillende nivå. Akkurat nå har vi ikke lagt vekt på å komme med
 revolusjonærende løsninger, men vil ikke se bort ifra at vi i framtiden 
 vil bli flinkere til tenke oss fram til selvstendige løsninger, uten å 
 se på kravspekket som har blitt gitt som en hjelpende hånd av foreleser. 
-
-
-
-
-
-
-
-
-
-
-
-
