@@ -186,6 +186,7 @@ http://en.wikipedia.org/wiki/Ethernet_frame wikipedia.org
 http://www.mcmcse.com/cisco/guides/csma.shtml mcmcse.com
 http://en.wikipedia.org/wiki/Cyclic_redundancy_check wikipedia.org
 http://en.wikipedia.org/wiki/Data_%28computing%29 wikipedia.org
+http://www.ehow.com/info_8773193_ethernet-preamble.html ehow.com
 
 Praktiske oppgaver:
 http://it.iut.ac.ir/sites/fsites/it/files/u4/uploads/Networking%20Class-Wireshar%20Labs-Solutions/10-Wireshark_Ethernet_ARP_Solution_July_22_2007.pdf
