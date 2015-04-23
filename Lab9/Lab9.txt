@@ -73,14 +73,24 @@ Forbindelsesløse pakker kan komme ut av rekkefølgen til mottakeren.
 Ønsker du pålitelighet og at pakker skal bli levert til mottakerapplikasonen i rekkefølge,
 kan du benytte en pålitelig transportlagsprotokoll som TCP. (wikipedia.org)
 
-Oppgave c)
-Ethernet-frame starter etter en seven-ocett-preamble og et one-ocett start frame delimiter(SFD).
-Begge er en del av ethernet-pakken som omslutter frame. I denne oppgaven skal vi kort
-gå nærmere inn på hva preamble brukes til.
 
-Innledning til en Ethernet-pakke består av et 56-bit mønster av vekslende 1 og 0 biter, slik at noder
+Oppgave c)
+ 
+Preamble er en innledning i Ethernet-frame somvarsler om at noe viktig kommer. 
+Bortsett fra å fungere som en vekkerklokke, eller en "bli klar" varsel, 
+fungerer preamble også som en klokke-synkroniserings enhet. 
+
+Ethernet-frame starter etter en seven-ocett-preamble og et one-ocett start frame delimiter (SFD).
+Begge er en del av ethernet-pakken som omslutter frame. 
+
+
+Innledning(Preamble) til en Ethernet-pakke består av et 56-bit mønster av vekslende 1 og 0 biter, slik at noder
 på nettverket enkelt kan synkroniseres med mottakerens klokker, dette er da etterfulgt SFD for å
 markere en ny frame.
+Bits er representert som en elektrisk spenning - enten høy eller lav. Mottakeren er nødt til å holde følge
+med standard-intervallene, fordi det er bare med en regulert klokke et en kan fortelle hvor en bit slutter 
+og den neste starter. 
+
 
 Oppgave d)
 I feltet "type" legges det til informasjon om 
