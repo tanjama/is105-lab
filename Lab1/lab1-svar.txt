@@ -1,6 +1,6 @@
 Operatørprioritet i python:
 Operatører er symboler som representerer beregninger som addisjon
-og multiplikasjon. Disse verdiene kalles for “operatører”. 
+og multiplikasjon. 
 Eksempler på disse operatørene er: +, -, * og **. 
 
 Når flere av disse operatørere brukes i samme uttrykk er 
@@ -10,23 +10,24 @@ Programmeringsspråket python følger den matematiske konvensjonen som er følge
 
     - Det finnes ulike operatører: +,-, *,/ og **. 
     - Parenteser har høyest prioritet og kan brukes til å tvinge 
-    et uttrykk til å bli evaluert i den rekkefølgen du ønsker.
+      et uttrykk til å bli evaluert i den rekkefølgen du ønsker.
     - Eksponenter har nest høyest prioritet.
     - Multiplikasjon og divisjon har samme prioritet, noe som er høyere 
-    enn addisjon og subtraksjon, som også har samme prioritet.
+      enn addisjon og subtraksjon, som også har samme prioritet.
     - Operatører med samme presedens evalueres fra venstre mot høyre. (Python.org)
-    - Operatørprioritering læres på grunnskolenivå
+    - Operatørprioritering læres på grunnskolenivå.
     
-      For eksempel: 5*2+1 
+    For eksempel: 5 * 2 + 1 
     Mulitiplikasjon har høyere prioritet enn addisjon, 
-    derfor regner vi 5*2 først, og legger deretter til 3. 
-    5*2+1 = 11
+    derfor regner vi 5*2 først, og legger deretter til 1. 
+    5 * 2 + 1 = 11.
+    
     Hadde vi ikke tatt hensyn til operatørpritering, 
-    kunne svaret vært 15 - som er feil. 
+    kunne svaret vært 15 (5 * (2+1) = 15)  - som er feil. 
 
     HUSK at det alltid er mulig å klamme utrykk i parentes hvis du er i tvil på 
     hvordan regnestykket skal regnes. 
-    For eksempel: 5*2+1 = 5*(2+1)
+    For eksempel: 5*2+1 = (5*2) + 1.
 
 
 One’s complement i python:
@@ -34,7 +35,7 @@ One’s complement i python:
 alle bits i den binære representasjonen av et nummer. 0 endres til 1, og motsatt. 
 Tallet oppfører seg da motsatt av det dét opprinnelige tallets verdi i noen operasjoner.  (Wikipedia.org)
     
-    For eksempel(svært enkelt eksempel kopiert fra internett)
+For eksempel(svært enkelt eksempel kopiert fra internett)
     
         +      −
  0   0000   1111   — Note that +0 and −0 return TRUE when tested for zero
