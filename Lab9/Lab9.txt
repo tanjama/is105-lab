@@ -179,6 +179,7 @@ g)
 h)
 
 Kilder, lastet ned 13.04.2015
+
 Teoretiske oppgaver:
 http://no.wikipedia.org/wiki/Ethernet wikipedia.org
 https://learningnetwork.cisco.com/thread/46562 learningnetwork.cisco.com
