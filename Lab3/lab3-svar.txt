@@ -85,12 +85,22 @@ En vesentlig del av denne lab-oppgaven baserte seg på å måle hastigheten
 når en melding ble overført via protokoller
 
 Kildehenvisning: 
-    Binært tallsystem: http://no.wikipedia.org/wiki/Bin%C3%A6rt_tallsystem
-    Titallssystemet: http://no.wikipedia.org/wiki/Titallsystemet
+
+	Forskjell mellom TCP og UDP: 
+	http://www.cyberciti.biz/faq/key-differences-between-tcp-and-udp-protocols/
+	http://www.diffen.com/difference/TCP_vs_UDP
+	http://stackoverflow.com/questions/5970383/difference-between-tcp-and-udp
+
+    Binært tallsystem: 
+	http://no.wikipedia.org/wiki/Bin%C3%A6rt_tallsystem
+    Titallssystemet: 
+	http://no.wikipedia.org/wiki/Titallsystemet
 
     Det romerske tallsystemet:
-    Roman arthimetic: http://turner.faculty.swau.edu/mathematics/materialslibrary/roman/
-    Romertall: http://no.wikipedia.org/wiki/Romertall
+    Roman arthimetic: 
+	http://turner.faculty.swau.edu/mathematics/materialslibrary/roman/
+    Romertall: 
+	http://no.wikipedia.org/wiki/Romertall
 
     Grunnleggende systeminformasjon: 
     Vi har brukt pdf-filen foreleser la ut som oppgaveark. 
