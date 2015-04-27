@@ -2,7 +2,7 @@
 Repository i IS-105
 Universitetet i Agder, avdeling Kristiansand.
 
-IT og informasjonssystemet, andre semester.
+IT og informasjonssystemer, andre semester.
 
 Gruppe: Stanley's Tigers!
 
