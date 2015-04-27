@@ -172,11 +172,14 @@ d) Verdien på upcode feltet er 1.
 
 e) Ja, vi kan finne ip adressen til både avsender og mottaker under "Adress resolution protocol"
 
-f)
+f) Den første arp pakken vi sender ut har ikke en bestemt ethernet adresse, ettersom vi ikke vet den enda.
+Destination adressen er 00:00:00:00:00:00(ff:ff:ff:ff:ff:ff for windows), som er en spesiell adresse for 
+kringkastning til netverket, som betyr at pakken vår blir sendt til hele nettverket. Etter dette er det 
+opp til ruteren på nettveket å svare på forespørselen og returnere destination ethernet adressen.
 
-g)
+g) Verdien på dette feltet er 2.
 
-h)
+h) Se siste del av svaret til oppgave f.
 
 Kilder, lastet ned 13.04.2015
 
@@ -188,6 +191,7 @@ http://www.mcmcse.com/cisco/guides/csma.shtml mcmcse.com
 http://en.wikipedia.org/wiki/Cyclic_redundancy_check wikipedia.org
 http://en.wikipedia.org/wiki/Data_%28computing%29 wikipedia.org
 http://www.ehow.com/info_8773193_ethernet-preamble.html ehow.com
+https://wiki.wireshark.org/Gratuitous_ARP
 
 Praktiske oppgaver:
 http://it.iut.ac.ir/sites/fsites/it/files/u4/uploads/Networking%20Class-Wireshar%20Labs-Solutions/10-Wireshark_Ethernet_ARP_Solution_July_22_2007.pdf
