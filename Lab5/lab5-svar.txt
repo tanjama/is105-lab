@@ -131,4 +131,14 @@ Når vi bruker en JPEG fil i punkt 2 og 6 så ser vi at når vi bruker f.read(1)
 vi finner også "J", "F", "I", "F", JFIF. JFIF er standard formatet i en JPEG som hjelper å utveksle kodeinformasjonen.
 
 
+Kildehenvisning:
 
+Making C file:
+https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html#zz-1.4
+
+ELF fil:
+http://en.wikipedia.org/wiki/Executable_and_Linkable_Format
+Magic number:
+http://en.wikipedia.org/wiki/File_format#Magic_number
+JFIF:
+http://en.wikipedia.org/wiki/JPEG_File_Interchange_Format
