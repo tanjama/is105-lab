@@ -84,10 +84,11 @@ til å skrive inn følgende kommandoer i terminalen:
     - uname -a for version name of Linux kernel.
     - uname - mrs for Linux kernel. 
     - cat/proc/cpuinfo|grep "model name" for processor and CPU details on Linux.
-    - cat/etc/lisb-release for which distribution you are using. 
+    - cat/etc/lib-release for which distribution you are using. 
     
-Vi har fått tips om å bruke cat/etc/lisb-release, men har av ulike grunner 
-ikke fått respons på denne kommandoen.(SKAL FIKSES FØR INNLEVERING OM MULIG)
+Vi har fått tips om å bruke cat/etc/lib-release, men denne filen finnes ikke,
+og etter utforsking av fillagringssystem, finner vi en fil som heter 
+lsb-release, ikke lib-release.
    
 Utskriftene på kommandoene er følgende:
 
